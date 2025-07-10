@@ -7,8 +7,76 @@
 .spacer {
   flex: 1 1 auto;
 }
-.header_s1{
-    background-color: #1f396e;
-    --focus-outline-color: #CEDEDA;
-    color:white
+
+.header_s1 {
+  background-color: #1f396e;
+  --focus-outline-color: #CEDEDA;
+  color: white
+}
+
+.header_s2 {
+  background-color: #1f396e;
+  --focus-outline-color: #CEDEDA;
+  color: white
+}
+
+button {
+  color: white !important;
+}
+
+.header_img {
+  height: 100vh;
+  width: 98.5vw;
+}
+
+.school_list {
+  display: flex;
+  margin-top: 80px;
+  flex-direction: column;
+}
+
+.schoolContainer {
+  width: 100%;
+  background: #ffffffc4;
+  text-align: center;
+  position: relative;
+  border: 1px solid green;
+  border-radius: 2px;
+  max-width: 200px;
+  margin-top: 100px;
+}
+
+.schoolimage {
+      position: relative;
+    width: 70px;
+    top: -33px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.schoolimage img {
+     width: 100%;
+    transition: all 1s;
+}
+
+.title {
+  width: 100%;
+  font-size: 14px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  overflow-x: hidden;
+}
+.title a {
+  display: inline-block;
+  max-width: 100%;
+  text-decoration: none;
+}
+ .schoolContainer:hover {
+    animation: pulse 1s 1;
+    animation-timing-function: linear;
+    box-shadow: 0 0 2px 2px #284fa7;
+}
+.schoolContainer:hover img {
+  transform: rotate(360deg);
 }
