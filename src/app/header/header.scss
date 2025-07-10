@@ -15,7 +15,11 @@
 }
 
 .header_s2 {
-  background-color: #1f396e;
+   width: 100vw;
+  max-width: 100%;
+   position: sticky;
+  top: 0;
+  background: linear-gradient(to bottom, #2c9bdf, #003366);
   --focus-outline-color: #CEDEDA;
   color: white
 }
@@ -32,7 +36,7 @@ button {
 .school_list {
   display: flex;
   margin-top: 80px;
-  flex-direction: column;
+ // flex-direction: column;
 }
 
 .schoolContainer {
@@ -79,4 +83,9 @@ button {
 }
 .schoolContainer:hover img {
   transform: rotate(360deg);
+}
+.schoolContainer:hover .title a {
+  transform: rotate(360deg);
+  font-size: 1rem;
+  font-weight: 400;
 }

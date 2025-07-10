@@ -21,7 +21,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/cdk": "^20.0.5",
+    "@angular/cdk": "^20.1.0",
     "@angular/common": "^20.0.0",
     "@angular/compiler": "^20.0.0",
     "@angular/core": "^20.0.0",
@@ -32,6 +32,7 @@
     "@angular/router": "^20.0.0",
     "@angular/ssr": "^20.0.5",
     "express": "^5.1.0",
+    "ngx-flexible-layout": "^20.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
