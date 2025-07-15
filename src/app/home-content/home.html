@@ -1,20 +1,131 @@
 <div class="home">
-            
+    <mat-card class="video-wrapper">
+        <video src="https://www.starexuniversity.com/app-assets/vendors/assets/video/1.mp4" autoplay
+            [muted]="'muted'"></video>
+    </mat-card>
+
     <div class="home_img">
         <img src="assets/carousel/AI__carousall.webp" alt="Basic Life Support Training Program" class="header_img">
     </div>
+
+<section  id="tranding">
+      <div class="container">
+        <div class="swiper tranding-slider">
+          <swiper-container #swiperRef [config]="config" init="false" loop class="swiper-wrapper">
+            <!-- Slide-start -->
+            <div (click)="goToPath('pharmaceutical-science')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/carousel/Pharmaceutical__sciences.webp"  alt="Tranding">
+                 <figcaption> PHARMACEUTICAL </figcaption>
+              </div>
+             
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('physical-science')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/carousel/physical__scienes.webp"  alt="Tranding">
+                <figcaption> PHYSICAL SCIENCE </figcaption>
+              </div>
+              
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('life-science')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/carousel/life__sciences.webp" alt="Tranding">
+                <figcaption> LIFE SCIENCE </figcaption>
+              </div>
+              
+            </div>
+            <!-- Slide-end -->
+              <!-- Slide-start -->
+            <div (click)="goToPath('computerscience&technology')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/carousel/AI__carousall.webp" alt="Tranding">
+                <figcaption> COMPUTER SCIENCE & TECHNOLOGY </figcaption>
+              </div>
+              
+            </div>
+            <!-- Slide-end -->
+              <!-- Slide-start -->
+            <div (click)="goToPath('computerscience&technology')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/carousel/IBM-ICE.webp" alt="Tranding">
+                <figcaption> ENGINEERING & TECHNOLOGY </figcaption>
+              </div>
+              
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('law')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/carousel/law __courses5.webp"  alt="Tranding">
+                <figcaption> LAW </figcaption>
+              </div>
+              
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('humanities')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/carousel/humanities__carousall.webp"  alt="Tranding">
+                <figcaption> HUMANITIES </figcaption>
+              </div>
+             
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('hotel-management')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/carousel/HM.webp"  alt="Tranding">
+                <figcaption> HOTEL & MANAGEMENT </figcaption>
+              </div>
+              
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('agriculture')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/carousel/agriculture_carousall.webp"  alt="Tranding">
+                <figcaption> AGRICULTURE </figcaption>
+              </div>
+            </div>
+            <!-- Slide-end -->
+             <!-- Slide-start -->
+            <div routerLink="pharmaceutical-science" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/carousel/banner-samatrix.webp"  alt="Tranding">
+                <figcaption> SAMATRIX ASSOCIATION </figcaption>
+              </div>
+            </div>
+            <!-- Slide-end -->
+          </swiper-container>
+
+          <div class="tranding-slider-control">
+            <div class="swiper-button-prev slider-arrow">
+             <mat-icon>arrow_back_ios</mat-icon>
+            </div>
+            <div class="swiper-button-next slider-arrow">
+              <mat-icon>arrow_forward_ios</mat-icon>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
     <div class="about_section">
-        <div class="video-frame">
-                <video autoplay="" loop="" [muted]="'muted'"
-                    src="https://www.starexuniversity.com/app-assets/vendors/assets/video/1.mp4"
-                    alt="home page"></video>
-            </div> 
-         <div class="about_content">
-            <div class="row">
-                <div class="col-md-8" style="text-align:justify">
-                    <h1 class="text-center" style="font-size: 28px;
-    font-weight: bold;">Best Emerging Private University in Gurugram</h1>
-                    <div style="font-size: large; margin-top: 26px;">
+        <div fxFlex="100%" fxLayoutAlign="space-between stretch" fxLayout.xs="column-reverse">
+            <div fxFlex.gt-xs="100%" fxFlex.sm="100%" fxFlex.gt-lg="48%" fxLayout="column" class="about_content">
+                <mat-card class="example-card" appearance="outlined">
+                    <mat-card-header>
+                        <mat-card-title-group>
+                            <mat-card-title>Starex University</mat-card-title>
+                            <mat-card-subtitle>Best Emerging Private University in Gurugram</mat-card-subtitle>
+                            <img class="logo_img_small" mat-card-sm-image src="../../assets/stickylogo.png">
+                        </mat-card-title-group>
+                    </mat-card-header>
+                    <mat-card-content>
                         <p>
                             Since its inception in 2016, Starex University (SU) has become a leading Private University
                             in Gurugram, Haryana. Starex aims at presenting its students with a successful learning
@@ -32,21 +143,16 @@
 
                         <b>What makes us a land of opportunities?</b>
 
-                        <li>Quality Education</li>
-                        <li>Added excellence over Well-groomed Curriculum</li>
-                        <li>Expert Faculty Members</li>
-                        <li>Advanced Infrastructure </li>
-                        <li>Well-Equipped Labs</li>
-                        <li>Placement Opportunities</li>
-
-
-                    </div>
-                </div>
+                        <p>Quapty Education</p>
+                        <p>Added excellence over Well-groomed Curriculum</p>
+                        <p>Expert Faculty Members</p>
+                        <p>Advanced Infrastructure </p>
+                        <p>Well-Equipped Labs</p>
+                        <p>Placement Opportunities</p>
+                    </mat-card-content>
+                </mat-card>
 
             </div>
-
-            <br>
-
-        </div> 
+        </div>
     </div>
 </div>

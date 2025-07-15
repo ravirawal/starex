@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './law.html',
   styleUrl: './law.scss'
 })
-export class Law {
+export class LawComponent {
 
 }

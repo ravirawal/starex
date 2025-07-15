@@ -1,1 +1,130 @@
-<p>pharmacy works!</p>
+<!-- <mat-tab-group animationDuration="2000ms">
+  <mat-tab label="Home">Home</mat-tab>
+  <mat-tab label="About">About</mat-tab>
+  <mat-tab label="Programmes">Programmes</mat-tab>
+  <mat-tab label="News & Events">News & Events</mat-tab>
+  <mat-tab label="Blogs">Blogs</mat-tab>
+  <mat-tab label="DPSR">DPSR</mat-tab>
+</mat-tab-group> -->
+
+<div fxFlex="100" fxFlex="100" fxLayout="column" class="container">
+    <h1 class="contentTitle" style="font-size: 1.75rem;">School of Pharmaceutical Science </h1>
+
+    <div fxFlex="100">
+        <div fxFlexLayout class="hero">
+            <h1>Starex University: School of Pharmaceutical Sciences – Your Gateway to a
+                Rewarding Career&nbsp;in&nbsp;Healthcare</h1>
+        </div>
+
+        <div fxLayout="column">
+            <h2 class="text-center contentTitle border-0">Our Programs</h2>
+            <div fxFlex="100" fxLayout="row" class="row">
+                <div fxFlex="48">
+                    <img src="https://starexuniversity.com/app-assets/vendors/assets/images/schools/pharmaceuticals/1st.jpg"
+                        alt="Bachelor of Pharmacy (B.Pharm)">
+                </div>
+                <div fxFlex="48">
+                    <ul class="highlight-list">
+                        <li><strong>Bachelor of Pharmacy (B.Pharm):</strong> Gain a solid
+                            foundation in pharmaceutical sciences, covering subjects like
+                            pharmaceutics, pharmaceutical chemistry, pharmacology, and pharmacy
+                            practice.</li>
+                        <li><strong>Diploma in Pharmacy (D.Pharm):</strong> A shorter program
+                            providing an overview of pharmacy fundamentals.</li>
+                        <li><strong>Master of Pharmacy (M.Pharm) in Pharmaceutics:</strong>
+                            Deepen your expertise in drug formulation, delivery systems, and
+                            pharmaceutical technology.</li>
+                        <li><strong>Master of Pharmacy (M.Pharm) in Pharmaceutical
+                                Chemistry:</strong> Focus on the chemical aspects of drug
+                            discovery, development, and analysis.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div fxLayout="column">
+            <h2 class="text-center contentTitle border-0">Why Choose Starex University?</h2>
+            <div fxFlex="100" fxLayout="row">
+                <div fxFlex="48">
+                    <ul class="highlight-list">
+                        <li><strong>Comprehensive Curriculum:</strong> Our programs cover a wide
+                            range of pharmaceutical sciences.</li>
+                        <li><strong>Expert Faculty:</strong> Learn from experienced
+                            professionals in the field.</li>
+                        <li><strong>Industry Relevance:</strong> Our curriculum is aligned with
+                            industry trends and demands.</li>
+                        <li><strong>Career Guidance:</strong> Receive support in exploring
+                            career options and job placements.</li>
+                    </ul>
+                </div>
+                <div fxFlex.gt-lg="48" fxFlex.gt-sm="98">
+                    <img src="https://starexuniversity.com/app-assets/vendors/assets/images/schools/pharmaceuticals/2nd.jpg"
+                        alt="Expert Faculty">
+                </div>
+            </div>
+        </div>
+
+        <div fxLayout="column">
+            <h2 class="text-center contentTitle border-0">Your Future in Pharmacy</h2>
+            <div fxFlex="100" fxLayout="row">
+                <div fxFlex.gt-lg="48" fxFlex.gt-sm="98">
+                    <img src="https://starexuniversity.com/app-assets/vendors/assets/images/schools/pharmaceuticals/3rd.jpg"
+                        alt="Career Path">
+                </div>
+                <div fxFlex.gt-lg="48" fxFlex.gt-sm="98">
+                    <p>Graduates from our programs are well-prepared for successful careers in:
+                    </p>
+                    <ul class="highlight-list">
+                        <li>Pharmaceutical industry</li>
+                        <li>Drug regulatory agencies</li>
+                        <li>Hospital and clinical settings</li>
+                        <li>Research and development</li>
+                        <li>Pharmaceutical sales and marketing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div fxLayout="column">
+            <h2 class="text-center contentTitle border-0">Explore Our Programs</h2>
+            <div fxFlex.gt-lg="100">
+                <p>Ready to embark on your journey in pharmacy? Explore our programs and
+                    discover how Starex University can help you achieve your goals.</p>
+
+            </div>
+        </div>
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="course">
+                <th mat-header-cell *matHeaderCellDef> Course</th>
+                <td mat-cell *matCellDef="let element"> {{element.course}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="duration">
+                <th mat-header-cell *matHeaderCellDef> Duration </th>
+                <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="criteria">
+                <th mat-header-cell *matHeaderCellDef> Eligibility Criteria </th>
+                <td mat-cell *matCellDef="let element"> {{element.criteria}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="seats">
+                <th mat-header-cell *matHeaderCellDef> No. of Seats </th>
+                <td mat-cell *matCellDef="let element"> {{element.seats}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>

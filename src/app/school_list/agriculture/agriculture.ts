@@ -4,8 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-agriculture',
   imports: [],
   templateUrl: './agriculture.html',
-  styleUrl: './agriculture.scss'
+  styleUrl: './agriculture.scss',
+  standalone: true
 })
-export class Agriculture {
+export class AgricultureComponent {
 
 }

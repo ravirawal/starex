@@ -3,11 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { Header } from "./header/header";
 import { Footer } from "./footer/footer";
 import { LeftNav } from "./left-nav/left-nav";
-import { Home } from "./home-content/home";
+import { HomeComponent } from "./home-content/home";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, Home],
+  imports: [RouterOutlet, Header, Footer, HomeComponent,],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

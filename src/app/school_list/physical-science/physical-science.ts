@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './physical-science.html',
   styleUrl: './physical-science.scss'
 })
-export class PhysicalScience {
+export class PhysicalScienceComponent {
 
 }
