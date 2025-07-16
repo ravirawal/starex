@@ -1,8 +1,134 @@
 <mat-toolbar color="primary" class="header_s2">
-    <img src="assets/Logo.png" alt="Logo" class="logo" />
+    <img (click)="navigateToHome()" src="assets/Logo.png" alt="Logo" class="logo" />
 
     <span class="spacer"></span>
-    <!-- <div class="school_list">
+    <div class="erp-login">
+        <!-- <mat-icon>fingerprint</mat-icon> -->
+        <a> ERP LOGIN </a>
+    </div>
+    <div [matMenuTriggerFor]="schoolList" class="hamburger">
+        <span data-asw-org-font-size="16" style="font-size: 16px;"></span>
+        <span data-asw-org-font-size="16" style="font-size: 16px;"></span>
+        <span data-asw-org-font-size="16" style="font-size: 16px;"></span>
+    </div>
+    <mat-menu #schoolList="matMenu" yPosition="below">
+        <mat-accordion (click)="handleDivClick($event)">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title> About Starex </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ul class="dropmenu">
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">About Starex</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Chancellor Message</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Vice Chancellor Message</a>
+                    </li>
+
+                    <li>
+
+                        <a routerLink="law" (click)="handleAnchorClick()">Registrar Message</a>
+                    </li>
+                    <li> <a routerLink="law" (click)="handleAnchorClick()">Annual Reports</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Starex MOU's</a>
+                    </li>
+
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Recognition &amp; Approvals</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Mandatory Disclosure</a>
+                    </li>
+
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Course Eligibility</a>
+                    </li>
+                    <li>
+                        <a targert="_blank"
+                            href="https://www.starexuniversity.com/app-assets/vendors/assets/pdf/information_for_ugc_inspection.pdf">Information
+                            for UGC Inspection</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Details of Ombudsperson</a>
+                    </li>
+
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Policies</a>
+                    </li>
+
+
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Organogram</a>
+                    </li>
+                </ul>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title> Governance </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ul class="dropmenu">
+
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">University Authorities</a>
+                    </li>
+                    <li> <a routerLink="law" (click)="handleAnchorClick()">Committees &amp; Boards</a></li>
+
+                </ul>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title> Starex Schools </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ul class="dropmenu">
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Agriculture Science</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Commerce &amp; Management</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Physical Sciences</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Computer Science &amp; Technology </a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Engineering &amp; Technology</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Pharmaceutical Science </a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Hotel Management</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Humanities</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Law</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Life Sciences</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Vocational Courses</a>
+                    </li>
+
+                </ul>
+            </mat-expansion-panel>
+
+
+        </mat-accordion>
+    </mat-menu>
+</mat-toolbar>
+
+
+<!-- <div  class="school_list">
         <div class="schoolContainer">
             <div class="schoolimage"><img
                     src="https://www.starexuniversity.com/uploads/StarexSchools/icons/Agricultural-Studies-Icon-03.png "
@@ -95,5 +221,4 @@
 
             </div>
         </div>
-    </div> -->
-</mat-toolbar>
+    </div>  -->

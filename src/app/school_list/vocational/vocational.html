@@ -1,0 +1,142 @@
+<div class="container flex-column">
+    <h1 class="contentTitle" style="font-size: 1.75rem;">Vocational Courses </h1>
+    <div class="col-sm-12">
+        <p>School of Vocational Studies has been established by Starex University with a key thought of
+            “Employability” in which the best training methods and pedagogy will be providing for developing
+            necessary skills in order to ensure that the learners must get adequate knowledge and expertise
+            in their particular field.</p>
+
+        <p><img src="https://www.starexuniversity.com/app-assets/vendors/assets/skills.png" style="width:100%"></p>
+
+        <p>VERTICAL BRIDGE PARTNER<br>
+            SKILL INDIA EDUTECH</p>
+
+        <p>School of Vocational Studies has been established by Starex University with a key thought of
+            “Employability” in which the best training methods and pedagogy will be providing for developing
+            necessary skills in order to ensure that the learners must get adequate knowledge and expertise
+            in their particular field.</p>
+
+        <p>Advancement of technology has caused a dynamic change in handling the task and the jobs are
+            becoming skill-intensive or expert oriented therefore It is the need of the hour to reform the
+            training approach and education system so as to improve the skills of the workforce with this
+            thought, this school has essentially been designed for students wishing to enhance their
+            employability which would facilitate such students in learning, earning and growing
+            professionally.</p>
+
+        <h2>UGC-B.VOC SCHEME</h2>
+
+        <p>The University Grants Commission (UGC) has launched a scheme on skills development based on
+            higher education as part of college/university education, leading to Bachelor of Vocation &amp;
+            Master of Vocation (B. Voc. &amp; M. Voc.) Degree with multiple exits such as Diploma/Advanced
+            Diploma/PG Diploma under the NSQF. The B. Voc. &amp; M. Voc. programme is focused on
+            universities and colleges providing undergraduate &amp; post graduate studies which would also
+            incorporate specific job roles and their NOSs along with broad based general education. This
+            would enable the graduates completing B. Voc. to make a meaningful participation in accelerating
+            India’s economy by gaining appropriate employment, becoming entrepreneurs and creating
+            appropriate knowledge.</p>
+
+        <h2>About B.Voc. Programme</h2>
+
+        <p>Bachelor of Vocation (B.Voc.) is a three-year undergraduate degree course, available in several
+            fields for students who have completed their 12th standard or equivalent.</p>
+
+        <p>The University Grants Commission (UGC), in 2013, introduced Bachelor of Vocation, commonly known
+            as B.Voc. degree programme with multiple entry and exit points, which can be understood as after
+            completing one year if the student opts for the exit, he/she is awarded a diploma certificate.
+        </p>
+
+        <p>Similarly, there are other exit points from where the students can take an advanced diploma or a
+            full-fledged B.Voc. degree. The focus of this programme is to provide students with in-depth
+            knowledge of practical aspects to handle the complexities of tasks in the real work environment.
+            B.Voc. courses are considered to be a new generation training programme which emphases on
+            industry practices and are carefully designed in consultation with industries/employers with an
+            objective to make students industry-ready.</p>
+        <p>&nbsp;</p>
+<div class="flex-row flex-column-S">
+    <div class="flex-column flex_L50 flex_S100">
+        <p><strong>Department of Paramedical</strong></p>
+
+        <ul>
+            <li><strong>B. Voc.</strong></li>
+        </ul>
+
+        <ul>
+            <li>Medical Lab Technology</li>
+            <li>Radiology &amp; Medical Imaging Technology</li>
+            <li>Optometry Technology</li>
+            <li>Cardiac Care Technology</li>
+            <li>Operation Theatre Technology</li>
+            <li>Dialysis Technology</li>
+            <li>Hospital Management</li>
+            <li>Physiotherapy</li>
+        </ul>
+
+        <p>&nbsp;</p>
+</div>
+<div class="flex-column flex_L50 flex_S100">
+        <p><strong>Department of Hospitality</strong></p>
+
+        <ul>
+            <li><strong>B. Voc.</strong></li>
+        </ul>
+
+        <ul>
+            <li>Hotel &amp; Hospitality Management</li>
+        </ul>
+</div>
+<div class="flex-column flex_L50 flex_S100">
+        <p><strong>Department of Design</strong></p>
+
+        <ul>
+            <li><strong>B. Voc.</strong></li>
+        </ul>
+
+        <ul>
+            <li>Fashion Design</li>
+            <li>Interior Design</li>
+        </ul>
+</div>
+<div class="flex-column flex_L50 flex_S100">
+        <p><strong>Department of Commerce</strong></p>
+
+        <ul>
+            <li><strong>B. Voc.</strong></li>
+            <li>Accounting &amp; Taxation</li>
+        </ul>
+        </div>
+        </div>
+        <div>
+            <p><strong>Levels of Awards</strong></p>
+
+            <p>The certification levels will lead to Diploma/Advanced Diploma/PG Diploma/B. Voc. / M. Voc.
+                Degree in one or more vocational areas and will be offered under the aegis of the University.
+            </p>
+
+
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <ng-container matColumnDef="course">
+                    <th mat-header-cell *matHeaderCellDef> Award</th>
+                    <td mat-cell *matCellDef="let element"> {{element.course}}
+                    </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="duration">
+                    <th mat-header-cell *matHeaderCellDef> Duration </th>
+                    <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="seats">
+                    <th mat-header-cell *matHeaderCellDef> Corresponding NSQF </th>
+                    <td mat-cell *matCellDef="let element"> {{element.seats}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+        <p><strong>CONTACT US<br>
+                +91 9818739108</strong></p>
+    </div>
+</div>

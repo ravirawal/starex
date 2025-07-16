@@ -1,0 +1,142 @@
+<div class="container flex-column">
+    <h1 class="contentTitle" style="font-size: 1.75rem;">School of Engineering &amp; Technology </h1>
+    <div >
+        <h1>Shape Your Future in Technology with Specialized B.Tech Programs at Starex&nbsp;University
+        </h1>
+        <div class="container flex-column">
+            <h2 class="text-center contentTitle border-0">Specialized B.Tech Programs</h2>
+            <div class="flex-row flex-column-S">
+                <div class="flex_L50 flex_S100">
+                    <img src="https://starexuniversity.com/app-assets/vendors/assets/images/schools/Engineering &amp; Technology/b.tech 1st.jpg"
+                        alt="AI &amp; ML Program">
+                </div>
+                <div class="flex_L50 flex_S100">
+                    <ul class="highlight-list">
+                        <li><strong>B.Tech in Artificial Intelligence &amp; Machine Learning:</strong> Delve
+                            into the world of AI and ML with a strong foundation in algorithms, data structures,
+                            and machine learning techniques. Our program, enhanced by academic support from
+                            Samatrix, prepares you to develop intelligent systems and drive innovation.</li>
+                        <li><strong>B.Tech in Computer Science &amp; Engineering:</strong> Gain a comprehensive
+                            understanding of computer systems, software development, and fundamental computing
+                            principles. This program provides a solid foundation for a diverse range of tech
+                            careers.</li>
+                        <li><strong>B.Tech in Artificial Intelligence &amp; Machine Learning with academic
+                                support of Samatrix:</strong> This specialized program, in collaboration with
+                            Samatrix, offers in-depth knowledge and practical experience in AI and ML, equipping
+                            you with the skills to excel in this rapidly growing field.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex-row flex-column-S">
+                <div class="flex_L50 flex_S100">
+                    <ul class="highlight-list">
+                        <li><strong>B.Tech in Cyber Security &amp; Digital Forensics with academic support of
+                                Samatrix:</strong> Master the art of protecting digital assets and investigating
+                            cybercrimes with this specialized program. Gain hands-on experience and develop the
+                            skills to combat cyber threats.</li>
+                        <li><strong>B.Tech in Artificial Intelligence &amp; Machine Learning with academic
+                                support of IBM:</strong> This program, in collaboration with IBM, provides a
+                            unique opportunity to learn from industry experts and work on real-world AI and ML
+                            projects.</li>
+                        <li><strong>B.Tech in Computer Science &amp; Engineering (Azure Data, Cloud &amp; AI
+                                Developer) with academic support of Microsoft:</strong> Gain expertise in data,
+                            cloud, and AI development using Microsoft Azure. This program, in collaboration with
+                            Microsoft, prepares you for a successful career in cloud computing and data
+                            engineering.</li>
+                        <li><strong>B.Tech in Computer Science &amp; Engineering (Cyber Security) with academic
+                                support of Microsoft:</strong> This program, in collaboration with Microsoft,
+                            focuses on cybersecurity, equipping you with the skills to protect digital
+                            infrastructure and combat cyber threats.</li>
+                    </ul>
+                </div>
+                <div class="flex_L50 flex_S100 program-image">
+                    <img src="https://starexuniversity.com/app-assets/vendors/assets/images/schools/Engineering &amp; Technology/b.tech 2nd.jpg"
+                        alt="Cyber Security &amp; Digital Forensics Program">
+                </div>
+            </div>
+        </div>
+
+        <div class="container flex-column">
+            <h2 class="text-center contentTitle border-0">A World-Class Learning Experience</h2>
+            <div class="flex-row flex-column-S">
+                <div class="flex_L50 flex_S100 program-image">
+                    <img src="https://starexuniversity.com/app-assets/vendors/assets/images/schools/Engineering &amp; Technology/b.tech 3rd.jpg"
+                        alt="Learning Experience">
+                </div>
+                <div class="flex_L50 flex_S100">
+                    <ul class="highlight-list">
+                        <li><strong>Industry-Aligned Curriculum:</strong> Our curriculum is designed in
+                            collaboration with industry leaders to ensure you graduate with the skills demanded
+                            by employers.</li>
+                        <li><strong>Hands-On Learning:</strong> Gain practical experience through internships,
+                            projects, and industry collaborations.</li>
+                        <li><strong>Expert Faculty:</strong> Learn from experienced professors who are industry
+                            experts and passionate about teaching.</li>
+                        <li><strong>State-of-the-Art Infrastructure:</strong> Access cutting-edge labs and
+                            computing facilities to support your learning.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container program-section">
+            <h2 class="text-center contentTitle border-0">Launch Your Tech Career</h2>
+            <div class="flex-row flex-column-S">
+                <div class="flex_L50 flex_S100">
+                    <p>Graduates from Starex University's School of Computer Science are well-prepared for
+                        successful careers in a variety of roles, including:</p>
+                    <ul class="highlight-list">
+                        <li>Software development</li>
+                        <li>Data science and analytics</li>
+                        <li>Cybersecurity</li>
+                        <li>Artificial intelligence and machine learning</li>
+                        <li>Cloud computing</li>
+                        <li>Network engineering</li>
+                        <li>IT consulting</li>
+                        <li>Entrepreneurship</li>
+                    </ul>
+                </div>
+                <div class="flex_L50 flex_S100 program-image">
+                    <img src="https://starexuniversity.com/app-assets/vendors/assets/images/schools/Engineering &amp; Technology/starex university photo.jpg"
+                        alt="Career Opportunities">
+                </div>
+            </div>
+        </div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="course">
+                <th mat-header-cell *matHeaderCellDef> Course</th>
+                <td mat-cell *matCellDef="let element"> {{element.course}}
+                    <br>
+                    <a href="https://www.starexuniversity.com/uploads/Course_Syllabus/Bachelor_in_Pharmacy1.pdf"
+                        target="_blank"><span> <i class="fa fa fa-file-pdf-o" style="color: #820a0e;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 6px;
+    position: relative;
+    top: 4px;"></i>Download Syllabus</span></a>
+                </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="duration">
+                <th mat-header-cell *matHeaderCellDef> Duration </th>
+                <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="criteria">
+                <th mat-header-cell *matHeaderCellDef> Eligibility Criteria </th>
+                <td mat-cell *matCellDef="let element"> {{element.criteria}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="seats">
+                <th mat-header-cell *matHeaderCellDef> No. of Seats </th>
+                <td mat-cell *matCellDef="let element"> {{element.seats}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>

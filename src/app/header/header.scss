@@ -2,6 +2,7 @@
   height: 4rem;
   width: auto;
   margin-right: 16px;
+  cursor: pointer;
 }
 
 .spacer {
@@ -19,7 +20,7 @@
   max-width: 100%;
    position: sticky;
   top: 0;
-  background: linear-gradient(to bottom, #2c9bdf, #003366);
+  background: linear-gradient(to bottom, #003366, #004C97);
   --focus-outline-color: #CEDEDA;
   color: white;
   z-index: 2;
@@ -32,6 +33,43 @@ button {
 .header_img {
   height: 100vh;
   width: 98.5vw;
+}
+.erp-login{
+  margin-right: 1rem;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all ease-out 3ms
+}
+.erp-login:hover{
+  font-size: 16px;
+  transform: matrix3d();
+  background-color: #003366;
+}
+.hamburger {
+    position: relative;
+    width: 30px;
+    height: 23px;
+    cursor: pointer;
+    z-index: 1;
+}
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+.hamburger span:first-child {
+    top: 0;
+}
+.hamburger span:nth-child(2) {
+    top: 10px;
+    left: 0;
+}
+.hamburger span:last-child {
+    top: 20px;
 }
 
 .school_list {

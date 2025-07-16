@@ -7,7 +7,7 @@
   <mat-tab label="DPSR">DPSR</mat-tab>
 </mat-tab-group> -->
 
-<div fxFlex="100" fxFlex="100" fxLayout="column" class="container">
+<div fxFlex="100" fxLayout="column" class="container">
     <h1 class="contentTitle" style="font-size: 1.75rem;">School of Pharmaceutical Science </h1>
 
     <div fxFlex="100">
@@ -95,14 +95,17 @@
         </div>
 
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-            <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
-            <!-- Position Column -->
             <ng-container matColumnDef="course">
                 <th mat-header-cell *matHeaderCellDef> Course</th>
-                <td mat-cell *matCellDef="let element"> {{element.course}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.course}}
+                <br>
+	                                         <a href="https://www.starexuniversity.com/uploads/Course_Syllabus/Bachelor_in_Pharmacy1.pdf" target="_blank"><span> <i class="fa fa fa-file-pdf-o" style="color: #820a0e;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 6px;
+    position: relative;
+    top: 4px;"></i>Download Syllabus</span></a>    
+                </td>
             </ng-container>
 
             <!-- Name Column -->
