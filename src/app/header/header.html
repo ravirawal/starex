@@ -2,17 +2,211 @@
     <img (click)="navigateToHome()" src="assets/Logo.png" alt="Logo" class="logo" />
 
     <span class="spacer"></span>
+    <button class="blink-button">Click Me</button>
     <div class="erp-login">
         <!-- <mat-icon>fingerprint</mat-icon> -->
         <a> ERP LOGIN </a>
     </div>
-    <div [matMenuTriggerFor]="schoolList" class="hamburger">
-        <span data-asw-org-font-size="16" style="font-size: 16px;"></span>
-        <span data-asw-org-font-size="16" style="font-size: 16px;"></span>
-        <span data-asw-org-font-size="16" style="font-size: 16px;"></span>
+    <div [matMenuTriggerFor]="schoolList" #menuTrigger="matMenuTrigger" class="hamburger">
+        <mat-icon *ngIf="!menuTrigger.menuOpen">menu</mat-icon>
+        <mat-icon *ngIf="menuTrigger.menuOpen">close</mat-icon>
     </div>
+
     <mat-menu #schoolList="matMenu" yPosition="below">
-        <mat-accordion (click)="handleDivClick($event)">
+        <mat-tab-group (click)="handleDivClick($event)">
+            <mat-tab label="About Starex">
+                <ul class="dropmenu">
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">About Us</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Chancellor's Message</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Vice Chancellor's Message</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Registrar Message</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">OSD Message</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">COE</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Recognition &amp; Approval</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Mandatory Disclosure</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Starex MOU's</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Information for UGC Inspection</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Annual Reports</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Ombudsperson</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Policies</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Organogram</a>
+                    </li>
+                </ul>
+            </mat-tab>
+
+            <mat-tab label="Governance">
+                <ul class="dropmenu">
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">University Authorities</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Committees & Boards </a>
+                    </li>
+                </ul>
+            </mat-tab>
+            <mat-tab label="Schools">
+                <ul class="dropmenu">
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Agriculture Science</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Commerce &amp; Management</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Physical Sciences</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Computer Science &amp; Technology </a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Engineering &amp; Technology</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Pharmaceutical Science </a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Hotel Management</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Humanities</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Law</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Life Sciences</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Vocational Courses</a>
+                    </li>
+
+                </ul>
+            </mat-tab>
+            <mat-tab label="Study Abroad">
+                <ul>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">ICHM, Adelaide, Australia </a>
+                    </li>
+
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">The Apprenticeship Training Program For
+                            Hospitality, GERMANY , Europe</a>
+                    </li>
+                </ul>
+            </mat-tab>
+            <mat-tab label="Facility">
+                <ul>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Campus View</a>
+                    </li>
+
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Library</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Modern Hostel</a>
+                    </li>
+
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Wi-Fi Campus</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Transport Facility</a>
+                    </li>
+
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Playground</a>
+                    </li>
+                </ul>
+            </mat-tab>
+            <mat-tab label="Alumni">
+                <ul>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Message</a>
+                    </li>
+
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Register</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Alumni Association</a>
+                    </li>
+
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Gallery</a>
+                    </li>
+                </ul>
+            </mat-tab>
+            <mat-tab label="Media">
+                <ul>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">News</a>
+                    </li>
+
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Events</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Press Coverage</a>
+                    </li>
+
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Achievements</a>
+                    </li>
+                </ul>
+            </mat-tab>
+            <mat-tab label="Examination">
+                <ul>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Results</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Datesheet</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Examination Schedule</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">University NAD Cell</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Examination Form</a>
+                    </li>
+                    <li>
+                        <a routerLink="law" (click)="handleAnchorClick()">Reappear Form</a>
+                    </li>
+                </ul>
+            </mat-tab>
+        </mat-tab-group>
+
+        <!-- <mat-accordion (click)="handleDivClick($event)" class="accordion-grid" [multi]="false">
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
                     <mat-panel-title> About Starex </mat-panel-title>
@@ -121,9 +315,7 @@
 
                 </ul>
             </mat-expansion-panel>
-
-
-        </mat-accordion>
+        </mat-accordion> -->
     </mat-menu>
 </mat-toolbar>
 

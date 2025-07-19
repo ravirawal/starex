@@ -4,6 +4,76 @@
   margin-right: 16px;
   cursor: pointer;
 }
+ul{
+  list-style: none;
+  display: flex;
+    flex-direction: column;
+    padding: 0 0 0 2rem;
+    justify-content: unset;
+    align-items: flex-start;
+}
+.cdk-overlay-pane{
+top:50px !important
+}
+/* accordion-grid.component.css */
+mat-accordion.accordion-grid {
+  gap: 16px;
+}
+
+
+.desktop-nav{
+display: flex;
+flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px
+}
+.example-card{
+  flex: 0 0 calc(33% - 16px); /* 4 items per row */
+  background: #e0e0e0;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  img{
+    object-fit: contain;
+  }
+}
+@media (max-width: 1024px) {
+  mat-accordion.accordion-grid {
+     display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  mat-accordion.accordion-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.close-icon{
+  position: absolute;
+  top:50;
+  right:2rem;
+  p{
+    font-weight: 800;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  perspective: 1000px; /* Enables 3D effect */
+  min-height: 2rem;
+  width:100%;
+  color:#e3eef4
+}
+a:hover {
+  transform: rotateX(5deg) rotateY(5deg) scale(1.05);
+}
 
 .spacer {
   flex: 1 1 auto;

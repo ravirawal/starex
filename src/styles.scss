@@ -21,11 +21,36 @@ a{
 .mat-expansion-panel{
   margin-top:1rem !important;
 }
+.mdc-tab__text-label{
+  color:white !important;
+  font-size: 1rem;
+  letter-spacing: 1.1px;
+}
+.blink-button {
+  background-color: #2196f3;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  animation: blinkAnimation 1s infinite;
+}
+
+/* Blink keyframes */
+@keyframes blinkAnimation {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 /* Extra small devices (phones, <576px) */
 @media (max-width: 575.98px) {
   /* Your styles here */
 }
-
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
+    border-color: #5bfd1b !important;
+}
 /* Small devices (phones, ≥576px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   /* Your styles here */
@@ -58,10 +83,13 @@ html {
 }
 
 .mat-mdc-menu-panel{
-min-width:100vw !important;
-max-width: 100% !important;
+min-width:96vw !important;
+max-width: 90% !important;
 margin-top:1.1rem;
 background-color: #134080e6 !important;
+}
+.cdk-overlay-pane{
+top:3rem !important
 }
 @media (min-width: 1440px) {
   html {
