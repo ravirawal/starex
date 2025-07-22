@@ -18,9 +18,7 @@ p{
       height: 100%;
     }
 }
-.col-md-4{
-  width:33%;
-}
+
 .contentTitle{
     text-transform: uppercase;
     color: #284fa7;
@@ -40,8 +38,11 @@ p{
 .flex_L50{
   width:50%
 }
+.col-md-4{
+  width:33%;
+}
 /* Small devices (phones, ≥576px) */
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
   .flex-column-S {
     flex-direction: column;
   }

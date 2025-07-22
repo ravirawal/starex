@@ -5,7 +5,9 @@
   height: auto;
   flex-direction: column;
 }
-
+.photo_section{
+  padding: .5rem;
+}
 .home_img {
   width: 100%;
   height: auto;
@@ -20,81 +22,114 @@
 mat-grid-tile {
   background: lightblue;
 }
-
-.school_list {
-  position: absolute;
-  top: 28px;
-  right: 10px // flex-direction: column;
-}
-
-.school_list_container{
-  padding-left: 20px;
-}
-
-.schoolContainer {
-  background: rgba(255, 255, 255, 0.768627451);
-  border: 1px solid #336067;
-  border-radius: 2px;
+.statBox{
   position: relative;
-  min-width: 120px;
-  text-align: center;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-top: 3rem;
+}
+.statFigure {
+    width: 80%;
+    line-height: 1;
+    font-size: 14px;
+    position: relative;
+    padding: 15px;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    color: yellow;
+}
+@media (min-width: 640px) {
+    .sfCount {
+        font-size: 300%;
+    }
 }
 
-.schoolimage {
-  position: relative;
-  width: 70px;
-  top: -33px;
-  margin-left: auto;
-  margin-right: auto;
+.sfCount {
+    font-size: 200%;
+    font-weight: 600;
+}
+.sfText {
+    font-size: 18px;
+}
+.statBox:before {
+    background: linear-gradient(-55deg, rgba(51, 131, 250, 0) 20%, rgb(6, 52, 117) 100%);
+}
+.statBox:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all .50s ease;
+    border-radius: 1rem;
+}
+.statBox:after {
+    background: linear-gradient(-55deg, rgba(51, 131, 250, 0) 20%, rgb(63, 143, 255) 100%);
+    opacity: 0;
+    border-radius: 1rem;
 }
 
-.schoolimage img {
-  width: 100%;
-  transition: all 1s;
+.statBox:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+    z-index: 2;
+}
+.counter {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  animation: blinkAnimation 1s infinite alternate;
 }
 
-.title {
-  width: 100%;
-  font-size: 14px;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  white-space: normal;
-  overflow-x: hidden;
-  position: absolute;
-  bottom: 5px;
+.column {
+  display: flex;
+  flex-direction: column;
+  height: 80vh; /* full screen height */
 }
 
-.title a {
-  display: inline-block;
-  max-width: 100%;
-  text-decoration: none;
-  color: #685b8b;
+.half {
+  flex: 1;
+  overflow: hidden; /* ensures no overflow height */
+  display: flex;
 }
 
-.schoolContainer:hover {
-  animation: pulse 1s 1;
-  animation-timing-function: linear;
-  box-shadow: 0 0 2px 2px #284fa7;
+.top {
+  align-items: center;
+  justify-content: center;
+  background: #e3f2fd;
 }
 
-.schoolContainer:hover img {
-  transform: rotate(360deg);
+.bottom-row {
+  display: flex;
+  gap: 16px;
 }
 
-.schoolContainer:hover .title a {
-  transform: rotate(360deg);
-  font-weight: 300;
+.half-child {
+  flex: 1;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Optional Blink Effect */
+@keyframes blinkAnimation {
+  0% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+.flex-vertical-child{
+  flex: 1;
+}
+
 .about_section::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 60vh;
   background-image: url('../../assets/carousel/university_image.jpg'); /* your image path */
   background-size: cover;
   background-position: center;
@@ -105,50 +140,25 @@ mat-grid-tile {
 .about_section {
   display: flex;
   min-width: 100%;
-  height: 100vh;
+  height: 60vh;
   position: relative;
-}
-
-// .video_section{
-//     min-width: 60%;
-//     max-height: 600px;
-// }
-.video-frame {
-  width: 40%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  border-radius: 5px;
-  overflow: hidden;
-  background-color: #000;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-  z-index: 0;
-}
-
-.video-frame video {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  //object-fit: cover;/* or use 'contain' if you want the full video visible */
 }
 
 .video-wrapper {
-  width: 100vw;
-  max-width: 100%;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
+  height: 100%;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  aspect-ratio: 16/ 9;
 }
-
+.video-wrapper:before {
+    background: linear-gradient(-55deg, rgba(51, 131, 250, 0) 20%, rgb(6, 52, 117) 100%);
+}
+.video-wrapper video:before {
+    background: linear-gradient(-55deg, rgba(51, 131, 250, 0) 20%, rgb(6, 52, 117) 100%);
+}
 .video-wrapper video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:cover;
   /* or use 'contain' for full visibility */
   display: block;
 }
@@ -157,5 +167,15 @@ mat-grid-tile {
 }
 .mat-mdc-card{
   background-color: aliceblue;
+}
+.img_section{
+width:100%;
+height: 100%;
+object-fit: cover;
+border-radius: 1rem;
+}
+.crcLogoImg{
+width: 12rem;
+height: 6rem;
 }
 

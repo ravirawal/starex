@@ -1,158 +1,201 @@
 <div class="home">
-    <!-- <mat-card class="video-wrapper">
-        <video src="https://www.starexuniversity.com/app-assets/vendors/assets/video/1.mp4" autoplay
-            [muted]="'muted'"></video>
-    </mat-card> -->
+  <mat-card class="video-wrapper">
+    <video src="https://www.starexuniversity.com/app-assets/vendors/assets/video/1.mp4" autoplay
+      [muted]="'muted'"></video>
+  </mat-card>
 
-    <!-- <div class="home_img">
-        <img src="assets/carousel/AI__carousall.webp" alt="Basic Life Support Training Program" class="header_img">
-    </div> -->
-
-<section  id="tranding">
-      <div class="container">
-        <div class="swiper tranding-slider">
-          <swiper-container #swiperRef [config]="config" init="false" loop class="swiper-wrapper">
-            <!-- Slide-start -->
-            <div (click)="goToPath('pharmaceutical-science')" class="swiper-slide tranding-slide">
-              <div class="tranding-slide-img">
-                <img src="../../assets/carousel/Pharmaceutical__sciences.webp"  alt="Tranding">
-                 <figcaption> PHARMACEUTICAL </figcaption>
-              </div>
-             
-            </div>
-            <!-- Slide-end -->
-            <!-- Slide-start -->
-            <div (click)="goToPath('physical-science')" class="swiper-slide tranding-slide">
-              <div class="tranding-slide-img">
-                <img src="../../assets/carousel/physical__scienes.webp"  alt="Tranding">
-                <figcaption> PHYSICAL SCIENCE </figcaption>
-              </div>
-              
-            </div>
-            <!-- Slide-end -->
-            <!-- Slide-start -->
-            <div (click)="goToPath('life-science')" class="swiper-slide tranding-slide">
-              <div class="tranding-slide-img">
-                <img src="../../assets/carousel/life__sciences.webp" alt="Tranding">
-                <figcaption> LIFE SCIENCE </figcaption>
-              </div>
-              
-            </div>
-            <!-- Slide-end -->
-              <!-- Slide-start -->
-            <div (click)="goToPath('computerscience&technology')" class="swiper-slide tranding-slide">
-              <div class="tranding-slide-img">
-                <img src="../../assets/carousel/AI__carousall.webp" alt="Tranding">
-                <figcaption> COMPUTER SCIENCE & TECHNOLOGY </figcaption>
-              </div>
-              
-            </div>
-            <!-- Slide-end -->
-              <!-- Slide-start -->
-            <div (click)="goToPath('computerscience&technology')" class="swiper-slide tranding-slide">
-              <div class="tranding-slide-img">
-                <img src="../../assets/carousel/IBM-ICE.webp" alt="Tranding">
-                <figcaption> ENGINEERING & TECHNOLOGY </figcaption>
-              </div>
-              
-            </div>
-            <!-- Slide-end -->
-            <!-- Slide-start -->
-            <div (click)="goToPath('law')" class="swiper-slide tranding-slide">
-              <div class="tranding-slide-img">
-                <img src="../../assets/carousel/law __courses5.webp"  alt="Tranding">
-                <figcaption> LAW </figcaption>
-              </div>
-              
-            </div>
-            <!-- Slide-end -->
-            <!-- Slide-start -->
-            <div (click)="goToPath('humanities')" class="swiper-slide tranding-slide">
-              <div class="tranding-slide-img">
-                <img src="../../assets/carousel/humanities__carousall.webp"  alt="Tranding">
-                <figcaption> HUMANITIES </figcaption>
-              </div>
-             
-            </div>
-            <!-- Slide-end -->
-            <!-- Slide-start -->
-            <div (click)="goToPath('hotel-management')" class="swiper-slide tranding-slide">
-              <div class="tranding-slide-img">
-                <img src="../../assets/carousel/HM.webp"  alt="Tranding">
-                <figcaption> HOTEL & MANAGEMENT </figcaption>
-              </div>
-              
-            </div>
-            <!-- Slide-end -->
-            <!-- Slide-start -->
-            <div (click)="goToPath('agriculture')" class="swiper-slide tranding-slide">
-              <div class="tranding-slide-img">
-                <img src="../../assets/carousel/agriculture_carousall.webp"  alt="Tranding">
-                <figcaption> AGRICULTURE </figcaption>
-              </div>
-            </div>
-            <!-- Slide-end -->
-             <!-- Slide-start -->
-            <div routerLink="pharmaceutical-science" class="swiper-slide tranding-slide">
-              <div class="tranding-slide-img">
-                <img src="../../assets/carousel/banner-samatrix.webp"  alt="Tranding">
-                <figcaption> SAMATRIX ASSOCIATION </figcaption>
-              </div>
-            </div>
-            <!-- Slide-end -->
-          </swiper-container>
-
-          <div class="tranding-slider-control">
-            <div class="swiper-button-prev slider-arrow">
-             <mat-icon>arrow_back_ios</mat-icon>
-            </div>
-            <div class="swiper-button-next slider-arrow">
-              <mat-icon>arrow_forward_ios</mat-icon>
-            </div>
-          </div>
-
+  <div class="flex-column photo_section">
+    <div class="flex-row flex-column-S item-gap">
+      <div class="col-md-3 statBox">
+        <img class="img_section" src="../../assets/aug/1a.jpg" alt="Tranding">
+        <div class="statFigure">
+          <span #counterDiv class="counter" data-asw-org-font-size="28" style="font-size: 28px;"
+            [attr.data-count]="countLibrary()">
+            {{ displayLibraryValue() }} +
+          </span>
+          <div class="sfText">Books in 6 Libraries</div>
         </div>
       </div>
-    </section>
-    <div class="about_section">
-        <div fxFlex="100%" fxLayoutAlign="space-between stretch" fxLayout.xs="column-reverse">
-            <div fxFlex.gt-xs="100%" fxFlex.sm="100%" fxFlex.gt-lg="48%" fxLayout="column" class="about_content">
-                <mat-card class="example-card" appearance="outlined">
-                    <mat-card-header>
-                        <mat-card-title-group>
-                            <mat-card-title>Starex University</mat-card-title>
-                            <mat-card-subtitle>Best Emerging Private University in Gurugram</mat-card-subtitle>
-                            <img class="logo_img_small" mat-card-sm-image src="../../assets/stickylogo.png">
-                        </mat-card-title-group>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <p>
-                            Since its inception in 2016, Starex University (SU) has become a leading Private University
-                            in Gurugram, Haryana. Starex aims at presenting its students with a successful learning
-                            environment to succeed in life. </p>
-                        <p>The university welcomes national and international students to witness the world-class
-                            education and best on-campus facilities.
-                        </p>
-                        <p>
-                            We have maintained our reputation for excellence by offering many job-oriented courses in
-                            Physical Sciences, Commerce &amp; Management, Computer Science, Pharmaceutical Science,
-                            Engineering &amp; Technology, Hospitality Management, Humanities, Law, Life Sciences,
-                            Paramedical Sciences, Pharmacy.
-
-                        </p>
-
-                        <b>What makes us a land of opportunities?</b>
-
-                        <p>Quapty Education</p>
-                        <p>Added excellence over Well-groomed Curriculum</p>
-                        <p>Expert Faculty Members</p>
-                        <p>Advanced Infrastructure </p>
-                        <p>Well-Equipped Labs</p>
-                        <p>Placement Opportunities</p>
-                    </mat-card-content>
-                </mat-card>
-
-            </div>
+      <div class="column col-md-6 item-gap">
+        <div class="half bottom-row">
+          <div class="half-child"> <img class="img_section" src="../../assets/starex_events/1-min.jpg" alt="Tranding">
+          </div>
+          <div class="half-child"><img class="img_section" src="../../assets/starex_events/consultant_meet.jpg"></div>
         </div>
+
+        <div class="half bottom-row">
+          <div class="half-child"> <img class="img_section" src="../../assets/Sports.png" alt="Tranding"></div>
+          <div class="half-child"><img class="img_section" src="../../assets/starex_highlights/wifi.png"></div>
+        </div>
+      </div>
+
+      <div class="col-md-3 statBox">
+        <img class="img_section" src="../../assets/side.jpeg" alt="Tranding">
+        <div class="statFigure">
+          <span #counterReserchDiv class="counter" data-asw-org-font-size="28" style="font-size: 28px;"
+            [attr.data-count]="countReserch()">
+            {{ displayReserchValue() }} +
+          </span>
+          <div class="sfText">Reserch & Publications</div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <section id="tranding">
+    <div class="container">
+      <div class="swiper tranding-slider">
+        <swiper-container #swiperRef [config]="config" init="false" loop class="swiper-wrapper">
+          <!-- Slide-start -->
+          <div (click)="goToPath('pharmaceutical-science')" class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="../../assets/effectC/Pharmaceutical__sciences.webp" alt="Tranding">
+              <figcaption> PHARMACEUTICAL </figcaption>
+            </div>
+
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div (click)="goToPath('physical-science')" class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="../../assets/effectC/physical__scienes.webp" alt="Tranding">
+              <figcaption> PHYSICAL SCIENCE </figcaption>
+            </div>
+
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div (click)="goToPath('life-science')" class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="../../assets/effectC/life__sciences.webp" alt="Tranding">
+              <figcaption> LIFE SCIENCE </figcaption>
+            </div>
+
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div (click)="goToPath('computerscience&technology')" class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="../../assets/carousel/AI__carousall.webp" alt="Tranding">
+              <figcaption> COMPUTER SCIENCE & TECHNOLOGY </figcaption>
+            </div>
+
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div (click)="goToPath('computerscience&technology')" class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="../../assets/effectC/IBM-ICE.webp" alt="Tranding">
+              <figcaption> ENGINEERING & TECHNOLOGY </figcaption>
+            </div>
+
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div (click)="goToPath('law')" class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="../../assets/carousel/law __courses5.webp" alt="Tranding">
+              <figcaption> LAW </figcaption>
+            </div>
+
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div (click)="goToPath('humanities')" class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="../../assets/effectC/humanities__carousall.webp" alt="Tranding">
+              <figcaption> HUMANITIES </figcaption>
+            </div>
+
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div (click)="goToPath('hotel-management')" class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="../../assets/effectC/HM.webp" alt="Tranding">
+              <figcaption> HOTEL & MANAGEMENT </figcaption>
+            </div>
+
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div (click)="goToPath('agriculture')" class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="../../assets/effectC/agriculture_carousall.webp" alt="Tranding">
+              <figcaption> AGRICULTURE </figcaption>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div routerLink="pharmaceutical-science" class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="../../assets/carousel/banner-samatrix.webp" alt="Tranding">
+              <figcaption> SAMATRIX ASSOCIATION </figcaption>
+            </div>
+          </div>
+          <!-- Slide-end -->
+        </swiper-container>
+      </div>
+    </div>
+  </section>
+  <div class="flex-column">
+    <div class="text-center">
+      <h2 class="titleHeading mt50">Industry Linkage</h2>
+    </div>
+    <swiper-container 
+ loop="true"
+   autoplay-disable-on-interaction="false"
+   autoplay-delay="0"
+  speed="3000"
+  space-between="20"
+  slides-per-view="6"
+  centered-slides="true"
+  free-mode="true"
+  free-mode-momentum="true"
+  wait-for-transition="true"
+  loop-additional-slides="4"
+  class="crcLogoSwiper">
+       <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
+                                        src="../../assets/company-logo/1.png" /></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                         src="../../assets/company-logo/2.png" /></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                        src="../../assets/company-logo/3.png" /></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                        src="../../assets/company-logo/4.png" /></div>
+
+      <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
+                                        src="../../assets/company-logo/5.png" /></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                        src="../../assets/company-logo/6.png" /></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                       src="../../assets/company-logo/7.png" /></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                       src="../../assets/company-logo/8.png" /></div>
+ <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
+                                        src="../../assets/company-logo/9.png"/></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                        src="../../assets/company-logo/10.png" /></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                        src="../../assets/company-logo/11.png" /></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                        src="../../assets/company-logo/12.png" /></div>
+ <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
+                                        src="../../assets/company-logo/13.png"/></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                        src="../../assets/company-logo/14.png"/></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                         src="../../assets/company-logo/15.png" /></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                         src="../../assets/company-logo/16.png" /></div>
+ <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
+                                         src="../../assets/company-logo/17.png"/></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                        src="../../assets/company-logo/18.png"/></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                         src="../../assets/company-logo/19.png" /></div>
+      <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
+                                         src="../../assets/company-logo/20.png"/></div>
+    </swiper-container>
+  </div>
 </div>

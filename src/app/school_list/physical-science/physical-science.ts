@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {MatTabsModule} from '@angular/material/tabs';
-import { FlexLayoutModule } from 'ngx-flexible-layout';
 import {MatTableModule} from '@angular/material/table';
 
 export interface PeriodicElement {
@@ -31,7 +30,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 @Component({
   selector: 'app-physical-science',
-  imports: [MatTabsModule, FlexLayoutModule, MatTableModule],
+  imports: [MatTabsModule, MatTableModule],
   templateUrl: './physical-science.html',
   styleUrl: './physical-science.scss'
 })
