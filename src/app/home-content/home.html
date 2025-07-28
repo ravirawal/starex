@@ -1,20 +1,21 @@
 <div class="home">
   <mat-card class="video-wrapper">
-    <video src="https://www.starexuniversity.com/app-assets/vendors/assets/video/1.mp4" autoplay
-      [muted]="'muted'"></video>
+    <video src="https://www.starexuniversity.com/app-assets/vendors/assets/video/virtual tour.mp4" autoplay
+      [muted]="'muted'" playsinline  loop></video>
   </mat-card>
 
   <div class="flex-column photo_section">
     <div class="flex-row flex-column-S item-gap">
       <div class="col-md-3 statBox">
         <img class="img_section" src="../../assets/aug/1a.jpg" alt="Tranding">
-        <div class="statFigure">
-          <span #counterDiv class="counter" data-asw-org-font-size="28" style="font-size: 28px;"
-            [attr.data-count]="countLibrary()">
-            {{ displayLibraryValue() }} +
+         <div class="statFigure">
+          <span #counterReserchDiv class="counter" data-asw-org-font-size="28" style="font-size: 28px;"
+            [attr.data-count]="countReserch()">
+            {{ displayReserchValue() }} +
           </span>
-          <div class="sfText">Books in 6 Libraries</div>
+          <div class="sfText">Reserch & Publications</div>
         </div>
+        
       </div>
       <div class="column col-md-6 item-gap">
         <div class="half bottom-row">
@@ -31,21 +32,44 @@
 
       <div class="col-md-3 statBox">
         <img class="img_section" src="../../assets/side.jpeg" alt="Tranding">
-        <div class="statFigure">
-          <span #counterReserchDiv class="counter" data-asw-org-font-size="28" style="font-size: 28px;"
-            [attr.data-count]="countReserch()">
-            {{ displayReserchValue() }} +
+      <div class="statFigure">
+          <span #counterDiv class="counter" data-asw-org-font-size="28" style="font-size: 28px;"
+            [attr.data-count]="countLibrary()">
+            {{ displayLibraryValue() }} +
           </span>
-          <div class="sfText">Reserch & Publications</div>
+          <div class="sfText">Books in 6 Libraries</div>
         </div>
       </div>
     </div>
   </div>
-
+  <div class="flex-column">
+    <h2 class="text-center h2-blue"> Congratulations Moments</h2>
+    <div class="flex-row flex-column-S">
+      <div class="big-div col-md-6 col-sm-12" #imgRef [class.animate-slide]="imageVisible()">
+        <!-- <h2>Section 1</h2> -->
+        <img src="../../assets/aug/laxmi.jpg" alt="Animated Logo" [class.animate-image]="imageVisible()"
+          class="congratsImg" />
+      </div>
+      <div class="big-div col-md-6 col-sm-12" #imgRef [class.animate-slide]="imageVisible()">
+        <!-- <h2>Section 1</h2> -->
+        <img src="../../assets/aug/Mr__Deepanshu.jpg" alt="Animated Logo" [class.animate-image]="imageVisible()"
+          class="congratsImg" />
+      </div>
+    </div>
+  </div>
+  <!-- <div class="image-wrapper" #imgRef>
+  <img
+    src="../../assets/admission process.png"
+    alt="Animated Logo"
+    [class.animate-image]="imageVisible()"
+    class="crcLogoImg"
+  />
+</div> -->
   <section id="tranding">
     <div class="container">
-      <div class="swiper tranding-slider">
-        <swiper-container #swiperRef [config]="config" init="false" loop class="swiper-wrapper">
+      <h2 class="text-center h2-blue"> Running Programs</h2>
+      <div class="swiper tranding-slider margin-top-1">
+        <swiper-container #swiperRef [config]="config" init="false" loop>
           <!-- Slide-start -->
           <div (click)="goToPath('pharmaceutical-science')" class="swiper-slide tranding-slide">
             <div class="tranding-slide-img">
@@ -138,64 +162,241 @@
       </div>
     </div>
   </section>
-  <div class="flex-column">
-    <div class="text-center">
-      <h2 class="titleHeading mt50">Industry Linkage</h2>
+  <section class="container-fluid mb-14 lg:mb-20">
+    <div class="flex-column mx-auto px-3">
+      <h2 class="text-center h2-blue margin-top-1">Quality Leaders</h2>
+      <div class="flex-row flex-wrap justify-center item-gap  professorTable">
+        <div class="animateThis slideTop in-view margin-top-1">
+          <div class="dtperBox">
+            <div class="dtperImgBox"><img src="../../assets/ugc.jpg">
+            </div>
+            <div class="dtperContent">
+              <p data-asw-org-font-size="15" style="font-size: 15px;">Shri Mohinder singh acting person has renounced experince
+                in providing education with best qulity infrastructure and management  </p>
+            </div>
+            <div class="dtperDetail">
+              <h2 class="dtperName" data-asw-org-font-size="16" style="font-size: 16px;">Sh. Mohinder Singh</h2>
+              <span class="dtperDesig" data-asw-org-font-size="11" style="font-size: 11px;">CHAIR PERSON</span>
+            </div>
+          </div>
+        </div>
+        <div class="animateThis slideTop in-view margin-top-1" style="transition-delay:.1s;">
+          <div class="dtperBox">
+            <div class="dtperImgBox"><img src="../../assets/ugc.jpg">
+            </div>
+            <div class="dtperContent">
+              <p data-asw-org-font-size="15" style="font-size: 15px;">Ms. Madhu Parhar, is the vice chairman and has experince
+                of more than 40 years in education field as vice chaiman.
+              </p>
+            </div>
+            <div class="dtperDetail">
+              <h2 class="dtperName" data-asw-org-font-size="16" style="font-size: 16px;">Ms. Madhu Parhar</h2>
+              <span class="dtperDesig" data-asw-org-font-size="11" style="font-size: 11px;">VICE CHAIRMAN</span>
+            </div>
+          </div>
+        </div>
+        <div class="animateThis slideTop in-view margin-top-1" style="transition-delay:.2s;">
+          <div class="dtperBox">
+            <div class="dtperImgBox"><img src="../../assets/ugc.jpg">
+            </div>
+            <div class="dtperContent">
+              <p data-asw-org-font-size="15" style="font-size: 15px;">Mr. Nakshatar Pal Singh is an Independent Director, mentor, and
+                start-up/ scale-up ecosystem partner.
+                As a senior global executive in financial services, she excels in strategic business
+                model innovation, digital transformation, and social impact. She serves as an
+                Independent Director on multiple boards, including Electronica Finance Limited and
+                TTK Prestige.</p>
+            </div>
+            <div class="dtperDetail">
+              <h2 class="dtperName" data-asw-org-font-size="16" style="font-size: 16px;">Mr. Nakshatar Pal Singh</h2>
+              <span class="dtperDesig" data-asw-org-font-size="11" style="font-size: 11px;">MEMBER OF THE BOARD,
+                ASIA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="animateThis slideTop margin-top-2" style="transition-delay:.3s;">
+          <div class="dtperBox">
+            <div class="dtperImgBox"><img src="../../assets/ugc.jpg">
+            </div>
+            <div class="dtperContent">
+              <p data-asw-org-font-size="15" style="font-size: 15px;">Dr. Anju Rani is an internationally renowned
+                development professional specializing
+                in emerging markets, development issues, strategic visioning, and regional
+                cooperation. He has held several high-ranking positions at the Asian Development
+                Bank(ADB), including the role of Managing Director-General. Mr. Nag's educational
+                background includes degrees from IIT and the London School of Economics. His
+                expertise has solidified his reputation as a leading figure in international
+                development.</p>
+            </div>
+            <div class="dtperDetail">
+              <h2 class="dtperName" data-asw-org-font-size="16" style="font-size: 16px;">Dr. Dinesh Kumar</h2>
+              <span class="dtperDesig" data-asw-org-font-size="11" style="font-size: 11px;">Dean Academics Starex</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="animateThis slideTop margin-top-2" style="transition-delay:.5s;">
+          <div class="dtperBox">
+            <div class="dtperImgBox"><img src="../../assets/ugc.jpg">
+            </div>
+            <div class="dtperContent">
+              <a href="about/our-officers/dr-madan-mohan.html" data-asw-org-font-size="15" style="font-size: 15px;">
+                <p data-asw-org-font-size="15" style="font-size: 15px;">
+                  Dr. Parveen Kumari is presently the Provost of SGT University, Gurugram
+                  (Haryana).
+                  He taught Biochemistry &amp; Molecular Biology at Banaras Hindu University and
+                  University of Delhi
+                  over more than 35 years. His research interest are: (i) Chromatin Remodelling
+                  and regulation of gene expression,
+                  (ii) Inflammation and Cancer, and (iii) Epigenetic regulation of liver
+                  regeneration.
+                </p>
+              </a>
+            </div>
+            <div class="dtperDetail">
+              <h2 class="dtperName" data-asw-org-font-size="16" style="font-size: 16px;">Dr. Parveen Kumari</h2>
+              <span class="dtperDesig" data-asw-org-font-size="11" style="font-size: 11px;">Principal PHARMACEUTICAL</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <swiper-container 
- loop="true"
-   autoplay-disable-on-interaction="false"
-   autoplay-delay="0"
-  speed="3000"
-  space-between="20"
-  slides-per-view="6"
-  centered-slides="true"
-  free-mode="true"
-  free-mode-momentum="true"
-  wait-for-transition="true"
-  loop-additional-slides="4"
-  class="crcLogoSwiper">
-       <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
-                                        src="../../assets/company-logo/1.png" /></div>
+
+  </section>
+  <section class=" flex-column govt-section">
+    <h2 class="text-center h2-blue margin-top-2" style="background-color: #f9f9f9;">Important Links</h2>
+    <div class="flex-row flex-column-S flex-wrap item-gap">
+      <div class="col-md-2  text-center govt-img-container">
+        <div class="icon-holder">
+          <a href="https://www.education.gov.in/" target="_blank"> <img
+              src="../../assets/minstryEducation.png" class="govt_img" alt=""
+              style="    height: 126px;"></a>
+        </div>
+
+        <div class="legacyTitle">
+          <a href="https://www.education.gov.in/" target="_blank">
+            <p style="    font-size: 19px;
+    font-weight: 800;
+    text-align: inherit;
+    color: black;">Ministry of Education</p>
+          </a>
+        </div>
+
+      </div>
+      <div class="col-md-2  text-center govt-img-container">
+        <div class="icon-holder">
+          <a href="https://schooleducationharyana.gov.in/" target="_blank"> <img
+              src="../../assets/Govt_of_Haryana.webp" class="govt_img" alt=""></a>
+        </div>
+        <div class="legacyTitle">
+          <a href="https://schooleducationharyana.gov.in/" target="_blank">
+            <p style="    font-size: 19px;
+    font-weight: 800;
+    text-align: inherit;
+    color: black;">State Ministry of Education</p>
+          </a>
+        </div>
+
+      </div>
+      <div class="col-md-2  text-center govt-img-container">
+        <div class="icon-holder">
+          <a href="https://www.ugc.gov.in/" target="_blank"> <img
+              src="../../assets/ugc.jpg" class="govt_img" alt=""
+              style="    height: 130px;"></a>
+        </div>
+        <div class="legacyTitle">
+          <a href="https://www.ugc.gov.in/" target="_blank">
+            <p style="    font-size: 19px;
+    font-weight: 800;
+    text-align: inherit;
+    color: black;">UGC</p>
+          </a>
+        </div>
+
+      </div>
+      <div class="col-md-2  text-center govt-img-container">
+        <div class="icon-holder">
+          <a href="https://www.aiu.ac.in/" target="_blank"> <img
+              src="../../assets/aiu-new.jpg" class="govt_img" alt=""></a>
+        </div>
+        <div class="legacyTitle">
+          <a href="https://www.aiu.ac.in/" target="_blank">
+            <p style="    font-size: 19px;
+    font-weight: 800;
+    text-align: inherit;
+    color: black;"> AIU</p>
+          </a>
+        </div>
+
+
+
+      </div>
+      <div class="col-md-2  text-center govt-img-container">
+        <div class="icon-holder">
+          <a href="https://www.starexuniversity.com/assets/nep_2020.pdf" target="_blank"> <img class="govt_img"
+              src="../../assets/ministry-HRD.jpg" alt=""></a>
+        </div>
+        <div class="legacyTitle">
+          <a href="https://www.starexuniversity.com/assets/nep_2020.pdf" target="_blank">
+            <p style="    font-size: 19px;
+    font-weight: 800;
+    text-align: inherit;
+    color: black;"> NEP 2020</p>
+          </a>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+  <div class="flex-column crcLogoContainer ">
+    <h2 class="text-center h2-blue">Industry Linkage</h2>
+    <swiper-container loop="true" autoplay-disable-on-interaction="false" autoplay-delay="0" speed="3000"
+      space-between="20" slides-per-view="8" centered-slides="false" free-mode="true" free-mode-momentum="true"
+      wait-for-transition="false" loop-additional-slides="4" class="crcLogoSwiper">
+      <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
+          src="../../assets/company-logo/1.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                         src="../../assets/company-logo/2.png" /></div>
+          src="../../assets/company-logo/2.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                        src="../../assets/company-logo/3.png" /></div>
+          src="../../assets/company-logo/3.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                        src="../../assets/company-logo/4.png" /></div>
+          src="../../assets/company-logo/4.png" /></div>
 
       <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
-                                        src="../../assets/company-logo/5.png" /></div>
+          src="../../assets/company-logo/5.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                        src="../../assets/company-logo/6.png" /></div>
+          src="../../assets/company-logo/6.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                       src="../../assets/company-logo/7.png" /></div>
+          src="../../assets/company-logo/7.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                       src="../../assets/company-logo/8.png" /></div>
- <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
-                                        src="../../assets/company-logo/9.png"/></div>
+          src="../../assets/company-logo/8.png" /></div>
+      <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
+          src="../../assets/company-logo/9.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                        src="../../assets/company-logo/10.png" /></div>
+          src="../../assets/company-logo/10.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                        src="../../assets/company-logo/11.png" /></div>
+          src="../../assets/company-logo/11.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                        src="../../assets/company-logo/12.png" /></div>
- <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
-                                        src="../../assets/company-logo/13.png"/></div>
+          src="../../assets/company-logo/12.png" /></div>
+      <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
+          src="../../assets/company-logo/13.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                        src="../../assets/company-logo/14.png"/></div>
+          src="../../assets/company-logo/14.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                         src="../../assets/company-logo/15.png" /></div>
+          src="../../assets/company-logo/15.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                         src="../../assets/company-logo/16.png" /></div>
- <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
-                                         src="../../assets/company-logo/17.png"/></div>
+          src="../../assets/company-logo/16.png" /></div>
+      <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
+          src="../../assets/company-logo/17.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                        src="../../assets/company-logo/18.png"/></div>
+          src="../../assets/company-logo/18.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                         src="../../assets/company-logo/19.png" /></div>
+          src="../../assets/company-logo/19.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
-                                         src="../../assets/company-logo/20.png"/></div>
+          src="../../assets/company-logo/20.png" /></div>
     </swiper-container>
   </div>
 </div>

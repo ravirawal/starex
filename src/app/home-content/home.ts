@@ -19,9 +19,11 @@ export class HomeComponent {
 
   }
    @ViewChild('swiperRef') swiperRef!: ElementRef;
-    @ViewChild('crcLogoSwiperRef') crcLogoSwiperRef!: ElementRef;
+    //@ViewChild('crcLogoSwiperRef') crcLogoSwiperRef!: ElementRef;
     @ViewChild('counterDiv') counterDiv!: ElementRef;
      @ViewChild('counterReserchDiv') counterReserchDiv!: ElementRef;
+     imageVisible = signal(false);
+  @ViewChild('imgRef') imgRef!: ElementRef;
 countLibrary = signal(30000);             // target value
   displayLibraryValue = signal(0);        // visible animated count
   hasIntersected = signal(false); 
@@ -48,23 +50,30 @@ displayReserchValue = signal(0)
 const swiperEl = this.swiperRef.nativeElement;
     Object.assign(swiperEl, this.config);
     swiperEl.initialize();
-     const crcLogoSwiperEl = this.crcLogoSwiperRef.nativeElement;
-    crcLogoSwiperEl.swiper?.autoplay?.start();
+    },0)
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !this.hasIntersected()) {
+        if (entry.isIntersecting && entry.intersectionRatio) {
           this.hasIntersected.set(true); // trigger count once
           this.startLibraryCounting();
           this.startReserchCounting();
+           observer.unobserve(entry.target);
         }
       },
       { threshold: 0.5 } // trigger when 50% of div is visible
     );
-
+    const professorObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+       this.imageVisible.set(true);
+       professorObserver.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.5 } // trigger when 50% of div is visible
+    );
     observer.observe(this.counterDiv.nativeElement);
     observer.observe(this.counterReserchDiv.nativeElement);
-    },1000)
-    
+    professorObserver.observe(this.imgRef.nativeElement)
   }
   goToPath(path:string): void {
     this.router.navigate([`/${path}`]);
