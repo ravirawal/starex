@@ -1,3 +1,5 @@
+@use 'swiper/css';
+@use 'swiper/css/effect-flip';
 html,
 body {
   height: 100%;
@@ -41,7 +43,7 @@ flex-wrap: wrap;
 justify-content: center;
 }
 .col-md-6 {
-  width: 50%
+  width: 48%
 }
 
 .col-md-4 {
@@ -149,6 +151,26 @@ justify-content: center;
   word-wrap: break-word;
 }
 
+hr{
+  border: 1px dashed #284fa7;
+}
+.contentTitle{
+    text-transform: uppercase;
+    color: #284fa7;
+    border-bottom: 1px dashed #284fa7;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+p{
+  line-height: 1.8;
+    font-size: 18px;
+    color: #3C3D3E;
+    letter-spacing: .2px;
+    font-family: Lato, sans-serif;
+}
+table {
+  width: 100%;
+}
 .mat-expansion-panel {
   margin-top: 1rem !important;
 }

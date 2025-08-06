@@ -115,6 +115,7 @@ mat-grid-tile {
   justify-content: center;
 }
 
+
 /* Optional Blink Effect */
 @keyframes blinkAnimation {
   0% { opacity: 1; }
@@ -142,7 +143,17 @@ mat-grid-tile {
   object-fit:cover;
   /* or use 'contain' for full visibility */
   display: block;
-  margin-top: -4rem;
+  margin-top: -8rem;
+}
+@media (max-width:768px) {
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  /* or use 'contain' for full visibility */
+  display: block;
+  margin-top: -0;
+}
 }
 .logo_img_small{
   min-width: 15rem !important;
@@ -194,7 +205,8 @@ height: 8rem;
  .dtperImgBox {
   //margin-top:-50px;
   overflow:hidden;}
- .dtperImgBox img {transition:all .4s ease;top:0;opacity:1;position:relative;}
+ .dtperImgBox img {transition:all .4s ease;top:0;opacity:1;position:relative;width: 100%;
+    max-height: 350px;}
  .dtperDetail {padding:10px 15px;position:relative;z-index:2;}
  .dtperName {font-size:14px;font-weight:600;margin-bottom:0; letter-spacing: .7px;}
  .dtperDesig {font-size:11px;text-transform:uppercase;}
@@ -253,4 +265,34 @@ background-color: #f9f9f9;
 .govt_img{
   height: 7rem;
   max-height: 7rem;
+}
+
+.highlight-img{
+  width:100%;height:100%
+}
+.events-img{
+  height:60vh;
+  width:100%;
+}
+.highlights-swipper{
+  display: flex;
+  height: 70vh;
+}
+.highlights-slides{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background: #f0f0f0;
+  flex-direction: column;
+  .events-img{
+    width:100%;
+    height: 100%;
+  }
+  a {
+    text-align: center;
+  }
+  h6{
+    margin:0
+  }
 }

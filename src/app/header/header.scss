@@ -89,11 +89,10 @@ a:hover {
    width: 100vw;
   max-width: 100%;
    position: sticky;
-  top: 0;
-  background: linear-gradient(to bottom, #003366, #004C97);
-  --focus-outline-color: #CEDEDA;
+  top: 0; 
+ background-color: #1f396e;
   color: white;
-  z-index: 2;
+  z-index: 100;
 }
 
 button {
@@ -111,9 +110,7 @@ button {
   transition: all ease-out 3ms
 }
 .erp-login:hover{
-  font-size: 16px;
   transform: matrix3d();
-  background-color: #003366;
 }
 .hamburger {
     position: relative;

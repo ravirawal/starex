@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, signal, ViewChild } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, signal, ViewChild, ViewEncapsulation } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 
@@ -12,7 +12,8 @@ import { Router } from '@angular/router';
   imports: [CommonModule, MatGridListModule, MatCardModule, MatIconModule,],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.html',
-  styleUrl: './home.scss'
+  styleUrl: './home.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent {
   constructor(private router: Router){
@@ -53,7 +54,7 @@ const swiperEl = this.swiperRef.nativeElement;
     },0)
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && entry.intersectionRatio) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
           this.hasIntersected.set(true); // trigger count once
           this.startLibraryCounting();
           this.startReserchCounting();
