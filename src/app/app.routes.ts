@@ -38,7 +38,7 @@ export const routes: Routes = [
   { path: 'vocational-courses', component: VocationalComponent },
    { path: 'about-starex', component: AboutComponent },
     { path: 'chancellor-message', component: ChacellorComponent },
-  { path: 'vc-message', component: VchancellorComponent },
+  { path: 'vice-chancellor-message', component: VchancellorComponent },
   { path: 'registrar-message', component: RegistrarComponent },
     { path: 'osd-message', component: OSDComponent },
   { path: 'coe', component: COEComponent },

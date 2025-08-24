@@ -1,0 +1,4 @@
+<div class="chatbot-icon" (click)="openChat()">
+  💬
+</div>
+<app-chatbot-modal *ngIf="isChatOpen" [closing]="isClosing" (close)="closeChat()" (userMessage)="onUserMessage($event)" [suggestion]="suggestion"></app-chatbot-modal>
