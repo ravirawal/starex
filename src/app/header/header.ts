@@ -10,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
+import { FacultyService } from '../services/facultyService';
 
 @Component({
   selector: 'app-header',
@@ -22,7 +23,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 export class Header {
    @ViewChild(MatMenuTrigger) menuTrigger!: MatMenuTrigger;
    screenWidth = signal(window.innerWidth);
-   constructor(private router: Router){
+   constructor(private router: Router, private facultyService: FacultyService){
 window.addEventListener('resize', () => {
       this.screenWidth.set(window.innerWidth);
     });
@@ -57,4 +58,10 @@ handleAnchorClick(): void {
 navigateToHome(){
   this.router.navigateByUrl('/home');
 }
+goToFaculty(department: string) {
+  this.menuTrigger.closeMenu();
+  this.facultyService.setSearchTerm({ department });
+  this.router.navigate(['/faculty']);
+}
+
 }

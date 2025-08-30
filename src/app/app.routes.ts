@@ -22,6 +22,7 @@ import { DisclosureComponent } from './about_list/disclosure/disclosure';
 import { MOUComponent } from './about_list/mou/mou';
 import { UGCComponent } from './about_list/ugc/ugc';
 import { PoliciesComponent } from './about_list/policies/policies';
+import {FacultyComponent } from './generic-faculty/generic-faculty';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -49,5 +50,8 @@ export const routes: Routes = [
     { path: 'annual-reports', component:  PoliciesComponent},
   { path: 'ombudsperson', component:  PoliciesComponent},
   { path: 'policies', component:  PoliciesComponent},
+  {
+    path: 'faculty', component: FacultyComponent, title: 'Faculty'
+  },
   { path: '**', redirectTo: 'home' }
 ];

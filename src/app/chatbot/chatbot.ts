@@ -1,8 +1,9 @@
-
 import { Component } from '@angular/core';
 import { ChatbotModal } from "../chatbot-modal/chatbot-modal";
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { FacultyService } from '../services/facultyService';
+import { DEPARTMENTS, DESIGNATIONS, ROUTE_MATCH, TOPICS } from '../services/data';
 
 @Component({
   selector: 'app-chatbot',
@@ -15,8 +16,9 @@ export class Chatbot {
   isChatOpen = false;
   isClosing = false;
   suggestion: string | null = null;
+  private lastSuggestions: string[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private facultyService: FacultyService) {}
 
   openChat() {
     this.isChatOpen = true;
@@ -33,10 +35,9 @@ export class Chatbot {
 
   // List of valid keywords for dynamic suggestions
   private validKeywords: string[] = [
-    'madhu','mohinder',
-    'chancellor', 'pharmacy', 'agriculture', 'humanities', 'registrar', 'vc', 'engineering', 'physical', 'vocational',
+  'chancellor', 'vice chancellor', 'center of examination', 'pharmacy', 'agriculture', 'humanities', 'registrar', 'vc', 'engineering', 'physical', 'physics', 'vocational',
     'disclosure', 'mou', 'policies', 'recognition', 'annual report', 'ombudsperson', 'law', 'home', 'commerce', 'management',
-    'computer', 'cse', 'technology', 'hotel', 'life science', 'pharmaceutical', 'about', 'osd', 'coe', 'ugc'
+  'computer', 'cse', 'technology', 'hotel', 'life science', 'pharmaceutical', 'starex', 'osd', 'coe', 'ugc'
   ];
 
   // Levenshtein distance function
@@ -64,82 +65,277 @@ export class Chatbot {
     return matrix[bn][an];
   }
 
-  onUserMessage(message: string) {
-    const msg = message.toLowerCase();
-    const words = msg.split(/\s+/);
-    // If any word is an exact match to a keyword, route immediately and do not show suggestions
-    for (const word of words) {
-      if (this.validKeywords.includes(word)) {
-        // Routing logic (same as before)
-        if (word === 'home') {
-          this.router.navigate(['/home']);
-        } else if (word === 'agriculture') {
-          this.router.navigate(['/agriculture']);
-        } else if (word === 'commerce' || word === 'management') {
-          this.router.navigate(['/commerce&management']);
-        } else if (word === 'computer' || word === 'cse' || word === 'technology') {
-          this.router.navigate(['/computerscience&technology']);
-        } else if (word === 'engineering') {
-          this.router.navigate(['/engineering&technology']);
-        } else if (word === 'hotel') {
-          this.router.navigate(['/hotel-management']);
-        } else if (word === 'humanities') {
-          this.router.navigate(['/humanities']);
-        } else if (word === 'law') {
-          this.router.navigate(['/law']);
-        } else if (word === 'life science') {
-          this.router.navigate(['/life-science']);
-        } else if (word === 'pharmacy' || word === 'pharmaceutical') {
-          this.router.navigate(['/pharmaceutical-science']);
-        } else if (word === 'physical science') {
-          this.router.navigate(['/physical-science']);
-        } else if (word === 'vocational') {
-          this.router.navigate(['/vocational-courses']);
-        } else if (word === 'about') {
-          this.router.navigate(['/about-starex']);
-        } else if (word === 'chancellor') {
-          this.router.navigate(['/chancellor-message']);
-        } else if (word === 'vc') {
-          this.router.navigate(['/vc-message']);
-        } else if (word === 'registrar') {
-          this.router.navigate(['/registrar-message']);
-        } else if (word === 'osd') {
-          this.router.navigate(['/osd-message']);
-        } else if (word === 'coe') {
-          this.router.navigate(['/coe']);
-        } else if (word === 'recognition' || word === 'approval') {
-          this.router.navigate(['/approval-recognition']);
-        } else if (word === 'disclosure') {
-          this.router.navigate(['/disclosure']);
-        } else if (word === 'mou') {
-          this.router.navigate(['/starex-mou']);
-        } else if (word === 'ugc') {
-          this.router.navigate(['/ugc-inspection']);
-        } else if (word === 'annual report') {
-          this.router.navigate(['/annual-reports']);
-        } else if (word === 'ombudsperson') {
-          this.router.navigate(['/ombudsperson']);
-        } else if (word === 'policy' || word === 'policies') {
-          this.router.navigate(['/policies']);
-        }
-        this.suggestion = null;
-        return;
-      }
-    }
-    // Otherwise, show suggestions for typos
-    const suggestions: Set<string> = new Set();
-    for (const word of words) {
-      for (const keyword of this.validKeywords) {
-        if (this.levenshtein(word, keyword) <= 2 && !word.includes(keyword)) {
-          suggestions.add(keyword);
-        }
-      }
-    }
-    if (suggestions.size > 0) {
-      this.suggestion = `Did you mean: ${Array.from(suggestions).map(s => '"' + s + '"').join(', ')}?`;
+onUserMessage(message: string) {
+  const msg = message.toLowerCase().trim();
+  const words = this.getFilteredWords(msg);
+console.log('User message received:', msg, words);
+  if (this.handleAcknowledgments(msg)) return;
+  if (this.handleGreetings(msg)) return;
+
+  const intent = this.parseIntent(msg);
+
+  // Fee-related routing
+  if (intent.topic === 'fee' && intent.department) {
+    this.suggestion = `Showing fee details for ${intent.department}.`;
+    this.router.navigate([DEPARTMENTS[intent.department]]);
+    return;
+  }
+
+  // Faculty-related search
+  if (
+    intent.topic === 'faculty' ||
+    intent.designation ||
+    intent.topic === 'research' ||
+    msg.includes('faculty') ||
+    msg.includes('department') ||
+    msg.includes('dean')
+  ) {
+    if (intent.department) {
+      this.facultyService.setSearchTerm({
+        designation: intent.designation,
+        department: intent.department
+      });
+      this.suggestion = `Showing ${intent.designation ?? 'faculty'} from ${intent.department}.`;
+      this.router.navigate(['/faculty']);
       return;
     }
-    // If no routing and no suggestions, show fallback message
-    this.suggestion = 'Sorry, I could not understand. Please contact admin 12345678.';
   }
+
+  // General department routing
+  if (intent.department && !intent.topic) {
+    this.suggestion = `Taking you to the ${intent.department} page.`;
+    this.router.navigate([DEPARTMENTS[intent.department]]);
+    return;
+  }
+
+  if (this.handleRouteNavigation(msg)) return;
+  if (this.handleFacultySearch(msg, words)) return;
+  if (this.handleTypoSuggestions(words)) return;
+  if (this.handleConfirmation(msg)) return;
+
+  this.suggestion = 'I couldn’t understand your request. Could you please clarify what you’re looking for—faculty, fee, or department info?';
+}
+
+
+private getFilteredWords(msg: string): string[] {
+  console.log('Function getFilteredWords', msg)
+  const stopWords: string[] = [/* your full stopWords list */];
+  return msg.split(/\s+/).filter(w => !stopWords.includes(w));
+}
+
+private handleAcknowledgments(msg: string): boolean {
+  console.log('Function handleAcknowledgments', msg)
+  const acknowledgments = ['ok', 'okay', 'thanks', 'thank you', 'thx', 'thankyou', 'ty', 'great', 'fine', 'good', 'awesome', 'cool'];
+  const ackReplies = [
+    'You’re welcome!',
+    'Glad I could help!',
+    'Happy to assist!',
+    'Anytime!',
+    'If you have more questions, just ask!',
+    'Always here to help!'
+  ];
+  if (acknowledgments.includes(msg)) {
+    this.suggestion = this.getRandom(ackReplies);
+    console.log('Acknowledgment handled', this.suggestion);
+    return true;
+  }
+  return false;
+}
+
+private handleGreetings(msg: string): boolean {
+  console.log('Function handleGreetings', msg);
+  const greetings = ['hi', 'hello', 'hey', 'good morning', 'good afternoon', 'good evening'];
+  const greetingReplies = [
+    'Hello! How can I help you today?',
+    'Hi there! What can I do for you?',
+    'Hey! Need any assistance?',
+    'Greetings! How may I assist you?',
+    'Hi! Let me know if you have any questions.',
+    'Hello! I am here to help.'
+  ];
+  if (greetings.includes(msg)) {
+    this.suggestion = this.getRandom(greetingReplies);
+    console.log('Greeting handled', this.suggestion);
+    return true;
+  }
+  return false;
+}
+
+private handleFacultySearch(msg: string, words: string[]): boolean {
+  console.log('Function handleFacultySearch', msg, words);
+  const dept = this.matchDepartmentPhrase(msg);
+  if (dept) {
+    this.facultyService.setSearchTerm({ department: dept });
+    this.suggestion = `Showing faculty from ${dept} department.`;
+    this.router.navigate(['/faculty']);
+    return true;
+  }
+
+  const fuzzyName = this.fuzzyMatchFacultyName(msg);
+  if (fuzzyName) {
+    this.facultyService.setSearchTerm({ name: fuzzyName })
+    this.suggestion = `Showing faculty members matching "${fuzzyName}".`;
+    this.router.navigate(['/faculty']);
+    return true;
+  }
+
+  return false;
+}
+
+private handleRouteNavigation(msg: string): boolean {
+  console.log('Function handleRouteNavigation', msg);
+  const routeMap: { [key: string]: string } = ROUTE_MATCH;
+
+  // Sort keywords by length (descending) to prioritize longer matches
+  const sortedKeywords = Object.keys(routeMap).sort((a, b) => b.length - a.length);
+
+  for (const keyword of sortedKeywords) {
+    if (msg.includes(keyword)) {
+      const targetRoute = routeMap[keyword];
+      console.log(`Matched keyword: ${keyword}, Navigating to: ${targetRoute}`);
+
+      if (targetRoute && this.router.url === targetRoute) {
+        this.suggestion = 'You’re already on the relevant page. If you need more help, contact support at 12345678.';
+        return true;
+      }
+
+      this.suggestion = 'Taking you to the relevant page for more information.';
+      this.router.navigate([targetRoute]);
+      return true;
+    }
+  }
+
+  return false;
+}
+
+private handleTypoSuggestions(words: string[]): boolean {
+  console.log('Function handleTypoSuggestions', words);
+  if (words.length === 1 && words[0].length < 4) return false;
+
+  const suggestions: Set<string> = new Set();
+  for (const word of words) {
+    for (const keyword of this.validKeywords) {
+      if (this.levenshtein(word, keyword) <= 2 && !word.includes(keyword)) {
+        suggestions.add(keyword);
+      }
+    }
+  }
+
+  if (suggestions.size > 0) {
+    this.lastSuggestions = Array.from(suggestions);
+    this.suggestion = `Did you mean: ${this.lastSuggestions.map(s => `"${s}"`).join(', ')}?`;
+    return true;
+  }
+
+  return false;
+}
+
+private handleConfirmation(msg: string): boolean {
+    console.log('Function handleConfirmation', msg, this.lastSuggestions);
+
+    const confirmations = ['yes', 'yeah', 'yep', 'sure', 'of course', 'please', 'yup'];
+    const negatives = ['no', 'nope', 'nah', 'not really'];
+
+    if (this.lastSuggestions.length === 1 && confirmations.includes(msg)) {
+        const confirmed = this.lastSuggestions[0];
+        console.log('User confirmed suggestion:', confirmed);
+        this.lastSuggestions = []; // Clear to avoid reprocessing
+        this.onUserMessage(confirmed); // Reprocess as if user typed it
+        return true;
+    }
+
+    if (this.lastSuggestions.length > 0 && negatives.includes(msg)) {
+        this.suggestion = 'Okay, let me know if you need anything else!';
+        console.log('User rejected suggestion');
+        this.lastSuggestions = [];
+        return true;
+    }
+
+    if (confirmations.includes(msg)) {
+        this.suggestion = 'Great! Please let me know what you need help with, or type your question.';
+        console.log('General confirmation received');
+        return true;
+    }
+
+    return false;
+}
+
+private getRandom(arr: string[]): string {
+  console.log('Function getRandom', arr);
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+private fuzzyMatchFacultyName(input: string): string | null {
+  console.log('Function fuzzyMatchFacultyName', input);
+  const allFaculty = this.facultyService.getAllFaculty();
+  const normalizedInput = input.toLowerCase().replace(/[^a-z\s]/g, '');
+
+  for (const faculty of allFaculty) {
+    const words = faculty.name.split(/\s+/); // Split full name into words
+
+    for (const word of words) {
+      const normalizedWord = word.toLowerCase().replace(/[^a-z]/g, '');
+
+      if (normalizedWord.includes(normalizedInput) || normalizedInput.includes(normalizedWord)) {
+        return word; // Return the matched word only
+      }
+
+      const distance = this.levenshtein(normalizedInput, normalizedWord);
+      if (distance <= 2) {
+        return word;
+      }
+    }
+  }
+
+  return null;
+}
+
+
+private matchDepartmentPhrase(msg: string): string | null {
+  console.log('Function matchDepartmentPhrase', msg);
+  const departmentMap: { [key: string]: string } = {
+    'law': 'law',
+    'pharmaceutics': 'pharmaceutics',
+    'physical science': 'physicalScience',
+    'life science': 'lifeScience',
+    'computer science': 'cse',
+    'agriculture': 'agriculture'
+  };
+
+  for (const phrase in departmentMap) {
+    if (msg.includes(phrase)) {
+      return departmentMap[phrase];
+    }
+  }
+
+  return null;
+}
+
+private parseIntent(msg: string): {
+  department?: string;
+  designation?: string;
+  topic?: string;
+} {
+  console.log('Function parseIntent', msg);
+  const lowerMsg = msg.toLowerCase();
+
+  const department = Object.keys(DEPARTMENTS).find(dep => lowerMsg.includes(dep));
+  const designation = DESIGNATIONS.find(d => lowerMsg.includes(d));
+  const topic = TOPICS.find(t => lowerMsg.includes(t));
+
+  return { department, designation, topic };
+}
+// private extractDesignationAndDepartment(msg: string): { designation?: string; department?: string } | null {
+//   const designations = ['professor', 'assistant professor', 'associate professor', 'dean', 'hod'];
+//   const departments = ['law', 'cse', 'pharmaceutics', 'agriculture', 'life science', 'physical science'];
+// console.log('Function extractDesignationAndDepartment', msg);
+//   const foundDesignation = designations.find(d => msg.includes(d));
+//   const foundDepartment = departments.find(dep => msg.includes(dep));
+
+//   if (foundDesignation) {
+//     return { designation: foundDesignation, department: foundDepartment };
+//   }
+
+//   return null;
+// }
 }

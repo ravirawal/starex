@@ -1,0 +1,19 @@
+<!-- faculty.component.html -->
+<div class="faculty-container">
+  <!-- <h2>{{ departmentName | titlecase }} Faculty</h2> -->
+  <div class="faculty-list">
+    <div class="faculty-card" *ngFor="let f of facultyList">
+      <img [src]="f.photo" alt="{{f.name}}" class="faculty-photo"
+           onerror="this.onerror=null;this.src='/assets/default-avatar.png'" />
+      <div class="faculty-info">
+        <h3>{{ f.name }}</h3>
+        <div class="faculty-title">{{ f.title }}</div>
+        <div class="faculty-research"><strong>Research:</strong> {{ f.research }}</div>
+        <div class="faculty-bio">{{ f.bio }}</div>
+        <div class="faculty-contact">
+          <span *ngIf="f.email"><strong>Email:</strong> <a [href]="'mailto:' + f.email">{{ f.email }}</a></span><br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

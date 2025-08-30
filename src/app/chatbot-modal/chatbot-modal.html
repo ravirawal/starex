@@ -6,7 +6,7 @@
 			</button>
 	</div>
 	<div class="chatbot-modal-body">
-			<div class="chatbot-messages">
+			<div class="chatbot-messages" #messagesContainer>
 				<div *ngFor="let msg of messages" [ngClass]="'chatbot-message ' + msg.sender">
 					<span>{{ msg.text }}</span>
 				</div>

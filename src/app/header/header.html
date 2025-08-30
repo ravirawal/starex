@@ -71,6 +71,41 @@
                     </li>
                 </ul>
             </mat-tab>
+            <mat-tab label="Faculty Directory">
+                <ul class="dropmenu">
+                    <li>
+                        <a (click)="goToFaculty('computerScience')">Computer Science</a>
+                    </li>
+                    <li>
+                        <a (click)="goToFaculty('enggTechnology')">Engineering & Technology</a>
+                    </li>
+                    <li>
+                        <a (click)="goToFaculty('pharmaceutics')">Pharmaceutical Science</a>
+                    </li>
+                    <li>
+                        <a (click)="goToFaculty('physicalScience')">Physical Science</a>
+                    </li>
+                    <li>
+                        <a (click)="goToFaculty('lifeScience')">Life Science</a>
+                    </li>
+                    <li>
+                        <a (click)="goToFaculty('humanities')">Humanities Science</a>
+                    </li>
+                    <li>
+                        <a (click)="goToFaculty('commerce')">Commerce Management</a>
+                    </li>
+                    <li>
+                        <a (click)="goToFaculty('agriculture')">Agriculture Science</a>
+                    </li>
+                    <li>
+                        <a (click)="goToFaculty('hotelManagement')">Hotel-management</a>
+                    </li>
+                    <li>
+                        <a (click)="goToFaculty('law')">Law Faculty</a>
+                    </li>
+                    
+                </ul>
+            </mat-tab>
             <mat-tab label="Schools">
                 <ul class="dropmenu">
                     <li>
@@ -79,18 +114,14 @@
                     <li>
                         <a routerLink="commerce&management" (click)="handleAnchorClick()">Commerce &amp; Management</a>
                     </li>
-                    <li>
-                        <a routerLink="physical-science" (click)="handleAnchorClick()">Physical Sciences</a>
-                    </li>
+                   
                     <li>
                         <a routerLink="computerscience&technology" (click)="handleAnchorClick()">Computer Science &amp; Technology </a>
                     </li>
                     <li>
                         <a routerLink="engineering&technology" (click)="handleAnchorClick()">Engineering &amp; Technology</a>
                     </li>
-                    <li>
-                        <a routerLink="pharmaceutical-science" (click)="handleAnchorClick()">Pharmaceutical Science </a>
-                    </li>
+                    
                     <li>
                         <a routerLink="hotel-management" (click)="handleAnchorClick()">Hotel Management</a>
                     </li>
@@ -102,6 +133,12 @@
                     </li>
                     <li>
                         <a routerLink="life-science" (click)="handleAnchorClick()">Life Sciences</a>
+                    </li>
+                     <li>
+                        <a routerLink="physical-science" (click)="handleAnchorClick()">Physical Sciences</a>
+                    </li>
+                    <li>
+                        <a routerLink="pharmaceutical-science" (click)="handleAnchorClick()">Pharmaceutical Science </a>
                     </li>
                     <li>
                         <a routerLink="vocational-courses" (click)="handleAnchorClick()">Vocational Courses</a>

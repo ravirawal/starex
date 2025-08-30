@@ -69,7 +69,8 @@ a {
   perspective: 1000px; /* Enables 3D effect */
   min-height: 2rem;
   width:100%;
-  color:#e3eef4
+  color:#e3eef4;
+  cursor: pointer;
 }
 a:hover {
   transform: rotateX(5deg) rotateY(5deg) scale(1.05);

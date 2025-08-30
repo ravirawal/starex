@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -9,7 +9,11 @@ import { FormsModule } from '@angular/forms';
 	styleUrl: './chatbot-modal.scss',
 	imports: [CommonModule, FormsModule]
 })
-export class ChatbotModal implements OnChanges {
+export class ChatbotModal implements OnChanges, AfterViewInit {
+	@ViewChild('messagesContainer') messagesContainer!: ElementRef<HTMLDivElement>;
+	ngAfterViewInit() {
+		this.scrollToBottom();
+	}
 	@Input() closing = false;
 	@Input() suggestion: string | null = null;
 	@Output() close = new EventEmitter<void>();
@@ -17,9 +21,15 @@ export class ChatbotModal implements OnChanges {
 	isAnimating = false;
 	userInput = '';
 
-	messages: { sender: 'user' | 'bot', text: string }[] = [
-		{ sender: 'bot', text: 'Hello! How can I help you today?' }
-	];
+	messages: { sender: 'user' | 'bot', text: string }[] = [];
+	private firstOpen = true;
+
+	constructor() {
+		// Only show welcome message on very first open
+		if (this.messages.length === 0) {
+			this.messages.push({ sender: 'bot', text: 'Hello! How can I help you today?' });
+		}
+	}
 
 	onMinimize() {
 		this.isAnimating = true;
@@ -34,18 +44,36 @@ export class ChatbotModal implements OnChanges {
 	}
 
 	onSubmit(event: Event) {
-		event.preventDefault();
-		const msg = this.userInput.trim();
-		if (msg) {
-			this.messages.push({ sender: 'user', text: msg });
-			this.userMessage.emit(msg);
-			this.userInput = '';
-		}
-	}
+    event.preventDefault();
+    const msg = this.userInput.trim().toLowerCase();
+    console.log('User submitted:', msg);
+
+    if (msg === 'yes' && this.suggestion) {
+        // Let chatbot.ts handle the suggestion confirmation
+        this.userMessage.emit(msg);
+        this.userInput = '';
+        return;
+    }
+
+    if (msg) {
+        this.messages.push({ sender: 'user', text: msg });
+        this.userMessage.emit(msg);
+        this.userInput = '';
+        setTimeout(() => this.scrollToBottom(), 0);
+    }
+}
 
 	ngOnChanges(changes: SimpleChanges) {
 		if (changes['suggestion'] && changes['suggestion'].currentValue) {
 			this.messages.push({ sender: 'bot', text: changes['suggestion'].currentValue });
+			setTimeout(() => this.scrollToBottom(), 0);
+		}
+	}
+
+	private scrollToBottom() {
+		if (this.messagesContainer && this.messagesContainer.nativeElement) {
+			const el = this.messagesContainer.nativeElement;
+			el.scrollTop = el.scrollHeight;
 		}
 	}
 }
