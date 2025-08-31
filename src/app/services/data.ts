@@ -21,7 +21,7 @@ export const FACULTY_LIST: { [key: string]: Faculty[] }  = {
     ],
      law:[
       {
-        name: 'Dr. Parveen law',
+        name: 'Dr. Parveen Dahiya',
         photo: '/assets/icons/female.svg',
         title: 'Professor, Agriculture',
         research: 'Crop Science, Sustainable Farming',
@@ -29,7 +29,7 @@ export const FACULTY_LIST: { [key: string]: Faculty[] }  = {
         email: ''
       },
       {
-        name: 'Dr. Madhur law',
+        name: 'Dr. Madhur Hooda',
         photo: '/assets/icons/female.svg',
         title: 'Professor, Agriculture',
         research: 'Crop Science, Sustainable Farming',
@@ -238,7 +238,12 @@ export const FACULTY_LIST: { [key: string]: Faculty[] }  = {
   engineering: '/engineering&technology',
   agriculture: '/agriculture',
   physicalscience: '/physical-science',
-  lifeScience: '/life-science'
+  lifeScience: '/life-science',
+  hotel: '/hotel-management',
+  humanities: '/humanities',
+  commerce: '/commerce&management',
+  management: '/commerce&management',
+  vocational: '/vocational-courses'
 };
 
 export const DESIGNATIONS = [
