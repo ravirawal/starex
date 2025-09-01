@@ -23,6 +23,7 @@ import { MOUComponent } from './about_list/mou/mou';
 import { UGCComponent } from './about_list/ugc/ugc';
 import { PoliciesComponent } from './about_list/policies/policies';
 import {FacultyComponent } from './generic-faculty/generic-faculty';
+import { OrganogramComponent } from './about_list/organogram/recognisation';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -50,6 +51,7 @@ export const routes: Routes = [
     { path: 'annual-reports', component:  PoliciesComponent},
   { path: 'ombudsperson', component:  PoliciesComponent},
   { path: 'policies', component:  PoliciesComponent},
+    { path: 'organogram', component:  OrganogramComponent},
   {
     path: 'faculty', component: FacultyComponent, title: 'Faculty'
   },
