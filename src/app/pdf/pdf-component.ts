@@ -1,19 +1,12 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { PdfService } from './pdf-component-service';
 import * as pdfjsLib from 'pdfjs-dist';
-//import workerUrl from 'pdfjs-dist/build/pdf.worker?url';
-//import { GlobalWorkerOptions } from 'pdfjs-dist';
 import { MatIconModule } from "@angular/material/icon";
 import { GlobalWorkerOptions } from 'pdfjs-dist';
-
-// Use import.meta.url to resolve the worker path
 GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.mjs',
   import.meta.url
 ).toString();
-
-//GlobalWorkerOptions.workerSrc = workerUrl;
-
 @Component({
     selector: 'app-pdf-viewer',
     templateUrl: './pdf-component.html',

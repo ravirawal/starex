@@ -1,15 +1,17 @@
 .footer {
     width: 100vw;
     max-width: 100%;
-     background-color: #1f396e;
+    background-color: #3059ae;
     color: #fff;
- li::before {
-    content: "";
-    font-family: fontawesome;
-    color: var(--theme-color2);
-    left: -20px;
-    position: absolute;
-}
+
+    li::before {
+        content: "";
+        font-family: fontawesome;
+        color: var(--theme-color2);
+        left: -20px;
+        position: absolute;
+    }
+
     a {
         display: inline-block;
         text-decoration: none;
@@ -22,8 +24,14 @@
         color: #e3eef4
     }
 
+    li a:before {
+        content: '-';
+        margin-right: 8px;
+    }
+
     a:hover {
         transform: rotateX(5deg) rotateY(5deg) scale(1.05);
+        cursor: pointer;
     }
 
     ul {
@@ -79,9 +87,10 @@ p {
     width: 50%
 }
 
-.col-md-6{
-  width:50%;
+.col-md-6 {
+    width: 50%;
 }
+
 /* Small devices (phones, ≥576px) */
 @media (max-width: 768px) {
     .flex-column-S {
@@ -95,7 +104,8 @@ p {
     .col-md-4 {
         width: 100%;
     }
-    .col-md-6{
-  width:100%;
-}
+
+    .col-md-6 {
+        width: 100%;
+    }
 }

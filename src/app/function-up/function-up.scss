@@ -1,0 +1,971 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/functionup/font/Inter-VariableFont_slnt,wght.ttf') format('truetype-variations');
+}
+.mainWrapper{
+    margin: 0;
+    
+}
+.wrapper{
+    background-color:  #F5F9FB;
+    margin: 0;
+    padding-top:1rem;
+}
+.graduateImgWrapper{
+    display: none;
+}
+.starexLogo {
+    width: 4.5rem;
+    height: 1.75rem;
+}
+.funcLogo{
+    width: 4.518rem;
+    height: 1.5625rem;
+    margin-top: 0.1875rem;
+}
+.logoWrapper{
+    background-color: white;
+    display: flex;
+    padding-left: 0.4rem;
+    gap: 3px;
+}
+.dividerLine{
+    width: 0.046875rem;
+    height: 1.4375rem;
+    background: #D9D9D9;
+    margin-top: 0.1375rem;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding-right: 1rem;
+}
+.contactDetails{
+    color: #001378;
+    font-size: 0.5rem;
+    font-weight: 600;
+    line-height: 0.2rem;
+    margin-top: 0.2rem;
+    text-align: right;
+}
+.heroSection{
+    padding-left: 1.4rem;
+    padding-right: 1.47rem;
+    padding-bottom: 2.3125rem;
+}
+.heroTextAndImgWrapper{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 1.0625rem;
+    margin-bottom: 1rem;
+}
+.heroTextAndImgWrapper p{
+    color: #001378;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin: 1rem 0 0 0;
+}
+
+.graduateImg{
+    position: absolute;
+}
+.imageWrapper {
+    width: auto;
+    height: calc(302rem/16);
+    background-size: cover;
+    background-position: center;
+    font-family: Inter;
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: calc(38rem/16); 
+    border-radius: 20px;
+}
+
+.heroTextWrapper p:nth-child(2){
+    color: #CB9039;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: calc(22rem/16);
+    margin: 0.5rem 0 1rem 0;
+}
+.knowMoreBtn{
+    width: calc(146rem/16);
+    height: calc(37rem/16);
+    border-radius: 10px;
+    background: #CA8F38;
+    margin:auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-family: Inter;
+    cursor: pointer;
+}
+.aboutSection{
+    padding: 2rem 1rem 0 1rem;
+    text-align: center;
+}
+.aboutSection p{
+    color: #1D252D;
+    font-family: Inter;
+    font-size: calc(10rem/16);
+    font-weight: 500;
+    line-height: calc(18rem/16);
+}
+.aboutSection h3{
+    color: #1D252D;
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 800;
+}
+.fstWrapper{
+    background: linear-gradient(360deg, #CA8F38 0%, #FFF 100%);
+    text-align: center;
+    padding-top: 1.6rem;
+    padding-bottom: 1rem;
+}
+.fstForDesktop{
+    display: none;
+}
+.horizontalLine{
+    width: calc(68rem/16);
+    height: calc(2rem/16);
+    background: #001378;
+    /* margin-top: 0rem; */
+    align-self: center;
+}
+.ugcWrapper{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 0.5rem;
+}
+.ugcWrapper p{
+    margin: 0;
+    color: #001378;
+    text-align: center;
+    font-family: Inter;
+    font-size: calc(12rem/16);
+    font-weight: 600;
+}
+.fstForMobile{
+    margin: 0;
+    color: #001378;
+    font-family: Inter;
+    font-size: calc(22rem/16);
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+.fstSubtext{
+    color: #001378;
+    text-align: center;
+    font-family: Inter;
+    font-size: calc(10rem/16);
+    font-style: normal;
+    font-weight: 500;
+    line-height: calc(14rem/16); 
+    margin-top:0.5rem ;
+}
+.logoAndResidentialWrapper{
+    display: flex;
+    justify-content: center;
+    padding-left: 2.5rem;
+    padding-right: 2rem;
+    gap: 1rem;
+}
+.fstResLogo{
+    width: calc(105rem/16);
+    margin-right: 1.5rem;
+}
+.intResidentialText{
+    margin: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: calc(11rem/16);
+    font-style: normal;
+    font-weight: 500;
+    line-height: calc(14.43rem/16);
+    align-self: center;
+}
+.residentDivider{
+    width: calc(1rem/16);
+    height: calc(30rem/16);
+    background: #EAEAEA;
+    align-self: center;
+}
+.fstAdvantage{
+    padding-top: 2rem;
+    padding-left: calc(15rem/16);
+    padding-right: calc(10rem/16);
+    padding-bottom: 1.5rem;
+}
+.cardWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.card{
+    width: calc(140rem/16);
+    height: calc(97.201rem/16);
+    border-radius: 7px;
+    background: #F5F9FB;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 1rem 0rem 1rem;
+    gap: 10px;
+}
+.advantageCardImg{
+    width: calc(32rem/16);
+    height: calc(32rem/16);
+}
+.cardMainText{
+    color: #1D252D;
+    font-family: Inter;
+    font-size: calc(8rem/16);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+.cardSubText{
+    color: #1D252D;
+    text-align: center;
+    font-family: Inter;
+    font-size: calc(6.4rem/16);
+    font-style: normal;
+    font-weight: 400;
+    line-height: calc(10rem/16); 
+    margin: 0;
+}
+.eligibilitySection{
+    background-color: #F9F3EA;
+    padding: 1rem 2rem 2rem 2rem;
+}
+.pointsWrapper{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0.6rem;
+}
+.pointsWrapper p{
+    margin: 0;
+    color: #1D252D;
+    font-family: Inter;
+    font-size: calc(10rem/16);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.eligibilitySection h2{
+    color: #1D252D;
+    font-family: Inter;
+    font-size: calc(17.625rem/16);
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 0;
+    margin: 0 0 0.5rem 0;
+}
+.eligibilityComment{
+    color: #1D252D;
+    font-family: Inter;
+    font-size: calc(11.016rem/16);
+    font-style: normal;
+    font-weight: 600;
+    line-height: calc(18rem/16);
+    margin: 0;
+}
+.highlightedPointWrapper{
+    border-radius: 10px;
+    background: #FFF;
+    margin-top: 1rem;
+    padding: 1rem 0.8rem 0.3rem 0rem;
+}
+.highlightedPointWrapper ul li{
+    color: #1D252D;
+    font-family: Inter;
+    font-size: calc(11.016rem/16);
+    font-style: normal;
+    font-weight: 500;
+    line-height: calc(18rem/16);
+}
+.leftSection{
+    display: none;
+}
+.rightSection{
+    padding: 1rem 0 1rem 0;
+}
+.imageAndTextPointWrapper{
+    display: flex;
+    gap: 2rem;
+    padding-right: 1rem;
+}
+
+.stepPointWrapper p{
+    color: #828282;
+    font-family: Inter;
+    font-size: calc(14rem/16);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0.3rem 0 1rem 0;
+}
+.imageAndTextPointWrapper h5{
+    color: #2A289C;
+    text-align: center;
+    font-family: Inter;
+    font-size: calc(14rem/16);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    text-align: left;
+} 
+.admProcessSection{
+    padding: 1rem 1rem 1rem 1.8rem;
+}
+.mobileAdmProcess{
+    display: block;
+    color: #1D252D;
+    font-family: Inter;
+    font-size: calc(17rem/16);
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.mobileAdmStepIns{
+    display: block;
+    color: #1D252D;
+    font-family: Inter;
+    font-size: calc(11rem/16);
+    font-style: normal;
+    font-weight: 500;
+    line-height: calc(18rem/16);
+}
+.knowMoreBtn1{
+    width: calc(146rem/16);
+    height: calc(37rem/16);
+    border-radius: 10px;
+    background: #CA8F38;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-family: Inter;
+    margin-top: 3rem;
+}
+.contactUs{
+    padding: 1rem 2rem 2rem 2rem;
+   
+    background: #001378;
+    color: white;
+}
+.contactWrapper{
+    display: flex;
+    gap: 15px;
+    font-family: Inter;
+    font-size: calc(10rem/16);
+    font-style: normal;
+    font-weight: 800;
+    line-height: calc(12rem/16);
+}
+.contactUs h2{
+    color: #CA8F38;
+    font-family: Inter;
+    font-size: calc(14rem/16);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+@media screen and (min-width: 768px){
+    .starexLogo {
+        width: 10rem;
+        height: 4rem;
+    }
+    .funcLogo{
+        width: 10rem;
+        height: 4rem;
+        margin-top: 0.12rem;
+    }
+    .mainWrapper{
+        
+    }
+    .header{
+        background-color: unset;
+        padding-left: 2.125rem;
+        padding-right: 5.625rem;
+    }
+    .logoWrapper{
+        background-color: unset;
+    }
+    .contactDetails {
+        color: #001378;
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 0.4rem;
+        margin-top: 0.4rem;
+    }
+    .contactDetails p:nth-child(2){
+        margin-left: 2.9rem;
+    }
+    .dividerLine{
+        width: 0.1rem;
+        height: 3rem;
+        background: #D9D9D9;
+    }
+    .imageWrapper{
+        border-radius: 230px 230px 0px 0px;
+        width: calc(250rem/16);
+        height: calc(300rem/16);
+    }
+    .heroTextAndImgWrapper{
+        flex-direction: row;
+        padding-left: 2.125rem;
+
+    }
+    .heroTextWrapper{
+        margin-top: 5rem;
+        flex: 1;
+    }
+    .heroTextWrapper p{
+        margin: 0;
+        font-size: 2.5rem;
+        text-align: left;
+    }
+    .heroTextWrapper p:nth-child(2){
+        margin: 0.6rem 0 0 0;
+        font-size: 1.3rem;
+        text-align: left;
+        width:calc(500rem/16)
+    }
+    .knowMoreBtn{
+        margin: 1.5rem 0 0 0rem;
+        width: calc(170rem/16);
+        height: calc(45rem/16);
+        font-size: calc(18rem/16);
+        cursor: pointer;
+    }
+    .heroSection{
+        padding-right: 5.625rem;
+    }
+    .aboutSection{
+        padding: 2rem 5rem 0 4rem;
+        text-align: left;
+    }
+    .aboutSection p{
+        color: #2C3339;
+        font-family: Inter;
+        font-size: calc(14rem/16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: calc(23rem/16);
+    }
+    .aboutSection h3{
+        color: #1D252D;
+        font-family: Inter;
+        font-size: 1.7rem;
+        font-weight: 800;
+    }
+    .fstWrapper{
+        background: linear-gradient(360deg, #CA8F38 0%, #FFF 100%);
+        font-family: Inter;
+        display: block;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+    .fstForMobile{
+        display: none;
+    }
+    .fstForDesktop{
+        display: block;
+        text-align: center;
+        font-size: calc(30.035rem/16);
+        font-style: normal;
+        color: #001378;
+        font-weight: 700;
+        margin: 2rem 0 0.5rem 0;
+    }
+    .horizontalLine{
+        width: calc(234.702rem/16);
+        height: calc(3.105rem/16);
+        background: #001378;
+        margin-top: 0;
+        align-self: center;
+    }
+    .ugcWrapper{
+        display: flex;
+        justify-content: space-around;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .ugcWrapper p{
+        margin: 0;
+        color: #001378;
+        text-align: center;
+        font-family: Inter;
+        font-size: calc(10rem/16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .fstSubtext{
+        color: #001378;
+        text-align: center;
+        font-family: Inter;
+        font-size: calc(10rem/16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: calc(17.877rem/16);
+    }
+    .logoAndResidentialWrapper{
+        padding-left: 2rem;
+        padding-right:1.5rem;
+        gap: 1rem;
+    }
+    .fstResLogo{
+        width: calc(180.154rem/16);
+        margin-right: 2rem;
+    }
+    .intResidentialText{
+        margin: 0;
+        color: #FFF;
+        font-family: Inter;
+        font-size: calc(17rem/16);
+        font-style: normal;
+        font-weight: 600;
+        line-height: calc(47.614rem/16);
+    }
+    .residentDivider{
+        width: calc(2rem/16);
+        height: calc(61rem/16);
+        background: #EAEAEA;
+        align-self: center;
+    }
+    .fstAdvantage{
+        padding: 4rem 4rem 2rem 4rem;
+     }
+     .cardWrapper{
+        gap : 2rem;
+        justify-content: space-evenly;
+     }
+     .card{
+        width: calc(253rem/16);
+        height: calc(190rem/16);
+        padding: 2rem 1rem 1rem 1rem;
+     }
+     .advantageCardImg{
+        width: calc(80rem/16);
+        height: calc(80rem/16);
+     }
+     .cardMainText{
+        font-size: calc(16rem/16);
+     }
+     .cardSubText{
+        color: #1D252D;
+        font-size: 0.7rem;
+        line-height: calc(25rem/16); 
+        margin: 0;
+    }
+    .eligibilitySection{
+        padding: 1rem 3rem 4rem 6rem;
+    }
+    .leftSection{
+        display: none;
+    }
+    .admProcessSection{
+        display: flex;
+        justify-content: center;
+    }
+    .mobileAdmProcess{
+        display: none;
+    }
+    .mobileAdmStepIns{
+        display: none;
+    }
+    .stepPointWrapper p{
+        font-size: calc(14rem/16);
+        margin: 0.3rem 0 1rem 0;
+    }
+    .imageAndTextPointWrapper h5{
+        font-size: calc(18rem/16);
+        margin: 0;
+        text-align: left;
+    } 
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        font-family: Inter;
+    }
+    .starexLogo {
+        width: 11rem;
+        height: 4.2rem;
+    }
+    .funcLogo{
+        width: 13rem;
+        height: 3.8rem;
+        margin-top: 0.25rem;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        background-color: unset;
+        padding-left: 2.125rem;
+        padding-right: 5.625rem;
+
+    }
+    .logoWrapper{
+        background-color: unset;
+    }
+    .mainWrapper{
+      
+    }
+    .dividerLine{
+        width: 0.125rem;
+        height: 3.3rem;
+        background: #D9D9D9;
+    }
+    .contactDetails{
+        color: #001378;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 0.5rem;
+        margin-top: 0.2rem;
+    }
+    .contactDetails p:nth-child(2){
+        margin-left: 3.625rem;
+    }
+    .heroSection{
+        padding-left: 1.4rem;
+        padding-right: 5.625rem;
+        padding-bottom: 0;
+    }
+    .heroTextAndImgWrapper{
+        display: flex;
+        margin-top: 3.6875rem;
+        flex-direction: row;
+    }
+    .heroTextAndImgWrapper p{
+        color: #001378;
+        font-size: 3.75rem;
+        font-weight: 900;
+        letter-spacing: 1px;
+        flex: 2;
+    }
+
+    .graduateImg{
+        position: absolute;
+    }
+    .graduateImgWrapper{
+        display: block;
+        width: auto;
+        height: calc(528rem/16);
+    align-self: flex-end;
+        
+    }
+    .imageWrapper {
+        display: none;
+    }
+    .heroTextWrapper{
+        flex: 2;
+    }
+    .heroTextWrapper p{
+       margin: 3rem 2rem 1rem 1rem; 
+       text-align: left;
+    }
+    .heroTextWrapper p:nth-child(2){
+        margin: 0 0 0 1rem;
+        font-size: 1.875rem;
+        font-weight: 700;
+        line-height: calc(38rem/16);
+        text-align: left;
+        width:calc(700rem/16)
+    }
+    .knowMoreBtn{
+        margin: 3rem 0 0 1rem;
+        width: calc(200rem/16);
+        height: calc(55rem/16);
+        font-size: calc(20rem/16);
+        cursor: pointer;
+    }
+    .aboutSection{
+        padding: 2rem 8rem 4rem 4rem;
+        text-align: left;
+    }
+    .aboutSection p{
+        color: #2C3339;
+        font-family: Inter;
+        font-size: calc(20rem/16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: calc(32rem/16);
+    }
+    .aboutSection h3{
+        color: #1D252D;
+        font-family: Inter;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    .fstWrapper{
+        background: linear-gradient(360deg, #CA8F38 0%, #FFF 100%);
+        font-family: Inter;
+        display: block;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+    .fstForMobile{
+        display: none;
+    }
+    .fstForDesktop{
+        display: block;
+        text-align: center;
+        font-size: calc(50.035rem/16);
+        font-style: normal;
+        color: #001378;
+        font-weight: 700;
+        margin: 2rem 0 1.5rem 0;
+    }
+    .horizontalLine{
+        width: calc(374.702rem/16);
+        height: calc(3.105rem/16);
+        background: #001378;
+        margin-top: 0;
+        align-self: center;
+    }
+    .ugcWrapper{
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    .ugcWrapper p{
+        margin: 0;
+        color: #001378;
+        text-align: center;
+        font-family: Inter;
+        font-size: calc(18.632rem/16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .fstSubtext{
+        color: #001378;
+        text-align: center;
+        font-family: Inter;
+        font-size: calc(17rem/16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: calc(25.877rem/16);
+    }
+    .logoAndResidentialWrapper{
+        padding-left: 2.5rem;
+        padding-right: 2rem;
+        gap: 2rem;
+    }
+    .fstResLogo{
+        width: calc(246.154rem/16);
+        margin-right: 2rem;
+    }
+    .intResidentialText{
+        margin: 0;
+        color: #FFF;
+        font-family: Inter;
+        font-size: calc(27rem/16);
+        font-style: normal;
+        font-weight: 600;
+        line-height: calc(47.614rem/16);
+    }
+    .residentDivider{
+        width: calc(2rem/16);
+        height: calc(61rem/16);
+        background: #EAEAEA;
+        align-self: center;
+    }
+    .fstAdvantage{
+       padding: 4rem 8rem 2rem 8rem;
+    }
+    .cardWrapper{
+        gap : 1.5rem;
+        justify-content: space-evenly;
+    }
+    .card{
+        width: calc(343rem/16);
+        height: calc(220rem/16);
+        padding: 2rem 1rem 1rem 1rem;
+    }
+    .advantageCardImg{
+        width: calc(80rem/16);
+        height: calc(80rem/16);
+    }
+    .cardMainText{
+        font-size: calc(20rem/16);
+    }
+    .cardSubText{
+        color: #1D252D;
+        font-size: 1rem;
+        line-height: calc(25rem/16); 
+        margin: 0;
+    }
+    .eligibilitySection{
+        padding: 1rem 9rem 4rem 10rem;
+    }
+    .pointsWrapper{
+        gap: 10px;
+        margin-bottom: 1rem;
+    }
+    .pointsWrapper p{
+        margin: 0;
+        font-size: calc(15rem/16);
+        font-weight: 500;
+    }
+    .eligibilitySection h2{
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        margin: 0 0 1rem 0;
+    }
+    .eligibilityComment{
+        color: #1D252D;
+        font-size: calc(18rem/16);
+        line-height: calc(18rem/16);
+        margin: 0;
+    }
+    .highlightedPointWrapper ul li{
+        font-size: calc(15rem/16);
+        font-weight: 500;
+        line-height: calc(34rem/16);
+    }
+    .mobileAdmProcess{
+        display: none;
+    }
+    .mobileAdmStepIns{
+        display: none;
+    }
+    .eligibilitySection{
+        background-color: #F9F3EA;
+        padding: 1rem 2rem 2rem 5rem;
+    }
+    .pointsWrapper{
+        display: flex;
+        gap: 10px;
+        margin-bottom: 0.6rem;
+    }
+    .pointsWrapper p{
+        margin: 0;
+        color: #1D252D;
+        font-family: Inter;
+
+    font-size: calc(16rem/16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .eligibilitySection h2{
+        color: #1D252D;
+        font-family: Inter;
+        font-size: calc(17.625rem/16);
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        margin: 0;
+        margin: 0 0 0.5rem 0;
+    }
+    .eligibilityComment{
+        color: #1D252D;
+        font-family: Inter;
+        font-size: calc(11.016rem/16);
+        font-style: normal;
+        font-weight: 600;
+        line-height: calc(18rem/16);
+        margin: 0;
+    }
+    .highlightedPointWrapper{
+        border-radius: 10px;
+        background: #FFF;
+        margin-top: 1rem;
+        padding: 1rem 0.8rem 0.3rem 0rem;
+    }
+    .highlightedPointWrapper ul li{
+        color: #1D252D;
+        font-family: Inter;
+        font-size: calc(11.016rem/16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: calc(18rem/16);
+    }
+    .leftSection{
+        display: block;
+    }
+    .rightSection{
+        padding: 1rem 0 1rem 0;
+    }
+    .imageAndTextPointWrapper{
+        display: flex;
+        gap: 2rem;
+        padding-right: 1rem;
+    }
+    
+    .stepPointWrapper p{
+        font-size: calc(14rem/16);
+        margin: 0.3rem 0 1rem 0;
+    }
+    .imageAndTextPointWrapper h5{
+        font-size: calc(22rem/16);
+        margin: 0;
+        text-align: left;
+    } 
+    .admProcessSection{
+        padding: 3rem 3rem 1rem 6rem;
+        display: flex;
+    }
+    .knowMoreBtn1{
+        width: calc(146rem/16);
+        height: calc(37rem/16);
+        border-radius: 10px;
+        background: #CA8F38;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-family: Inter;
+        margin-top: 3rem;
+        cursor: pointer;
+    }
+    .contactUs{
+        padding: 1rem 2rem 2rem 7rem;
+    }
+    .contactWrapper{
+        font-size: calc(15rem/16);
+        font-style: normal;
+        line-height: calc(12rem/16);
+    }
+    .contactUs h2{
+        color: #CA8F38;
+        font-family: Inter;
+        font-size: calc(26rem/16);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
