@@ -260,7 +260,7 @@ export const TOPICS = [
   'fees',
   'structure',
   'faculty',
-  'department',
+  // 'department',
   'research',
   'names'
 ];
