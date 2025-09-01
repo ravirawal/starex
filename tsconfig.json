@@ -13,8 +13,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve",
-    "types": ["pdfjs-dist", "vite/client"],
+    "module": "preserve"
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -31,6 +30,5 @@
     {
       "path": "./tsconfig.spec.json"
     }
-  ],
-
+  ]
 }

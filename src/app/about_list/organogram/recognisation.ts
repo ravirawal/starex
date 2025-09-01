@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-organogram',
+  selector: 'app-recognisation',
   imports: [],
-  templateUrl: './organogram.html',
-  styleUrl: './organogram.scss',
+  templateUrl: './recognisation.html',
+  styleUrl: './recognisation.scss',
   standalone: true
 })
-export class OrganogramComponent {}
+export class RecognisationComponent {}

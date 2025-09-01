@@ -227,8 +227,7 @@ export const FACULTY_LIST: { [key: string]: Faculty[] }  = {
   'annual report': '/annual-reports',
   'ombudsperson': '/ombudsperson',
   'policy': '/policies',
-  'policies': '/policies',
-  'organogram': '/organogram',
+  'policies': '/policies'
 };
 
   export const DEPARTMENTS: { [key: string]: string } = {
