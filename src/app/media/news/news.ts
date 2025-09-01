@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-university-authority',
+  selector: 'app-news',
   imports: [],
-  templateUrl: './university-authority.html',
-  styleUrl: './university-authority.scss',
+  templateUrl: './news.html',
+  styleUrl: './news.scss',
   standalone: true
 })
-export class UniversityAuthorityComponent {}
+export class NewsComponent {}

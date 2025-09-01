@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-university-authority',
+  selector: 'app-datesheet',
   imports: [],
-  templateUrl: './university-authority.html',
-  styleUrl: './university-authority.scss',
+  templateUrl: './datesheet.html',
+  styleUrl: './datesheet.scss',
   standalone: true
 })
-export class UniversityAuthorityComponent {}
+export class DatesheetComponent {}

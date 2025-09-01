@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-university-authority',
+  selector: 'app-hostel',
   imports: [],
-  templateUrl: './university-authority.html',
-  styleUrl: './university-authority.scss',
+  templateUrl: './hostel.html',
+  styleUrl: './hostel.scss',
   standalone: true
 })
 export class UniversityAuthorityComponent {}

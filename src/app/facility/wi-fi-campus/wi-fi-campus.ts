@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-board-commeties',
+  selector: 'app-wi-fi-campus',
   imports: [],
-  templateUrl: './board-commeties.html',
-  styleUrl: './board-commeties.scss',
+  templateUrl: './wi-fi-campus.html',
+  styleUrl: './wi-fi-campus.scss',
   standalone: true
 })
 export class BoardCommetiesComponent {}
