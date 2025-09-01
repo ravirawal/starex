@@ -11,7 +11,8 @@ import { CommonModule } from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FacultyService } from '../services/facultyService';
-
+import { MatDialog } from '@angular/material/dialog';
+import { PdfModalComponent } from '../pdf/pdf-modal-components';
 @Component({
   selector: 'app-header',
   imports: [MatToolbarModule, MatListModule, CommonModule,MatCardModule,MatTabsModule,
@@ -23,7 +24,7 @@ import { FacultyService } from '../services/facultyService';
 export class Header {
    @ViewChild(MatMenuTrigger) menuTrigger!: MatMenuTrigger;
    screenWidth = signal(window.innerWidth);
-   constructor(private router: Router, private facultyService: FacultyService){
+   constructor(private router: Router, private facultyService: FacultyService,private dialog: MatDialog){
 window.addEventListener('resize', () => {
       this.screenWidth.set(window.innerWidth);
     });
@@ -63,5 +64,15 @@ goToFaculty(department: string) {
   this.facultyService.setSearchTerm({ department });
   this.router.navigate(['/faculty']);
 }
-
+  previewPdf(url: string) {
+    this.dialog.open(PdfModalComponent, {
+    width: '90vw',
+    maxWidth: '100vw',
+    data: { url }
+  });
+    this.menuTrigger.closeMenu();
+  }
+  openPdfInNewTab(url: string) {
+  window.open(url, '_blank');
+}
 }
