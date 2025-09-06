@@ -7,4 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './hostel.scss',
   standalone: true
 })
-export class UniversityAuthorityComponent {}
+export class HostelComponent {}

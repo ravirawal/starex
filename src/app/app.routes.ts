@@ -22,42 +22,104 @@ import { DisclosureComponent } from './about_list/disclosure/disclosure';
 import { MOUComponent } from './about_list/mou/mou';
 import { UGCComponent } from './about_list/ugc/ugc';
 import { PoliciesComponent } from './about_list/policies/policies';
-import {FacultyComponent } from './generic-faculty/generic-faculty';
+import { FacultyComponent } from './generic-faculty/generic-faculty';
 import { OrganogramComponent } from './about_list/organogram/recognisation';
 import { FunctionUPComponent } from './function-up/function-up';
+import { HostelComponent } from './facility/hostel/hostel';
+import { BoardCommetiesComponent } from './governance/board-commeties/board-commeties';
+import { IcheAustraliaComponent } from './study-abroad/iche-australia/iche-australia';
+import { GermanyHospitalityComponent } from './study-abroad/germany-hospitality/germany-hospitality';
+import { CampusViewComponent } from './facility/campus-view/campus-view';
+import { LibraryComponent } from './facility/library/library';
+import { WIFIComponent } from './facility/wi-fi-campus/wi-fi-campus';
+import { TransportComponent } from './facility/transport/transport';
+import { PlaygroundComponent } from './facility/playground/playground';
+import { GymComponent } from './facility/gym/gym';
+import { MedicalHospitalComponent } from './facility/medical-hospital/medical-hospital';
+import { UniversityAuthorityComponent } from './governance/university-authority/university-authority';
+import { GalleryComponent } from './media/gallery/gallery';
+import { AlumniAssociationComponent } from './media/alumni-association/alumni-association';
+import { AchivementsComponent } from './media/achivements/achivements';
+import { PressCoverageComponent } from './media/press-coverage/press-coverage';
+import { EventsComponent } from './media/events/events';
+import { NewsComponent } from './media/news/news';
+import { ResultNotificationComponent } from './examination/result-notification/result-notification';
+import { DatesheetComponent } from './examination/datesheet/datesheet';
+import { NadCellComponent } from './examination/nad-cell/nad-cell';
+import { ExamScheduleComponent } from './examination/exam-schedule/exam-schedule';
+import { BlogsComponent } from './others-component/blogs/blogs';
+import { ContactUSComponent } from './others-component/contact-us/contact-us';
+import { PlacementComponent } from './others-component/placement/placement';
+import { InternationalStudentsComponent } from './others-component/international-students/international-students';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy';
+import { NoticiesComponent } from './others-component/noticies/noticies';
+import { PhdComponent } from './others-component/phd/phd';
+import { CarriersComponent } from './others-component/carrier/carrier';
+import { FaqsComponent } from './others-component/faqs/faqs';
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'agriculture', component: AgricultureComponent },
   { path: 'commerce&management', component: CommerceManagementComponent },
   { path: 'computerscience&technology', component: CSEComponent },
-   { path: 'engineering&technology', component: ENTComponent },
+  { path: 'engineering&technology', component: ENTComponent },
   { path: 'hotel-management', component: HotelManagementComponent },
   { path: 'humanities', component: HumanitiesComponent },
   { path: 'law', component: LawComponent },
   { path: 'life-science', component: lifeScienceComponent },
-  { path: 'pharmaceutical-science', component: PharmacyComponent , title: 'pharmaceutical-science'},
+  { path: 'pharmaceutical-science', component: PharmacyComponent, title: 'pharmaceutical-science' },
   { path: 'physical-science', component: PhysicalScienceComponent },
   { path: 'vocational-courses', component: VocationalComponent },
-   { path: 'about-starex', component: AboutComponent },
-    { path: 'chancellor-message', component: ChacellorComponent },
+  { path: 'about-starex', component: AboutComponent },
+  { path: 'chancellor-message', component: ChacellorComponent },
   { path: 'vice-chancellor-message', component: VchancellorComponent },
   { path: 'registrar-message', component: RegistrarComponent },
-    { path: 'osd-message', component: OSDComponent },
+  { path: 'osd-message', component: OSDComponent },
   { path: 'coe', component: COEComponent },
   { path: 'approval-recognition', component: RecognisationComponent },
-    { path: 'disclosure', component: DisclosureComponent },
+  { path: 'disclosure', component: DisclosureComponent },
   { path: 'starex-mou', component: MOUComponent },
   { path: 'ugc-inspection', component: UGCComponent },
-    { path: 'annual-reports', component:  PoliciesComponent},
-  { path: 'ombudsperson', component:  PoliciesComponent},
-  { path: 'policies', component:  PoliciesComponent},
-    { path: 'organogram', component:  OrganogramComponent},
-    {
-    path: 'functionup', component: FunctionUPComponent, title: 'functionup'
-  },
-  {
-    path: 'faculty', component: FacultyComponent, title: 'Faculty'
-  },
+  { path: 'annual-reports', component: PoliciesComponent },
+  { path: 'ombudsperson', component: PoliciesComponent },
+  { path: 'policies', component: PoliciesComponent },
+  { path: 'organogram', component: OrganogramComponent },
+  { path: 'university-authorities', component: UniversityAuthorityComponent },
+  { path: 'committees', component: BoardCommetiesComponent },
+  { path: 'ICHM', component: IcheAustraliaComponent },
+  { path: 'apprenticeship-training', component: GermanyHospitalityComponent },
+  { path: 'campus-view', component: CampusViewComponent },
+  { path: 'library', component: LibraryComponent },
+  { path: 'modern-hostel', component: HostelComponent },
+  { path: 'wi-fi-campus', component: WIFIComponent },
+  { path: 'transport-facility', component: TransportComponent },
+  { path: 'playground', component: PlaygroundComponent },
+  { path: 'gym', component: GymComponent },
+  { path: 'medical-hospital', component: MedicalHospitalComponent },
+  { path: 'alumni-mom-notice', component: AlumniAssociationComponent },
+  { path: 'gallery', component: GalleryComponent },
+  { path: 'news', component: NewsComponent },
+  { path: 'events', component: EventsComponent },
+  { path: 'press-coverage', component: PressCoverageComponent },
+  { path: 'achivements', component: AchivementsComponent },
+  { path: 'results', component: ResultNotificationComponent },
+  { path: 'datesheet', component: DatesheetComponent },
+  { path: 'examination-schedule', component: ExamScheduleComponent },
+  { path: 'NAD-Cell', component: NadCellComponent },
+{ path: 'blogs', component: BlogsComponent },
+  { path: 'contact-us', component: ContactUSComponent },
+  { path: 'placement', component: PlacementComponent },
+  { path: 'international-students', component: InternationalStudentsComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'IBM-ICE', component: PlacementComponent },
+
+{ path: 'notices', component: NoticiesComponent },
+  { path: 'board-commities', component: BoardCommetiesComponent },
+  { path: 'phd-programmes', component: PhdComponent },
+  { path: 'career', component: CarriersComponent },
+  { path: 'faqs', component: FaqsComponent },
+
+  { path: 'functionup', component: FunctionUPComponent, title: 'functionup' },
+  { path: 'faculty', component: FacultyComponent, title: 'Faculty' },
   { path: '**', redirectTo: 'home' }
 ];

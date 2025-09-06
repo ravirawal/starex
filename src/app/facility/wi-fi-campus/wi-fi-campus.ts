@@ -7,4 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './wi-fi-campus.scss',
   standalone: true
 })
-export class BoardCommetiesComponent {}
+export class WIFIComponent {}
