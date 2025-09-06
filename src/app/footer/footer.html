@@ -1,126 +1,65 @@
-<footer class="footer flex-column">
-    <div class="flex-row flex-column-S">
-        <div class="col-md-4">
-            <ul>
-                <li><a routerLink="blogs">Blogs</a></li>
-                <li><a routerLink="contact-us">Contact Us</a></li>
-                <!-- <li><a href="https://www.starexuniversity.com/complaints">Complaints</a></li> -->
-                <!-- <li><a href="https://www.starexuniversity.com/examination-form">Examination Form</a>
-            </li>
-            <li><a href="https://www.starexuniversity.com/reappear-form">Reappear Form</a></li> -->
-                <li><a routerLink="placement">Placement</a></li>
+<footer class="footer-container">
+  <div class="footer-content">
 
-                <li><a routerLink="international-students">International
-                        Students</a></li>
-                <li><a (click)="openPdfInNewTab('assets/pdf/rti-act-2005.pdf')">RTI
-                        Act</a></li>
-                <li> <a routerLink="IBM-ICE"> MBA &amp; B.Tech with (IBM
-                        - ICE)
-                    </a></li>
-                <li> <a (click)="openPdfInNewTab('assets/pdf/Latest Prospectus 2024-2025.pdf')"> University
-                        Prospectus
-                    </a></li>
-                <li> <a routerLink="privacy-policy"> Privacy
-                        Policy </a></li>
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <div class="link-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a routerLink="blogs">Blogs</a></li>
+          <li><a routerLink="contact-us">Contact Us</a></li>
+          <li><a routerLink="placement">Placement</a></li>
+          <li><a routerLink="international-students">International Students</a></li>
+          <li><a (click)="openPdfInNewTab('assets/pdf/rti-act-2005.pdf')">RTI Act</a></li>
+          <li><a routerLink="IBM-ICE">MBA & B.Tech with IBM-ICE</a></li>
+          <li><a (click)="openPdfInNewTab('assets/pdf/Latest Prospectus 2024-2025.pdf')">University Prospectus</a></li>
+          <li><a routerLink="privacy-policy">Privacy Policy</a></li>
+          <li><a routerLink="vocational-courses">B.Voc</a></li>
+          <li><a routerLink="vocational-courses">B.Skills</a></li>
+        </ul>
+      </div>
 
-                <li><a routerLink="vocational-courses">B.Voc</a> </li>
+      <div class="link-column">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="http://erp.starexuniversity.in/index.php" target="_blank">ERP Login</a></li>
+          <li><a routerLink="notices">Notice</a></li>
+          <li><a routerLink="board-commities">Committees & Board</a></li>
+          <li><a routerLink="phd-programmes">PhD</a></li>
+          <li><a (click)="openPdfInNewTab('assets/pdf/2025/2025_footer_research_and_dev.pdf')">Research & Development</a></li>
+          <li><a routerLink="career">Career</a></li>
+          <li><a routerLink="faqs">FAQs</a></li>
+          <li><a (click)="openPdfInNewTab('assets/pdf/2025_footer_fee_refund.pdf')">Fee Refund Policy</a></li>
+          <li><a (click)="openPdfInNewTab('assets/pdf/2025_header_board_studies.pdf')">Board of Studies</a></li>
+          <li><a (click)="openPdfInNewTab('assets/pdf/2025_dean_vo.pdf')">Chief Vigilance Officer (CVO)</a></li>
+          <li><a (click)="openPdfInNewTab('assets/pdf/swayam.pdf')">SWAYAM/MOOC</a></li>
+          <li><a routerLink="functionup">FunctionUp</a></li>
+        </ul>
+      </div>
 
-                <li> <a routerLink="vocational-courses">B.Skills</a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-4">
-            <ul>
-                <li><a href="http://erp.starexuniversity.in/index.php" target="_blank">ERP Login</a>
-                </li>
-                <li><a routerLink="notices">Notice</a></li>
-                <!-- <li><a routerLink="feedback">Feedback</a></li> -->
-                <li><a routerLink="board-commities">Commitees &amp; Board</a>
-                </li>
-                <li><a routerLink="phd-programmes">PHD</a></li>
-                <li><a (click)="openPdfInNewTab('assets/pdf/2025/2025_footer_research_and_dev.pdf')">Research &amp;
-                        Development</a></li>
-                <!-- <li><a href="https://www.starexuniversity.com/admission/">Apply Online</a></li> -->
-                <li><a routerLink="career">Career</a></li>
-                <li><a routerLink="faqs">FAQ's</a></li>
-                <li><a (click)="openPdfInNewTab('assets/pdf/2025_footer_fee_refund.pdf')">Fee Refund Policy</a></li>
-                <li><a (click)="openPdfInNewTab('assets/pdf/2025_header_board_studies.pdf')">Board of studies</a></li>
-                <li><a (click)="openPdfInNewTab('assets/pdf/2025_dean_vo.pdf')">Chief Vigilance Officer(CVO) - Part
-                        Time</a></li>
-                <li><a (click)="openPdfInNewTab('assets/pdf/swayam.pdf')">SWAYAM/MOOC</a></li>
-                <li> <a routerLink="functionup">FunctionUp</a><br>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-4">
-
-            <div class="margin-top-2">
-                <div class="margin-top-1">
-                    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
-                    <label>
-                        Address : NH-48, Vill- Binola, P.O. Bhorakalan, Gurugram, Haryana 122413 (India)
-                    </label>
-                </div>
-                <div class="margin-top-1">
-                    <mat-icon> contact_phone</mat-icon>
-                    <label>
-                        Toll Free : 1800 1033 123 (24x7)
-                    </label>
-                </div>
-
-                <div class="margin-top-1">
-                    <mat-icon> contact_mail</mat-icon>
-                    <span class="break-word">
-                        <a href="mailto:admission@starexuniversity.co.in">
-                            admission&#64;starexuniversity.co.in</a>
-                    </span>
-                </div>
-                <div class="margin-top-1">
-                    <h4 class="mt-5">For International Student Admission</h4>
-                    <div>
-                        <mat-icon> contact_mail</mat-icon>
-                        <label>
-                            <a href="mailto:global@starexuniversity.com">global&#64;starexuniversity.com</a>
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <!-- Contact Info -->
+      <div class="contact-column">
+        <h3>Contact</h3>
+        <p><mat-icon>home</mat-icon> NH-48, Vill-Binola, P.O. Bhorakalan, Gurugram, Haryana 122413 (India)</p>
+        <p><mat-icon>contact_phone</mat-icon> Toll Free: 1800 1033 123 (24x7)</p>
+        <p><mat-icon>contact_mail</mat-icon> <a href="mailto:admission&#64;starexuniversity.co.in">admission&#64;starexuniversity.co.in</a></p>
+        <h4>For International Student Admission</h4>
+        <p><mat-icon>contact_mail</mat-icon> <a href="mailto:global&#64;starexuniversity.com">global&#64;starexuniversity.com</a></p>
+      </div>
     </div>
-    <div class="flex-row flex-column-S margin-bottom-2">
-        <div class="col-md-6 margin-left-2">
-            <h4>Connect</h4>
-            <div class="flex-row item-gap">
-                <a href="https://www.facebook.com/Starexuniversity/" target="_blank">
-                    <img src="https://www.starexuniversity.com/app-assets/vendors/assets/images/icons/social/fb.png"
-                        alt="">
-                </a>
-                <a href="https://www.instagram.com/starexuniversity/" target="_blank">
-                    <img src="https://www.starexuniversity.com/app-assets/vendors/assets/images/icons/social/insta.png"
-                        alt="">
-                </a>
-                <a href="https://www.linkedin.com/company/starexuniversity/" target="_blank">
-                    <img src="https://www.starexuniversity.com/app-assets/vendors/assets/images/icons/social/link.png"
-                        alt="">
-                </a>
-                <a href="https://x.com/StarexUniversi1">
-                    <img src="https://www.starexuniversity.com/app-assets/vendors/assets/images/icons/social/twitter.png"
-                        alt="">
-                </a>
-                <a href="https://www.youtube.com/@starexuniversity1187">
-                    <img src="https://www.starexuniversity.com/app-assets/vendors/assets/images/icons/social/youtube.png"
-                        alt="">
-                </a>
-                <a href="https://starexuniversitygurgaon.s3.ap-south-1.amazonaws.com/tour.html">
-                    <img src="https://www.starexuniversity.com/app-assets/vendors/assets/degree.png" alt=""
-                        style="width: 39px;">
-                </a>
-            </div>
-        </div>
-        <div class="col-md-6  margin-left-2">
-            <p class="text-center text-white">Copyright 2025-26 &#64; - All Rights Reserved By <a target="_blank"
-                    href="https://www.starexuniversity.com/"><b class="text-white"> Starex University ,Gurugram
-                    </b></a></p>
-        </div>
+
+    <!-- Social & Copyright -->
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/Starexuniversity/" target="_blank"><img src="../../assets/icons/social/fb.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/starexuniversity/" target="_blank"><img src="../../assets/icons/social/insta.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/company/starexuniversity/" target="_blank"><img src="../../assets/icons/social/link.png" alt="LinkedIn"></a>
+        <a href="https://x.com/StarexUniversi1"><img src="../../assets/icons/social/twitter.png" alt="Twitter"></a>
+        <a href="https://www.youtube.com/&#64;starexuniversity1187"><img src="../../assets/icons/social/youtube.png" alt="YouTube"></a>
+        <a href="https://starexuniversitygurgaon.s3.ap-south-1.amazonaws.com/tour.html"><img src="../../assets/logo/degree.png" alt="Virtual Tour"></a>
+      </div>
+      <p class="copyright">© 2025–26 — All Rights Reserved by <a href="https://www.starexuniversity.com/" target="_blank">Starex University, Gurugram</a></p>
     </div>
+
+  </div>
 </footer>

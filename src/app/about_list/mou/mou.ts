@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './mou.html',
   styleUrl: './mou.scss'
 })
-export class MOUComponent {}
+export class MOUComponent {
+  
+}
