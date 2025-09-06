@@ -107,16 +107,4 @@ startReserchCounting(): void {
       }
     }, 10); // adjust speed here
   }
-
-
-  // slides = [
-  //   { title: 'Slide 1', image: 'https://swiperjs.com/demos/images/nature-1.jpg' },
-  //   { title: 'Slide 2', image: 'https://swiperjs.com/demos/images/nature-2.jpg' },
-  //   { title: 'Slide 3', image: 'https://swiperjs.com/demos/images/nature-3.jpg' },
-  //   { title: 'Slide 4', image: 'https://swiperjs.com/demos/images/nature-4.jpg' },
-  //   { title: 'Slide 5', image: 'https://swiperjs.com/demos/images/nature-5.jpg' },
-  //   { title: 'Slide 6', image: 'https://swiperjs.com/demos/images/nature-6.jpg' },
-  //   // more slides...
-  // ];
-
 }

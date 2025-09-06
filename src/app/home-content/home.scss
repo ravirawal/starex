@@ -224,11 +224,13 @@ box-shadow: nset 0 0 10px #adadad;
 
 .leader-image img {
   transition: all 3s ease;
-  top: 0;
-  opacity: 1;
-  position: relative;
-  width: 100%;
-  max-height: 350px;
+    top: 0;
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    max-height: 350px;
+    min-height: 350px;
+    min-width: 300px;
 }
 
 .leader-details {

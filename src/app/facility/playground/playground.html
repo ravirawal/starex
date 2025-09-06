@@ -1,22 +1,40 @@
-<section class="content about py50">
-    <div class="container">
-        <div class="row">
+<section class="playground-section">
+  <div class="playground-container">
+    <h1 class="playground-title">Playground</h1>
 
-            <div class="col-md-8 order-md-2">
-                <h1 class="contentTitle" style="font-size: 1.75rem;"> Playground </h1>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <p class="abouttext">
-                            The campus is surrounded by lush green lawns and playing fields. volleyball court, lawn
-                            tennis court, Football ground and cricket grounds are well maintained. Facilities for indoor
-                            games like Table Tennis, Carom, Chess, etc. are also available.
-                        </p>
+    <div class="playground-content">
+      <!-- Left: Vertical Swiper -->
+      <div class="playground-carousel">
+        <swiper-container
+          direction="vertical"
+          loop="true"
+          autoplay-delay="2500"
+          speed="1000"
+          space-between="20"
+          slides-per-view="1"
+          class="vertical-swiper"
+        >
+          <swiper-slide>
+            <img src="../../../assets/sports/1.jpg" alt="Playground 1" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="../../../assets/sports/2.jpg" alt="Playground 2" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="../../../assets/sports/3.jpg" alt="Playground 3" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="../../../assets/sports/4.jpg" alt="Playground 4" />
+          </swiper-slide>
+        </swiper-container>
+      </div>
 
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
+      <!-- Right: Description -->
+      <div class="playground-description">
+        <p>
+          The campus is surrounded by lush green lawns and playing fields. Volleyball court, lawn tennis court, football ground and cricket grounds are well maintained. Facilities for indoor games like Table Tennis, Carom, Chess, etc. are also available.
+        </p>
+      </div>
     </div>
+  </div>
 </section>
