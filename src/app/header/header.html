@@ -2,17 +2,50 @@
     <img (click)="navigateToHome()" src="assets/logo/Logo.png" alt="Logo" class="logo" />
 
     <span class="spacer"></span>
-    <!-- <button class="blink-button">Click Me</button> -->
+    <div class="head-course-carousel">
+        <swiper-container direction="vertical" loop="true" autoplay-delay="2500" speed="1000" space-between="20"
+            slides-per-view="1" class="vertical-swiper">
+            <swiper-slide>
+                <span>Pharmaceutical Seience</span>
+            </swiper-slide>
+            <swiper-slide>
+                <span>Physical Seience</span>
+            </swiper-slide>
+            <swiper-slide>
+                <span>Agriculture Seience</span>
+            </swiper-slide>
+            <swiper-slide>
+                <span>Phd Programs</span>
+            </swiper-slide>
+        </swiper-container>
+    </div>
+    @if (!isMobile()) {
     <div class="erp-login">
-        <!-- <mat-icon>fingerprint</mat-icon> -->
+        <a class="" href="https://www.starexuniversity.com/app-assets/vendors/assets/nirf-data-2023.pdf">NIRF Report</a>
+
+    </div>
+    <div class="erp-login">
+        <a class="flashButton" href="https://www.starexuniversity.com/admission/">Apply Online</a>
+
+    </div>
+    <div class="erp-login">
+        <a class="" href="https://www.starexuniversity.com/international-students">International Admission</a>
+    </div>
+    <div class="erp-login">
         <a href="http://erp.starexuniversity.in/index.php" target="_blank"> ERP LOGIN </a>
     </div>
-    <div [matMenuTriggerFor]="schoolList" #menuTrigger="matMenuTrigger" class="hamburger">
-        <mat-icon *ngIf="!menuTrigger.menuOpen">menu</mat-icon>
-        <mat-icon *ngIf="menuTrigger.menuOpen">close</mat-icon>
-    </div>
+    }
 
+    <div [matMenuTriggerFor]="schoolList" #menuTrigger="matMenuTrigger" class="hamburger">
+        @if (!menuTrigger.menuOpen) {
+        <mat-icon>menu</mat-icon>
+        }
+        @else {
+        <mat-icon>close</mat-icon>
+        }
+    </div>
     <mat-menu #schoolList="matMenu" yPosition="below">
+        @if(!isMobile()){
         <mat-tab-group (click)="handleDivClick($event)">
             <mat-tab label="About Starex">
                 <ul class="dropmenu">
@@ -23,7 +56,8 @@
                         <a routerLink="chancellor-message" (click)="handleAnchorClick()">Chancellor's Message</a>
                     </li>
                     <li>
-                        <a routerLink="vice-chancellor-message" (click)="handleAnchorClick()">Vice Chancellor's Message</a>
+                        <a routerLink="vice-chancellor-message" (click)="handleAnchorClick()">Vice Chancellor's
+                            Message</a>
                     </li>
                     <li>
                         <a routerLink="registrar-message" (click)="handleAnchorClick()">Registrar Message</a>
@@ -35,7 +69,8 @@
                         <a routerLink="coe" (click)="handleAnchorClick()">COE</a>
                     </li>
                     <li>
-                        <a routerLink="approval-recognition" (click)="handleAnchorClick()">Recognition &amp; Approval</a>
+                        <a routerLink="approval-recognition" (click)="handleAnchorClick()">Recognition &amp;
+                            Approval</a>
                     </li>
                     <li>
                         <a routerLink="disclosure" (click)="handleAnchorClick()">Mandatory Disclosure</a>
@@ -44,7 +79,8 @@
                         <a routerLink="starex-mou" (click)="handleAnchorClick()">Starex MOU's</a>
                     </li>
                     <li>
-                        <a (click)="openPdfInNewTab('assets/pdf/information_for_ugc_inspection.pdf')">Information for UGC Inspection</a>
+                        <a (click)="openPdfInNewTab('assets/pdf/information_for_ugc_inspection.pdf')">Information for
+                            UGC Inspection</a>
                     </li>
                     <li>
                         <a routerLink="annual-reports" (click)="handleAnchorClick()">Annual Reports</a>
@@ -103,7 +139,7 @@
                     <li>
                         <a (click)="goToFaculty('law')">Law Faculty</a>
                     </li>
-                    
+
                 </ul>
             </mat-tab>
             <mat-tab label="Schools">
@@ -114,14 +150,16 @@
                     <li>
                         <a routerLink="commerce&management" (click)="handleAnchorClick()">Commerce &amp; Management</a>
                     </li>
-                   
+
                     <li>
-                        <a routerLink="computerscience&technology" (click)="handleAnchorClick()">Computer Science &amp; Technology </a>
+                        <a routerLink="computerscience&technology" (click)="handleAnchorClick()">Computer Science &amp;
+                            Technology </a>
                     </li>
                     <li>
-                        <a routerLink="engineering&technology" (click)="handleAnchorClick()">Engineering &amp; Technology</a>
+                        <a routerLink="engineering&technology" (click)="handleAnchorClick()">Engineering &amp;
+                            Technology</a>
                     </li>
-                    
+
                     <li>
                         <a routerLink="hotel-management" (click)="handleAnchorClick()">Hotel Management</a>
                     </li>
@@ -134,7 +172,7 @@
                     <li>
                         <a routerLink="life-science" (click)="handleAnchorClick()">Life Sciences</a>
                     </li>
-                     <li>
+                    <li>
                         <a routerLink="physical-science" (click)="handleAnchorClick()">Physical Sciences</a>
                     </li>
                     <li>
@@ -153,7 +191,8 @@
                     </li>
 
                     <li>
-                        <a routerLink="apprenticeship-training" (click)="handleAnchorClick()">The Apprenticeship Training Program For
+                        <a routerLink="apprenticeship-training" (click)="handleAnchorClick()">The Apprenticeship
+                            Training Program For
                             Hospitality, GERMANY , Europe</a>
                     </li>
                 </ul>
@@ -240,221 +279,49 @@
                     <li>
                         <a routerLink="NAD-Cell" (click)="handleAnchorClick()">University NAD Cell</a>
                     </li>
-                    <!-- <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Examination Form</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Reappear Form</a>
-                    </li> -->
                 </ul>
             </mat-tab>
         </mat-tab-group>
+    }
+    @else { 
+  <mat-accordion class="vertical-menu">
+    <mat-expansion-panel *ngFor="let section of aboutStarexSections" (click)="handleDivClick($event)">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ section.title }}
+        </mat-panel-title>
+        <mat-panel-description>
+         <!-- <div class="dropdown-toggle" (click)="isMenuOpen = !isMenuOpen">
+  @if (!isMenuOpen) {
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  } @else {
+    <mat-icon>keyboard_arrow_up</mat-icon>
+  }
+</div> -->
 
-        <!-- <mat-accordion (click)="handleDivClick($event)" class="accordion-grid" [multi]="false">
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title> About Starex </mat-panel-title>
-                </mat-expansion-panel-header>
-                <ul class="dropmenu">
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">About Starex</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Chancellor Message</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Vice Chancellor Message</a>
-                    </li>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
 
-                    <li>
-
-                        <a routerLink="law" (click)="handleAnchorClick()">Registrar Message</a>
-                    </li>
-                    <li> <a routerLink="law" (click)="handleAnchorClick()">Annual Reports</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Starex MOU's</a>
-                    </li>
-
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Recognition &amp; Approvals</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Mandatory Disclosure</a>
-                    </li>
-
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Course Eligibility</a>
-                    </li>
-                    <li>
-                        <a targert="_blank"
-                            href="https://www.starexuniversity.com/app-assets/vendors/assets/pdf/information_for_ugc_inspection.pdf">Information
-                            for UGC Inspection</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Details of Ombudsperson</a>
-                    </li>
-
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Policies</a>
-                    </li>
-
-
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Organogram</a>
-                    </li>
-                </ul>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title> Governance </mat-panel-title>
-                </mat-expansion-panel-header>
-                <ul class="dropmenu">
-
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">University Authorities</a>
-                    </li>
-                    <li> <a routerLink="law" (click)="handleAnchorClick()">Committees &amp; Boards</a></li>
-
-                </ul>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title> Starex Schools </mat-panel-title>
-                </mat-expansion-panel-header>
-                <ul class="dropmenu">
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Agriculture Science</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Commerce &amp; Management</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Physical Sciences</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Computer Science &amp; Technology </a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Engineering &amp; Technology</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Pharmaceutical Science </a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Hotel Management</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Humanities</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Law</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Life Sciences</a>
-                    </li>
-                    <li>
-                        <a routerLink="law" (click)="handleAnchorClick()">Vocational Courses</a>
-                    </li>
-
-                </ul>
-            </mat-expansion-panel>
-        </mat-accordion> -->
+      <ul class="dropmenu">
+        <li *ngFor="let item of section.links">
+          <a
+            *ngIf="item.type === 'router'"
+            [routerLink]="item.path"
+            (click)="handleAnchorClick()"
+          >
+            {{ item.label }}
+          </a>
+          <a
+            *ngIf="item.type === 'pdf'"
+            (click)="openPdfInNewTab(item.path)"
+          >
+            {{ item.label }}
+          </a>
+        </li>
+      </ul>
+    </mat-expansion-panel>
+  </mat-accordion>
+}
     </mat-menu>
+    
 </mat-toolbar>
-
-
-<!-- <div  class="school_list">
-        <div class="schoolContainer">
-            <div class="schoolimage"><img
-                    src="https://www.starexuniversity.com/uploads/StarexSchools/icons/Agricultural-Studies-Icon-03.png "
-                    alt=""></div>
-            <div class="title">
-                <a href=" https://www.starexuniversity.com/academics/Agriculture-Science"> Agriculture Science</a>
-
-            </div>
-        </div>
-
-        <div class="schoolContainer">
-            <div class="schoolimage"><img
-                    src="https://www.starexuniversity.com/uploads/StarexSchools/icons/Commerce-and-Management-Icon-05.png "
-                    alt=""></div>
-            <div class="title">
-                <a href=" https://www.starexuniversity.com/academics/Commerce-Management"> Commerce &amp;
-                    Management</a>
-
-            </div>
-        </div>
-
-        <div class="schoolContainer">
-            <div class="schoolimage"><img
-                    src="https://www.starexuniversity.com/uploads/StarexSchools/icons/Physical-Science-Icon-19.png "
-                    alt=""></div>
-            <div class="title">
-                <a href=" https://www.starexuniversity.com/academics/Physical-Sciences"> Physical Sciences</a>
-
-            </div>
-        </div>
-
-        <div class="schoolContainer">
-            <div class="schoolimage"><img
-                    src="https://www.starexuniversity.com/uploads/StarexSchools/icons/Coumputer-Sciences-Icon-07.png "
-                    alt=""></div>
-            <div class="title">
-                <a href=" https://www.starexuniversity.com/academics/Computer-Science-Technology"> Computer Science
-                    &amp; Technology </a>
-
-            </div>
-        </div>
-
-        <div class="schoolContainer">
-            <div class="schoolimage"><img
-                    src="https://www.starexuniversity.com/uploads/StarexSchools/icons/Pharmaceutical-Sciences-Icon-01.png "
-                    alt=""></div>
-            <div class="title">
-                <a href=" https://www.starexuniversity.com/academics/Pharmaceutical-Science"> Pharmaceutical Science
-                </a>
-
-            </div>
-        </div>
-
-        <div class="schoolContainer">
-            <div class="schoolimage"><img
-                    src="https://www.starexuniversity.com/uploads/StarexSchools/icons/Hotel-Management-Icon-10.png "
-                    alt=""></div>
-            <div class="title">
-                <a href=" https://www.starexuniversity.com/academics/Hotel-Management"> Hotel Management</a>
-
-            </div>
-        </div>
-
-        <div class="schoolContainer">
-            <div class="schoolimage"><img
-                    src="https://www.starexuniversity.com/uploads/StarexSchools/icons/Humanities-Icon-11.png " alt="">
-            </div>
-            <div class="title">
-                <a href=" https://www.starexuniversity.com/academics/Humanities"> Humanities</a>
-
-            </div>
-        </div>
-
-        <div class="schoolContainer">
-            <div class="schoolimage"><img
-                    src="https://www.starexuniversity.com/uploads/StarexSchools/icons/Law-Icon-12.png " alt="">
-            </div>
-            <div class="title">
-                <a href=" https://www.starexuniversity.com/academics/Law"> Law</a>
-
-            </div>
-        </div>
-
-        <div class="schoolContainer">
-            <div class="schoolimage"><img
-                    src="https://www.starexuniversity.com/uploads/StarexSchools/icons/Life-Sciences-Icon-14.png "
-                    alt=""></div>
-            <div class="title">
-                <a href=" https://www.starexuniversity.com/academics/Life-Sciences"> Life Sciences</a>
-
-            </div>
-        </div>
-    </div>  -->

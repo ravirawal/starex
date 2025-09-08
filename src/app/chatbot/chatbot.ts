@@ -100,7 +100,7 @@ console.log('User message received:', msg, words);
       return;
     }
   }
-
+  this.handleFacultySearch(msg, []);
   // General department routing
   if (intent.department && !intent.topic) {
     this.suggestion = `Taking you to the ${intent.department} page.`;
@@ -270,24 +270,42 @@ private fuzzyMatchFacultyName(input: string): string | null {
   const allFaculty = this.facultyService.getAllFaculty();
   const normalizedInput = input.toLowerCase().replace(/[^a-z\s]/g, '');
 
+  const candidates: { word: string; score: number }[] = [];
+
   for (const faculty of allFaculty) {
-    const words = faculty.name.split(/\s+/); // Split full name into words
+    const words = faculty.name.split(/\s+/);
 
     for (const word of words) {
       const normalizedWord = word.toLowerCase().replace(/[^a-z]/g, '');
 
-      if (normalizedWord.includes(normalizedInput) || normalizedInput.includes(normalizedWord)) {
-        return word; // Return the matched word only
+      let score = 0;
+
+      if (normalizedInput === normalizedWord) {
+        score = 100; // Exact match
+      } else if (normalizedWord.includes(normalizedInput) || normalizedInput.includes(normalizedWord)) {
+        score = 75; // Partial match
+      } else {
+        const distance = this.levenshtein(normalizedInput, normalizedWord);
+        const lengthDiff = Math.abs(normalizedInput.length - normalizedWord.length);
+
+        if (distance <= 2 && lengthDiff <= 1 && normalizedInput.length >= 4) {
+          score = 50 - distance; // Fuzzy match with penalty
+        }
       }
 
-      const distance = this.levenshtein(normalizedInput, normalizedWord);
-      if (distance <= 2) {
-        return word;
+      if (score > 0) {
+        candidates.push({ word, score });
       }
     }
   }
 
-  return null;
+  if (candidates.length === 0) return null;
+
+  // Sort by score descending, then alphabetically to stabilize
+  candidates.sort((a, b) => b.score - a.score || a.word.localeCompare(b.word));
+
+  console.log('Best match:', candidates[0].word);
+  return candidates[0].word;
 }
 
 
@@ -296,9 +314,12 @@ private matchDepartmentPhrase(msg: string): string | null {
   const departmentMap: { [key: string]: string } = {
     'law': 'law',
     'pharmaceutics': 'pharmaceutics',
+    'pharmacy': 'pharmaceutics',
     'physical science': 'physicalScience',
     'life science': 'lifeScience',
     'computer science': 'cse',
+    'computer programs': 'cse',
+    'computer technology': 'cse',
     'agriculture': 'agriculture'
   };
 
@@ -319,7 +340,7 @@ private parseIntent(msg: string): {
   console.log('Function parseIntent', msg);
   const lowerMsg = msg.toLowerCase();
 
-  const department = Object.keys(DEPARTMENTS).find(dep => lowerMsg.includes(dep));
+  let department = Object.keys(DEPARTMENTS).find(dep => lowerMsg.includes(dep));
   const designation = DESIGNATIONS.find(d => lowerMsg.includes(d));
   const topic = TOPICS.find(t => lowerMsg.includes(t));
 

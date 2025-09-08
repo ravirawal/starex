@@ -410,42 +410,58 @@ html {
   bottom: 0;
   margin: auto;
 }
-// .crcLogoSwiper {
-//   width: 100%;
-//   border-radius: 10px;
-//   background: #fafafa;
-//   box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
-// }
 
-// .swiper-wrapper {
-//   transition-timing-function: linear;
-//   pointer-events: none;
-// }
+.ibm-tabs .mdc-tab__text-label{
+  color: #444 !important;
+}
+.phd-section .mdc-tab__text-label{
+  color: #444 !important;
+}
+.head-course-carousel swiper-container {
+width: 150px;
+    height: 42px;
+  background-color: #1b3e7a;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  text-wrap: wrap;
+      border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.25);
+    border-image: initial;
+    background: rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    margin-right: 20px;
+}
 
-// .crcLogoSwiper .swiper-slide {
-//   text-align: center;
-//   position: relative;
-// }
+.head-course-carousel swiper-container:hover {
+  background-color: #2452a4;   /* brighter hover tone */
+  border-color: #4c7cd1;       /* accent border on hover */
+  cursor: pointer;
+}
 
-// .crcLogoSwiper .swiper-slide:after {
-//   content: '';
-//   width: 1px;
-//   height: 90%;
-//   display: block;
-//   background: #ddd;
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   right: -10px;
-//   margin: auto;
-// }
+.head-course-carousel swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 
-// .crcLogoSwiper .crcLogoImg {
-//   width: 100%;
-//   max-width: 110px;
-//   aspect-ratio: 5/3;
-//   object-fit: scale-down;
-//   object-position: center;
-//   margin: auto;
-//   mix-blend-mode: multiply;
-// }
+.head-course-carousel swiper-slide span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.head-course-carousel swiper-container:hover swiper-slide span {
+  color: #e0ecff; /* soft white-blue text on hover */
+}
+

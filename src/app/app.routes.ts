@@ -56,6 +56,7 @@ import { NoticiesComponent } from './others-component/noticies/noticies';
 import { PhdComponent } from './others-component/phd/phd';
 import { CarriersComponent } from './others-component/carrier/carrier';
 import { FaqsComponent } from './others-component/faqs/faqs';
+import { IbmIceComponent } from './others-component/ibm-ice/ibm-ice';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -111,7 +112,7 @@ export const routes: Routes = [
   { path: 'placement', component: PlacementComponent },
   { path: 'international-students', component: InternationalStudentsComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
-  { path: 'IBM-ICE', component: PlacementComponent },
+  { path: 'IBM-ICE', component: IbmIceComponent },
 
 { path: 'notices', component: NoticiesComponent },
   { path: 'board-commities', component: BoardCommetiesComponent },

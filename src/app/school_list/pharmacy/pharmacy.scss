@@ -1,61 +1,88 @@
-table {
-  width: 100%;
-}
-a{
-     color: #284fa7;
-}
-p{
-  line-height: 1.8;
-    font-size: 18px;
-    color: #3C3D3E;
-    letter-spacing: .2px;
-    font-family: Lato, sans-serif;
-}
-.container{
-    margin:0 1rem;
-    img{
-      width:100%;
-      height: 100%;
-    }
-}
-.col-md-4{
-  width:33%;
-}
-.contentTitle{
-    text-transform: uppercase;
-    color: #284fa7;
-    border-bottom: 1px dashed #284fa7;
-    padding-bottom: 10px;
-    font-weight: 700;
-}
-/* sketch-flex.component.css */
-.flex-column {
+.pharma-container {
   display: flex;
   flex-direction: column;
-}
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-.flex_L50{
-  width:50%
-}
-.col-md-6{
-  width:50%;
-}
-/* Small devices (phones, ≥576px) */
-@media (max-width: 768px) {
-  .flex-column-S {
-    flex-direction: column;
-  }
-.flex_S100{
-  width:100%
-}
-.col-md-6{
-  width:100%;
-}
-.col-md-4{
-  width:100%;
-}
+  gap: 2rem;
+  padding: 2rem;
+  background: #f9f9f9;
 }
 
+.pharma-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.pharma-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.pharma-subtitle {
+  font-size: 1.6rem;
+  color: #34495e;
+  margin-bottom: 1rem;
+}
+
+.pharma-hero h2 {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #555;
+}
+
+.pharma-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.pharma-img-container {
+  flex: 1;
+  text-align: center;
+}
+
+.pharma-text-container {
+  flex: 2;
+}
+
+.pharma-img-circle {
+  border-radius: 50%;
+  max-width: 280px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.pharma-img-rounded {
+  border-radius: 12px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.pharma-img-shadow {
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.pharma-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.pharma-table {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.pharma-pdf-icon {
+  color: #820a0e;
+  font-size: 18px;
+  margin-right: 6px;
+  position: relative;
+  top: 4px;
+}

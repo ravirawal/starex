@@ -1,28 +1,261 @@
-a{
-     color: #284fa7;
+.phd-section {
+  padding: 40px 20px;
+  background-color: #f9fbfc;
+
+  .phd-tabs {
+    width: 100%;
+
+    ::ng-deep .mat-tab-label {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #002147;
+    }
+
+    ::ng-deep .mat-tab-label-active {
+      color: #faba13;
+    }
+
+    ::ng-deep .mat-ink-bar {
+      background-color: #faba13;
+    }
+  }
+
+  .tab-content {
+    padding: 20px 0;
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #002147;
+    margin-bottom: 10px;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .program-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    .program-chip {
+      background-color: #e3eaf5;
+      color: #002147;
+      font-weight: 500;
+      padding: 8px 12px;
+      margin: 20px 20px 20px 0;
+      border-radius: 20px;
+      font-size: 0.95rem;
+    }
+  }
+
+  .info-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+
+    .info-card {
+      flex: 1 1 300px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      mat-card-title {
+        font-size: 1.2rem;
+        color: #002147;
+      }
+
+      .info-block {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 8px;
+        padding-left: 4px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .cta-wrapper {
+   display: flex;
+   justify-content: center;
+  }
+
+  .apply-btn {
+    font-weight: 600;
+    padding: 10px 24px;
+  }
 }
-p{
-  line-height: 1.8;
-    font-size: 18px;
-    color: #3C3D3E;
-    letter-spacing: .2px;
-    font-family: Lato, sans-serif;
+.syllabus-tab {
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #002147;
+    margin-bottom: 10px;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #444;
+  }
+
+  .syllabus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+
+    .syllabus-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      mat-card-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #002147;
+      }
+
+      mat-card-content {
+        p {
+          font-size: 0.95rem;
+          color: #555;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
 }
-.container{
-    margin:0 1rem;
-   
+.sample-questions-tab {
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #002147;
+    margin-bottom: 10px;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #444;
+  }
+
+  .question-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+
+    .question-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      mat-card-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #002147;
+      }
+
+      .question-list {
+        padding-left: 1rem;
+
+        li {
+          margin-bottom: 1rem;
+
+          p {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+          }
+
+          .options {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+
+            li {
+              font-size: 0.95rem;
+              color: #555;
+              margin-bottom: 0.25rem;
+            }
+          }
+        }
+      }
+
+      .answer-key {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #006400;
+        margin-top: 1rem;
+      }
+    }
+  }
 }
-.about-head-img {
-  margin-top: 1rem;
-  height: 75vh;
-  width: 80%;
-  //border: 1px solid blanchedalmond;
-  border-radius: 50%;
-  padding: 1rem;
- 
+.publications-tab {
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #002147;
+    margin-bottom: 10px;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #444;
+  }
+
+  .publication-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+
+    .publication-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      mat-card-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #002147;
+      }
+
+      mat-card-subtitle {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 10px;
+      }
+
+      mat-card-content {
+        p {
+          font-size: 0.95rem;
+          color: #555;
+          line-height: 1.5;
+        }
+      }
+
+      mat-card-actions {
+        margin-top: 10px;
+
+        a {
+          font-weight: 600;
+          font-size: 0.95rem;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+
+        mat-icon {
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }
 
-.vision-mission-img{
-  width: 100%;
-  height: 100%;
-}

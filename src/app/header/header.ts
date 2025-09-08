@@ -1,4 +1,4 @@
-import { Component, signal, ViewChild } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, signal, ViewChild } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -18,6 +18,7 @@ import { PdfModalComponent } from '../pdf/pdf-modal-components';
   imports: [MatToolbarModule, MatListModule, CommonModule,MatCardModule,MatTabsModule,
     MatButtonModule,RouterLink,
     MatIconModule, MatMenuModule, MatExpansionModule],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
@@ -29,25 +30,33 @@ window.addEventListener('resize', () => {
       this.screenWidth.set(window.innerWidth);
     });
   }
+  isMenuOpen = false;
   isMobile(): boolean {
     return this.screenWidth() < 768;
   }
-  navItems = [
-    {
-      label: 'Dashboard',
-      children: [
-        { label: 'Overview', route: '/dashboard/overview' },
-        { label: 'Stats', route: '/dashboard/stats' },
-      ],
-    },
-    {
-      label: 'Settings',
-      children: [
-        { label: 'Profile', route: '/settings/profile' },
-        { label: 'Security', route: '/settings/security' },
-      ],
-    },
-  ]
+ aboutStarexSections = [
+  {
+    title: 'About Starex',
+    expanded: false,
+    links: [
+      { label: 'About Us', path: 'about-starex', type: 'router' },
+      { label: "Chancellor's Message", path: 'chancellor-message', type: 'router' },
+      { label: "Vice Chancellor's Message", path: 'vice-chancellor-message', type: 'router' },
+      { label: 'Registrar Message', path: 'registrar-message', type: 'router' },
+      { label: 'OSD Message', path: 'osd-message', type: 'router' },
+      { label: 'COE', path: 'coe', type: 'router' },
+      { label: 'Recognition & Approval', path: 'approval-recognition', type: 'router' },
+      { label: 'Mandatory Disclosure', path: 'disclosure', type: 'router' },
+      { label: "Starex MOU's", path: 'starex-mou', type: 'router' },
+      { label: 'Information for UGC Inspection', path: 'assets/pdf/information_for_ugc_inspection.pdf', type: 'pdf' },
+      { label: 'Annual Reports', path: 'annual-reports', type: 'router' },
+      { label: 'Ombudsperson', path: 'assets/pdf/2025_about_ombudsperson.pdf', type: 'pdf' },
+      { label: 'Policies', path: 'policies', type: 'router' },
+      { label: 'Organogram', path: 'organogram', type: 'router' },
+    ]
+  }
+];
+
   readonly panelOpenState = signal(false);
   handleDivClick(event: MouseEvent): void {
   event.stopPropagation(); // prevents bubbling that triggers close

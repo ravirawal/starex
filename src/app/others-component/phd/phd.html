@@ -1,202 +1,193 @@
-<section class="content about py50">
-	<div class="container">
-		<div class="row">
-			
-			<div class="col-md-8 order-md-2">
-			 <h1 class="" style="font-size: 1.75rem;">PhD Program</h1>
-				
+<section class="phd-section">
+  <mat-tab-group mat-stretch-tabs class="phd-tabs">
+    <mat-tab label="PhD Programs">
+      <div class="tab-content">
+        <h2 class="section-title">🎓 PhD Programs – 2025–26</h2>
+        <p class="intro-text">Admissions are open for the following disciplines:</p>
 
-				<div class="row">
-					<div class="col-sm-12">
-						 
-						 <p class="abouttext"> 
-						 	The admissions are open to the following PhD Programmes for the academic session <span style="color:red">2025-26</span>. 
-						 </p> 
-					</div>
-					<div class="col-12">
-						 
-					 
-					 
-						<ol style="column-count: 2">
-							<li>Botany</li>
-						    <li>Chemistry</li>
-							<li>Commerce</li>
-							<li>English</li>
-							<li>Hotel Management</li>
-							<li>Management</li>
-							<li>Mathematics</li>
-							<li>Microbiology</li>
-							<li>Pharmaceutical Science</li>
-						    <li>Physics</li>
-							<li>Physiology</li>
-							<li>Zoology</li>
-							<li>Law</li>
-							<li>Political Science</li>
-                            <li>History</li>
-                            <li>Computer Science</li>
-                            <li>Agriculture Science</li>
-                            <!-- Code added by Roshan -->
-                            <!--<li>Hindi</li>-->
-                            <li>Psychology</li>
-                            <!--code here end here-->
-                            
-                            <!-- <li>Economics</li>
-                            <li>Computer Science & Engineering</li>
-                              <li>Hotel Management</li> -->
-                           <!--   
-                             
-                               <li>Psychology</li>
-                               
-                            
-                           
+        <div class="program-grid">
+          <mat-chip-list>
+            <mat-chip *ngFor="let subject of [
+              'Botany','Chemistry','Commerce','English','Hotel Management','Management',
+              'Mathematics','Microbiology','Pharmaceutical Science','Physics','Physiology',
+              'Zoology','Law','Political Science','History','Computer Science',
+              'Agriculture Science','Psychology'
+            ]" class="program-chip" selected>
+              {{ subject }}
+            </mat-chip>
+          </mat-chip-list>
+        </div>
 
-                            
-                            <li>Political Science</li>
-                          
-                          
-                            
-                         
-                            
-                        
-                            
-                            <li>Computer Science &amp; Engineering</li>
-                            <li>Law</li>
-                            <li>Physical Education/Sports Management/Sports Sciences</li>
-                            -->
+        <div class="info-cards">
+          <mat-card class="info-card">
+            <mat-card-header>
+              <mat-card-title>Eligibility Criteria</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="info-block">✅ NET Qualified</div>
+              <div class="info-block">📜 NET score considered as per UGC circular dated 28.03.2024</div>
+              <div class="info-block">🗣️ Interview</div>
+            </mat-card-content>
+          </mat-card>
 
-                        </ol>
-                        
-                        <!--Abhishek
-                        
-                        <p style="font-weight:bolder">These are the vacant seats for the PhD Programme (Full-time/Part-time) for the Academic Session <span style="color:red">2025-26</span> in various departments, and details are given below.</p>
-                        <div class="phd-seat-cont">
-                            <div>
-                                <ol class="phd-list-new">
-                                    <li style="font-weight: bolder;">Sr. No.</li>
-                                    <li>1.</li>
-                                    <li>2.</li>
-                                    <li>3.</li>
-                                    <li>4.</li>
-									<li>5.</li>
-                                    <li>6.</li>
-                                    <li>7.</li>
-                                    <li>8.</li>
-									<li>9.</li>
-                                    <li>10.</li>
-                                    <li>11.</li>
-                                    <li>12.</li>
-									<li>13.</li>
-                                    <li>14.</li>
-                                    <li>15.</li>
-                                </ol>
-                            </div>
-                    
-                            <div>   
-                                <ol class="phd-list-new">
-                                    <li style="font-weight: bolder;">Discipline </li>
-                                    <li>Botany</li>
-									<li>Chemistry</li>
-									<li>Commerce</li>
-									<li>English</li>
-									<li>Hotel Management</li>
-									<li>Management</li>
-									<li>Mathematics</li>
-									<li>Microbiology</li>
-									<li>Pharmaceutical Science</li>
-									<li>Physics</li>
-									<li>Physiology</li>
-									<li>Zoology</li>
-									<li>Law</li>
-									<li>Political Science</li>
-									<li>History</li>
-                                </ol>
-                            </div>
-                    
-                            <div>
-                                <ol class="phd-list-new">
-                                    <li style="font-weight: bolder;">Number of Seats</li>
-                                        <li>04</li>
-										<li>02</li>
-										<li>13</li>
-										<li>01</li>
-										<li>11</li>
-										<li>08</li>
-										<li>03</li>
-										<li>08*</li>
-										<li>06</li>
-										<li>05</li>
-										<li>02</li>
-										<li>04</li>
-										<li>05</li>
-										<li>04</li>
-										<li>01</li>
-                                </ol>
-                            </div>
-                        </div>-->
-                        <div>
-                            <p style="font-size: large;">Eligibility criteria:</p>
-                            <ol style="list-style:disc;">
-                                <li>NET Qualified</li>
-                                <li>NET score will be considered for PhD Admission as per UGC circular dated 28.03.2024</li>
-                                <!-- <li>Entrance test of University</li> -->
-                                <li>Interview</li>
-                            </ol>
-                        </div>
-                        
-                        <div>
-                            <p style="font-size: large;">Duration of the PhD</p>
-                            <ol style="list-style:disc;">
-                                <li>Minimum 3 Years</li>
-                                <li>Maximum 6 years</li>
-                            </ol>
-                        </div>
-                        
-                        <div>
-                            <p style="font-size: large;">Fees</p>
-                            <ol style="list-style:disc;">
-                                <li>100000 (Full-Time)</li>
-                                <li>90000 (Part-Time)</li>
-                            </ol>
-                        </div>
-                        
-                        <!--end-->
-                            <!-- <a style='font-size: 20px;' class="btn rounded-0" target="_blank" href="https://www.starexuniversity.com/app-assets/vendors/assets/Regarding-PhD-Admission-date-extended.pdf"><span> <i class="fa fa fa-file-pdf-o" style='color:red'></i></span>&nbsp;Admission Notice 2025-2026<img src="https://www.starexuniversity.com/app-assets/vendors/assets/new.gif" style="width: 52px;"></a> <br>
-                           <a style='font-size: 20px;' class="btn rounded-0" target="_blank" href="https://www.starexuniversity.com/app-assets/vendors/assets/phd-result-2023.pdf"><span> <i class="fa fa fa-file-pdf-o" style='color:red'></i></span>&nbsp;PHD RESULT 2023<img src="https://www.starexuniversity.com/app-assets/vendors/assets/new.gif" style="width: 52px;"></a> <br>
-                  
-                             <a style='font-size: 20px;' class="btn rounded-0" target="_blank" href="https://www.starexuniversity.com/app-assets/vendors/assets/rvphd-notification.pdf"><span> <i class="fa fa fa-file-pdf-o" style='color:red'></i></span>&nbsp;More Info About PhD</a> <br>
-                          <a style='font-size: 20px;' class="btn rounded-0" target="_blank" href="https://www.starexuniversity.com/app-assets/vendors/assets/latest-phd-notifications.pdf
+          <mat-card class="info-card">
+            <mat-card-header>
+              <mat-card-title>Duration</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="info-block">⏳ Minimum: 3 Years</div>
+              <div class="info-block">📆 Maximum: 6 Years</div>
+            </mat-card-content>
+          </mat-card>
 
-"><span> <i class="fa fa fa-file-pdf-o" style='color:red'></i></span>&nbsp;Admission Notifcation  Session 2023-24 </a><br>
-  <a style='font-size: 20px;' class="btn rounded-0" target="_blank" href="https://www.starexuniversity.com/app-assets/vendors/assets/latest-phd-notifications.pdf
-"><span> <i class="fa fa fa-file-pdf-o" style='color:red'></i></span>&nbsp;Latest PhD Notification </a><br>
-  <a style='font-size: 20px;' class="btn rounded-0" target="_blank" href="https://www.starexuniversity.com/app-assets/vendors/assets/notice-phd-exam.png
-"><span> <i class="fa fa fa-file-pdf-o" style='color:red'></i></span>&nbsp;PhD Examination Date Notification </a> -->
-			
-                           <a class="flashButton" href="https://www.starexuniversity.com/admission/" style="background-color: #284fa7; color: #ffffff;line-height: 30px;font-weight: 700;margin-top: 6px;padding: 0 6px;">Apply Now</a>
+          <mat-card class="info-card">
+            <mat-card-header>
+              <mat-card-title>Fees</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="info-block">💼 ₹1,00,000 (Full-Time)</div>
+              <div class="info-block">🕒 ₹90,000 (Part-Time)</div>
+            </mat-card-content>
+          </mat-card>
+        </div>
 
-					</div>
-				</div>
-							</div>
-			<div class="col-md-4 order-md-1">
-				<div class="row p-0 m-0">
-					
-					<div class="col-12 p-0 m-0">
-						<ul class="leftnav">
-					<li><a href="https://www.starexuniversity.com/phd" style="    text-transform: unset;">PhD PROGRAMS</a></li>
-					<!-- <li><a  href="https://www.starexuniversity.com/phd/admission-criteria">Admission Criteria</a></li> -->
-					<li><a href="https://www.starexuniversity.com/phd/apply-now">Apply Now</a></li>
-					<li><a href="https://www.starexuniversity.com/phd/syllabus">Syllabus</a></li>
-					<li><a href="https://www.starexuniversity.com/phd/sample-question">Sample Question </a></li>
-							<li><a href="https://www.starexuniversity.com/publication">Research Publication </a></li>
-					 
-				</ul>
-					</div>
-				</div>
+        <div class="cta-wrapper">
+          <a mat-raised-button color="primary" class="apply-btn" href="https://www.starexuniversity.com/admission/">Apply Now</a>
+        </div>
+      </div>
+    </mat-tab>
 
-				
-			</div>
+    <mat-tab label="Apply Now">
+      <div class="tab-content">
+        <p>Visit the <a href="https://www.starexuniversity.com/phd/apply-now">Apply Now</a> page to begin your application.</p>
+      </div>
+    </mat-tab>
 
+    <mat-tab label="Syllabus">
+      <div class="tab-content">
+       <div class="tab-content syllabus-tab">
+  <h2 class="section-title">📘 PhD Syllabus Overview</h2>
+  <p class="intro-text">Explore the syllabus highlights for various disciplines offered under the PhD program.</p>
 
-		</div>
-	</div>
+  <div class="syllabus-grid">
+    <mat-card class="syllabus-card" *ngFor="let subject of syllabus">
+      <mat-card-header>
+        <mat-card-title>{{ subject.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ subject.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Sample Question">
+      <div class="tab-content sample-questions-tab">
+  <h2 class="section-title">📝 Sample Questions</h2>
+  <p class="intro-text">Explore discipline-wise sample questions to prepare for the PhD entrance examination.</p>
+
+  <div class="question-grid">
+    <!-- Repeat this block for each subject -->
+    <mat-card class="question-card">
+      <mat-card-header>
+        <mat-card-title>English</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <ol class="question-list">
+          <li>
+            <p>During which period of Chaucer’s literary career was Canterbury Tales written?</p>
+            <ul class="options">
+              <li>First</li>
+              <li>Second</li>
+              <li>Third</li>
+              <li>None of the above</li>
+            </ul>
+          </li>
+          <li>
+            <p>To whom was Spenser’s Faerie Queen dedicated?</p>
+            <ul class="options">
+              <li>Queen Elizabeth</li>
+              <li>His beloved</li>
+              <li>Wife</li>
+              <li>Shakespeare</li>
+            </ul>
+          </li>
+          <li>
+            <p>Dryden’s All for Love is based on which play of Shakespeare?</p>
+            <ul class="options">
+              <li>Midsummer Night’s Dream</li>
+              <li>Antony and Cleopatra</li>
+              <li>Hamlet</li>
+              <li>Twelfth Night</li>
+            </ul>
+          </li>
+          <li>
+            <p>The phrase ‘Stream of Consciousness’ was coined by?</p>
+            <ul class="options">
+              <li>John Keats</li>
+              <li>Virginia Woolf</li>
+              <li>James Joyce</li>
+              <li>William James</li>
+            </ul>
+          </li>
+        </ol>
+        <p class="answer-key">✅ Answer Key: C, A, B, D</p>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Repeat similar mat-card blocks for Economics, Psychology, Mathematics, Commerce -->
+  </div>
+</div>
+
+    </mat-tab>
+
+    <mat-tab label="Research Publication">
+      <div class="tab-content">
+       <div class="tab-content publications-tab">
+  <h2 class="section-title">📚 PhD Research Publications</h2>
+  <p class="intro-text">Explore recent scholarly contributions from our PhD researchers.</p>
+
+  <div class="publication-grid">
+    <mat-card class="publication-card">
+      <mat-card-header>
+        <mat-card-title>Few Properties of 𝒎𝟐,𝒌(𝝈) Represented By A Dirichlet Series</mat-card-title>
+        <mat-card-subtitle>Author: Praneeta Verma</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          This paper discusses properties of mean values of entire functions represented by Dirichlet series. It distinguishes between limits and types of 𝑓(𝑠) within the same order 𝜌∗, and presents results for 𝑚2,𝑘(𝜎).
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button color="accent" href="https://www.starexuniversity.com/assets/publications/1.pdf" target="_blank">
+          <mat-icon>picture_as_pdf</mat-icon> View PDF
+        </a>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="publication-card">
+      <mat-card-header>
+        <mat-card-title>Fixed Point Theorem On Random Meir-Keeler Contractions In G-Metric Space</mat-card-title>
+        <mat-card-subtitle>Author: Radha, Balbir Singh</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          This paper introduces random MYγ and Meir-Keeler contractions in complete random G-metric spaces. It explores the existence of random fixed points and provides illustrative examples to support the findings.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button color="accent" href="https://www.starexuniversity.com/assets/publications/2.pdf" target="_blank">
+          <mat-icon>picture_as_pdf</mat-icon> View PDF
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 </section>

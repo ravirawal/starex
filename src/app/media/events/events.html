@@ -1,66 +1,13 @@
-<section class="content about py50">
+<section class="starex-news py50">
   <div class="container">
-    <div class="row media">
-      <div class="col-md-8 order-md-2">
-        <h1 class="contentTitle" style="font-size: 1.75rem;">Starex Events</h1>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="textbox py-4">
-              <div class="row">
-                <img src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_072132804.jpg"
-                  class="w-100" alt="">
-                <ul class="vieser">
-                  <li>
-                    <h4 style="font-weight: bold;font-size:18px;color: #05164d;">National Flag Day</h4>
-                  </li>
-                  <li>
-                    <p class="mt-1 mb-0"><i class="fa fa-calendar-alt"></i> 22-07-2025</p>
-                  </li>
-                  <li>
-                    <p></p>
-                  </li>
-                </ul>
+    <h1 class="section-title">Starex Events</h1>
 
-
-              </div>
-            </div>
-            <div class="textbox py-4">
-              <div class="row">
-                <img src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_071309733.jpg"
-                  class="w-100" alt="">
-                <ul class="vieser">
-                  <li>
-                    <h4 style="font-weight: bold;font-size:18px;color: #05164d;">National Flag Day</h4>
-                  </li>
-                  <li>
-                    <p class="mt-1 mb-0"><i class="fa fa-calendar-alt"></i> 22-07-2025</p>
-                  </li>
-                  <li>
-                    <p></p>
-                  </li>
-                </ul>
-
-
-              </div>
-            </div>
-            <div class="textbox py-4">
-              <div class="row">
-                <img src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_062218240_MP.jpg"
-                  class="w-100" alt="">
-                <ul class="vieser">
-                  <li>
-                    <h4 style="font-weight: bold;font-size:18px;color: #05164d;">National Flag Day </h4>
-                  </li>
-                  <li>
-                    <p class="mt-1 mb-0"><i class="fa fa-calendar-alt"></i> 22-07-2025</p>
-                  </li>
-                  <li>
-                    <p></p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <div class="news-grid">
+      <div class="news-card" *ngFor="let item of eventsData">
+        <img [src]="item.image" [alt]="item.title" scrollReveal />
+        <div class="news-text">
+          <h4>{{ item.title }}</h4>
+          <p class="news-date"><mat-icon>calendar_today</mat-icon> {{ item.date }}</p>
         </div>
       </div>
     </div>

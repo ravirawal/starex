@@ -1,71 +1,16 @@
-<section class="content about py50">
-    <div class="container">
-        <div class="row media">
-            <div class="col-md-8 order-md-2">
-                <h1 class="contentTitle" style="font-size: 1.75rem;">Starex News</h1>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="textbox py-4">
-                            <a href="#"><img src="https://www.starexuniversity.com/uploads/StarexNews/nsd.png"
-                                    class="w-100" alt=""> </a>
-                            <ul class="vieser">
-                                <li> <a href="#">
-                                        <h4 style="font-weight: bold;font-size:18px;color: #05164d;">Connecting
-                                            Communities Through Science - National Science Day Seminar!
-                                            Our Speaker Dr. Akhilesh Pandey</h4>
-                                    </a></li>
-                                <li>
-                                    <p class="mt-1 mb-0"><i class="fa fa-calendar-alt"></i> 17-02-2024</p>
-                                </li>
-                                <li>
-                                    <p></p>
-                                </li>
-                            </ul>
+<section class="starex-news py50">
+  <div class="container">
+    <h1 class="section-title">Starex News</h1>
 
-                        </div>
-                        <div class="textbox py-4">
-                            <a href="#"><img src="https://www.starexuniversity.com/uploads/StarexNews/dsd.png"
-                                    class="w-100" alt=""> </a>
-                            <ul class="vieser">
-                                <li> <a href="#">
-                                        <h4 style="font-weight: bold;font-size:18px;color: #05164d;">Recreational Visit
-                                            To Surajkund International Craft Fair </h4>
-                                    </a></li>
-                                <li>
-                                    <p class="mt-1 mb-0"><i class="fa fa-calendar-alt"></i> 17-02-2024</p>
-                                </li>
-                                <li>
-                                    <p></p>
-                                </li>
-                            </ul>
-
-                        </div>
-                        <div class="textbox py-4">
-                            <a href="#"><img
-                                    src="https://www.starexuniversity.com/uploads/StarexNews/WhatsApp_Image_2024-02-08_at_5_40_40_PM.png"
-                                    class="w-100" alt=""> </a>
-                            <ul class="vieser">
-                                <li> <a href="#">
-                                        <h4 style="font-weight: bold;font-size:18px;color: #05164d;">Visit Mark Exhaust
-                                            System Pvt Ltd</h4>
-                                    </a></li>
-                                <li>
-                                    <p class="mt-1 mb-0"><i class="fa fa-calendar-alt"></i> 07-02-2024</p>
-                                </li>
-                                <li>
-                                    <p></p>
-                                    <p>Embarking on a Journey of Engineering Excellence: MSc Physics students from
-                                        Starex University Gurugram explore the Power of Physics at Mark Exhaust System
-                                        Pvt Ltd, Manesar, Gurugram on 08-02-2024.&nbsp;</p>
-
-                                    <p>#PhysicsInAction #EngineeringExploration #StarexUniversity</p>
-                                    <p></p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="news-grid">
+      <div class="news-card" *ngFor="let item of newsData">
+        <img [src]="item.image" [alt]="item.title" scrollReveal />
+        <div class="news-text">
+          <h4>{{ item.title }}</h4>
+          <p class="news-date"><mat-icon>calendar_today</mat-icon> {{ item.date }}</p>
+          <p>{{ item.description }}</p>
         </div>
+      </div>
     </div>
+  </div>
 </section>

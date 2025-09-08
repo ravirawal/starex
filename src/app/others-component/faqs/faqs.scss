@@ -1,28 +1,51 @@
-a{
-     color: #284fa7;
-}
-p{
-  line-height: 1.8;
-    font-size: 18px;
-    color: #3C3D3E;
-    letter-spacing: .2px;
-    font-family: Lato, sans-serif;
-}
-.container{
-    margin:0 1rem;
-   
-}
-.about-head-img {
-  margin-top: 1rem;
-  height: 75vh;
-  width: 80%;
-  //border: 1px solid blanchedalmond;
-  border-radius: 50%;
-  padding: 1rem;
- 
-}
+.faq-section {
+  padding: 60px 20px;
+  background-color: #f4f7fa;
 
-.vision-mission-img{
-  width: 100%;
-  height: 100%;
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #002147;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .accordion-button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #002147;
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #faba13;
+      color: #000;
+    }
+  }
+
+  .accordion-body {
+    background-color: #fff;
+    padding: 20px;
+    border-top: 1px solid #eee;
+
+    p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 10px;
+
+      strong {
+        color: #002147;
+      }
+    }
+  }
+
+  .accordion-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
 }

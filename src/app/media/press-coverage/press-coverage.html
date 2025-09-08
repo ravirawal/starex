@@ -1,67 +1,13 @@
-<section class="content about py50">
+<section class="press-media py50">
   <div class="container">
-    <div class="row media">
-      <div class="col-md-8 order-md-2">
-        <h1 class="contentTitle" style="font-size: 1.75rem;">Starex Press Media</h1>
-        <div class="row">
+    <h1 class="section-title">Starex Press Media</h1>
 
-          <div class="col-sm-12">
-            <div class="textbox py-4">
-              <div class="row">
-                <img src="https://www.starexuniversity.com/uploads/StarexPressMedia/image_(1).png" class="w-100" alt="">
-
-                <ul class="vieser">
-                  <li>
-                    <h4 style="font-weight: bold;font-size:18px;color: #05164d;"></h4>
-                  </li>
-                  <li>
-                    <p class="mt-1 mb-0"><i class="fa fa-calendar-alt"></i> 05-06-2023</p>
-                  </li>
-                  <li>
-                    <p></p>
-                  </li>
-                </ul>
-
-              </div>
-            </div>
-            <div class="textbox py-4">
-              <div class="row">
-                <img src="https://www.starexuniversity.com/uploads/StarexPressMedia/studentimage.jpg" class="w-100"
-                  alt="">
-
-                <ul class="vieser">
-                  <li>
-                    <h4 style="font-weight: bold;font-size:18px;color: #05164d;"></h4>
-                  </li>
-                  <li>
-                    <p class="mt-1 mb-0"><i class="fa fa-calendar-alt"></i> </p>
-                  </li>
-                  <li>
-                    <p></p>
-                  </li>
-                </ul>
-
-              </div>
-            </div>
-            <div class="textbox py-4">
-              <div class="row">
-                <img src="https://www.starexuniversity.com/uploads/StarexPressMedia/owqeqwe.JPG" class="w-100" alt="">
-
-                <ul class="vieser">
-                  <li>
-                    <h4 style="font-weight: bold;font-size:18px;color: #05164d;">News</h4>
-                  </li>
-                  <li>
-                    <p class="mt-1 mb-0"><i class="fa fa-calendar-alt"></i> 12-10-2021</p>
-                  </li>
-                  <li>
-                    <p></p>
-                  </li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
+    <div class="masonry-grid">
+      <div class="masonry-item" *ngFor="let item of pressMediaData">
+        <img [src]="item.image" [alt]="item.title || 'Press Media'" />
+        <div class="item-meta">
+          <h4 *ngIf="item.title">{{ item.title }}</h4>
+          <p *ngIf="item.date"><mat-icon>calendar_today</mat-icon> {{ item.date }}</p>
         </div>
       </div>
     </div>
