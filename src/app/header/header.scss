@@ -107,11 +107,23 @@ button {
 .erp-login{
   margin-right: 1rem;
   cursor: pointer;
-  font-size: 18px;
-  transition: all ease-out 3ms
+  font-size: 14px;
+  transition: all ease-out 3ms;
+   border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.25);
+    border-image: initial;
+    background: rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    margin-right: 10px;
+    padding:0 10px;
+    line-height: 36px;
 }
 .erp-login:hover{
-  transform: matrix3d();
+   background-color: #2452a4;   /* brighter hover tone */
+  border-color: #4c7cd1;       /* accent border on hover */
+  cursor: pointer;
 }
 .hamburger {
     position: relative;

@@ -286,35 +286,26 @@ html {
 }
 
   #tranding {
-    padding: 0 0 2rem 0;
     background-color: #1b3e7a;
+    .tarding-container{
+       padding: 2rem 3rem;
+    }
   }
 
 #tranding .tranding-slider {
   position: relative;
 }
 
-// .tranding-slide {
-//   width: 24rem !important;
-//   height: 25rem;
-//   position: relative;
-// }
 
 @media (max-width:500px) {
-  .tranding-slide {
-    width: 26rem !important;
-    height: 22rem !important;
-  }
-
-  .tranding-slide .tranding-slide-img img {
-    width: 20rem !important;
-    height: 25rem !important;
+.tarding-container {
+    padding: 2rem 0.3rem;
   }
 }
 
 .tranding-slide .tranding-slide-img img {
-  width: 22rem;
-  height: 26rem;
+  width: 20rem;
+  height: 30rem;
   border-radius: 2rem;
   object-position: center;
   transition: all 0.3s ease;
@@ -333,7 +324,7 @@ html {
 .tranding-slide-content .tranding-slide-content-bottom {
   position: absolute;
   bottom: 2rem;
-  left: 2rem;
+  left: 1rem;
   color: var(--white);
 }
 
@@ -355,7 +346,7 @@ html {
   position: absolute;
   bottom: 0;
   color: #fff;
-  font-size: 17px;
+  font-size: 16px;
   font-family: var(--secondary-ff);
   line-height: 29px;
   background-color: var(--black);
@@ -464,4 +455,3 @@ width: 150px;
 .head-course-carousel swiper-container:hover swiper-slide span {
   color: #e0ecff; /* soft white-blue text on hover */
 }
-

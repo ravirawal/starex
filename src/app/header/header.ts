@@ -32,7 +32,7 @@ window.addEventListener('resize', () => {
   }
   isMenuOpen = false;
   isMobile(): boolean {
-    return this.screenWidth() < 768;
+    return this.screenWidth() < 800;
   }
  aboutStarexSections = [
   {

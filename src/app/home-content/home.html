@@ -1,10 +1,10 @@
 <div class="home">
-  <div class="video-wrapper" style="overflow:hidden; min-height:360px;" #wrapper>
-    <img src="../../assets/starex/university_image.jpg" alt="Virtual Tour Poster" style="width:100%;height:auto;object-fit:cover;display:block;" #posterImg>
-    <!-- <video src="../../assets/video/virtual tour.mp4" autoplay
+  <div class="video-wrapper" #wrapper>
+    <img src="../../assets/starex/university_image.jpg" alt="Virtual Tour Poster" #posterImg>
+    <video src="../../assets/video/virtual tour.mp4" autoplay
       [muted]="'muted'" playsinline loop style="width:100%;height:auto;object-fit:cover;display:none;" #videoEl
       (loadeddata)="posterImg.style.display='none'; videoEl.style.display='block'; wrapper.style.minHeight=''; wrapper.style.height=''">
-    </video> -->
+    </video>
   </div>
 
   <div class="flex-column photo_section">
@@ -45,6 +45,7 @@
       </div>
     </div>
   </div>
+
   <div class="flex-column">
     <h2 class="text-center h2-blue"> Congratulations Moments</h2>
     <div class="flex-row flex-column-S">
@@ -60,10 +61,11 @@
       </div>
     </div>
   </div>
+
   <!-- Tranding Section Start -->
   <section id="tranding">
-    <div class="container">
-      <h2 class="text-center h2-blue"> Running Programs</h2>
+    <h2 class="text-center h2-blue"> Running Programs</h2>
+    <div class="tranding-container">
       <div class="swiper tranding-slider margin-top-1">
         <swiper-container #swiperRef [config]="config" init="false" loop>
           <!-- Slide-start -->
@@ -236,7 +238,7 @@
           </div>
           <div class="leader-description">
             <a href="about/our-officers/dr-madan-mohan.html">
-              <p class="leader-text">Dr. Parveen Kumari, Provost at SGT University, has over 35 years of teaching and research experience in Biochemistry and Molecular Biology.</p>
+              <p class="leader-text">Dr. Hemant Sharma, Director of Schools, has over 35 years of in digital marketing and university campagining.</p>
             </a>
           </div>
           <div class="leader-details">
@@ -250,163 +252,112 @@
   </div>
 </section>
 
-  <div class="flex-row flex-column-S item-gap">
+ <div class="flex-row flex-column-S item-gap">
+  <!-- LEFT: Fade Effect -->
   <div class="flex-column-S col-md-6 col-sm-12">
-    <h2 class="text-center h2-blue margin-top-2">Main Highlights</h2>
-     <swiper-container class="highlights-swipper"
-     
-  slides-per-view="1"
-  loop="true"
-  autoplay="true"
- autoplay-delay="0"
-  autoplay-disable-on-interaction="false"
-  speed="8000"  >
-      <div class="swiper-slide highlights-slides">
+    <!-- <h2 class="text-center h2-blue margin-top-2">Main Highlights</h2> -->
+    <swiper-container
+      class="highlights-swipper"
+      loop="true"
+      autoplay-delay="2500"
+      speed="8000"
+      slides-per-view="1"
+    >
+     <div class="swiper-slide highlights-slides">
         <img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexHighlights/Discussion_with_international_students_.jpg"
+          src="https://www.starexuniversity.com/uploads/StarexNews/jan13.png"
           alt="">
 
-        <a href="https://www.starexuniversity.com/highlights/Discussion-with-international-students">
-          <h6 class="text-dark">Discussion with international students</h6>
-        </a>
+        <p>Agriculture Science research field</p>
+      </div>
+      <div class="swiper-slide highlights-slides"><img class="events-img"
+          src="https://www.starexuniversity.com/uploads/StarexNews/Bharatiya_Bhasha_Diwas.png" alt="">
+
+       <p>Bharatiya Bhasha Diwas</p>
+      </div>
+     <div class="swiper-slide highlights-slides">
+        <img class="events-img"
+          src="https://www.starexuniversity.com/uploads/StarexNews/nsd.png"
+          alt="">
+
+        <p>National Science Day Seminar featuring Dr. Akhilesh Pandey</p>
       </div>
       <div class="swiper-slide highlights-slides"><img class="events-img"
           src="https://www.starexuniversity.com/uploads/StarexHighlights/Chemistry_Lab.jpg" alt="">
 
-        <a href="https://www.starexuniversity.com/highlights/Chemistry-Lab-in-Action">
-          <h6 class="text-dark">Chemistry Lab in Action</h6>
-        </a>
+       <p>Chemistry Lab in Action</p>
       </div>
-      <div class="swiper-slide highlights-slides">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/CAFETERIA.jpg" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/Starex-Cafeteria">
-          <h6 class="text-dark">Starex Cafeteria</h6>
-        </a>
-      </div>
-
-
-      <div class="swiper-slide highlights-slides">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/canteen_.jpg" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/Starex-Canteen">
-          <h6 class="text-dark">Starex Canteen</h6>
-        </a>
-      </div>
-      <div class="swiper-slide highlights-slides">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/Library_.jpg" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/Starex-Library">
-          <h6 class="text-dark">Starex Library</h6>
-        </a>
-      </div>
-      <div class="swiper-slide highlights-slides">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/3a.jpg
-" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/Lush-Green-Campus">
-          <h6 class="text-dark">Lush Green Campus</h6>
-        </a>
-      </div>
-      <div class="swiper-slide highlights-slides">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/wifi.png" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/247-Wifi-Enabled-Campus">
-          <h6 class="text-dark">24*7 Wifi Enabled Campus</h6>
-        </a>
-      </div>
-      <div class="swiper-slide highlights-slides">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/modern.JPG" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/Well-Connected-to-DelhiNCR">
-          <h6 class="text-dark">Modern Hostels</h6>
-        </a>
-      </div>
-      <div class="swiper-slide highlights-slides">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/why1.jpg" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/Highly-Qualified-Experienced-Faculty">
-          <h6 class="text-dark">Highly Qualified &amp; Experienced Faculty</h6>
-        </a>
-      </div>
-    </swiper-container>
-  </div>
-  <div class="latest-events col-md-6 col-sm-12">
-    <h2 class="text-center h2-blue margin-top-2">Latest happenings / Events</h2>
-    <swiper-container effect="coverflow" loop="true" autoplay-disable-on-interaction="false" autoplay-delay="0" speed="6000"
-       slides-per-view="2" centered-slides="true" space-between="10"
-      wait-for-transition="false"  class="crcLogoSwiper">
-      <div class="swiper-slide">
+       <div class="swiper-slide highlights-slides">
         <img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexHighlights/Discussion_with_international_students_.jpg"
+          src="https://www.starexuniversity.com/uploads/StarexNews/dsd.png"
           alt="">
 
-        <a href="https://www.starexuniversity.com/highlights/Discussion-with-international-students">
-          <h6 class="text-dark">Discussion with international students</h6>
-        </a>
+        <p>Students immersed themselves in vibrant global crafts and cultural exhibits.</p>
       </div>
-      <div class="swiper-slide"><img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexHighlights/Chemistry_Lab.jpg" alt="">
+      <div class="swiper-slide highlights-slides"><img class="events-img"
+          src="https://www.starexuniversity.com/uploads/StarexNews/WhatsApp_Image_2024-02-08_at_5_40_40_PM.png" alt="">
 
-        <a href="https://www.starexuniversity.com/highlights/Chemistry-Lab-in-Action">
-          <h6 class="text-dark">Chemistry Lab in Action</h6>
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/CAFETERIA.jpg" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/Starex-Cafeteria">
-          <h6 class="text-dark">Starex Cafeteria</h6>
-        </a>
-      </div>
-
-
-      <div class="swiper-slide">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/canteen_.jpg" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/Starex-Canteen">
-          <h6 class="text-dark">Starex Canteen</h6>
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/Library_.jpg" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/Starex-Library">
-          <h6 class="text-dark">Starex Library</h6>
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/3a.jpg
-" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/Lush-Green-Campus">
-          <h6 class="text-dark">Lush Green Campus</h6>
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/wifi.png" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/247-Wifi-Enabled-Campus">
-          <h6 class="text-dark">24*7 Wifi Enabled Campus</h6>
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/modern.JPG" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/Well-Connected-to-DelhiNCR">
-          <h6 class="text-dark">Modern Hostels</h6>
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexHighlights/why1.jpg" alt="">
-
-        <a href="https://www.starexuniversity.com/highlights/Highly-Qualified-Experienced-Faculty">
-          <h6 class="text-dark">Highly Qualified &amp; Experienced Faculty</h6>
-        </a>
+       <p>Visit to Mark Exhaust System Pvt Ltd</p>
       </div>
     </swiper-container>
   </div>
+
+  <!-- RIGHT: Vertical with 4 slides visible -->
+  <div class="latest-events col-md-6 col-sm-12">
+    <!-- <h2 class="text-center h2-blue margin-top-2">Latest happenings / Events</h2> -->
+    <swiper-container
+      direction="vertical"
+      loop="true"
+      slides-per-view="1"
+     autoplay-delay="2500"
+     speed="8000"
+      class="vertical-swiper"
+    >
+     <div class="swiper-slide">
+        <img class="events-img"
+          src="https://www.starexuniversity.com/uploads/StarexEvents/Teachers_Day_3.jpg"
+          alt="">
+        <p> Happy Teachers Day 2025</p>
+      </div>
+      <div class="swiper-slide"><img class="events-img"
+          src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_071309733.jpg" alt="">
+
+        <p>National Flag Day</p>
+      </div>
+      <div class="swiper-slide"><img class="events-img"
+          src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250621_021121435_MP.jpg" alt="">
+
+         <p>International Yoga Day</p>
+      </div>
+      <div class="swiper-slide"><img class="events-img"
+          src="https://www.starexuniversity.com/uploads/StarexEvents/Teachers_Day_1_(1).jpg" alt="">
+
+         <p> Happy Teachers Day 2025</p>
+      </div>
+      <div class="swiper-slide">
+        <img class="events-img"
+          src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_072132804.jpg"
+          alt="">
+        <p> National Flag Day</p>
+      </div>
+      
+      <div class="swiper-slide">
+        <img class="events-img"
+          src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_062218240_MP.jpg"
+          alt="">
+
+         <p>National Flag Day</p>
+      </div>
+      <div class="swiper-slide"><img class="events-img"
+          src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250621_020102747_MP.jpg" alt="">
+
+         <p>International Yoga Day</p>
+      </div>
+    </swiper-container>
   </div>
+</div>
+
+  
   <section class=" flex-column govt-section">
     <h2 class="text-center h2-blue margin-top-2">Important Links</h2>
     <div class="flex-row flex-column-S flex-wrap item-gap">
@@ -418,10 +369,7 @@
 
         <div class="legacyTitle">
           <a href="https://www.education.gov.in/" target="_blank">
-            <p style="    font-size: 19px;
-    font-weight: 800;
-    text-align: inherit;
-    color: black;">Ministry of Education</p>
+            <p>Ministry of Education</p>
           </a>
         </div>
 
@@ -433,10 +381,7 @@
         </div>
         <div class="legacyTitle">
           <a href="https://schooleducationharyana.gov.in/" target="_blank">
-            <p style="    font-size: 19px;
-    font-weight: 800;
-    text-align: inherit;
-    color: black;">State Ministry of Education</p>
+            <p>State Ministry of Education</p>
           </a>
         </div>
 
@@ -444,14 +389,11 @@
       <div class="col-md-2 col-sm-12 text-center govt-img-container">
         <div class="icon-holder">
           <a href="https://www.ugc.gov.in/" target="_blank"> <img src="../../assets/logo/ugc.jpg" class="govt_img" alt=""
-              style="    height: 130px;"></a>
+             ></a>
         </div>
         <div class="legacyTitle">
           <a href="https://www.ugc.gov.in/" target="_blank">
-            <p style="    font-size: 19px;
-    font-weight: 800;
-    text-align: inherit;
-    color: black;">UGC</p>
+            <p >UGC</p>
           </a>
         </div>
 
@@ -463,10 +405,7 @@
         </div>
         <div class="legacyTitle">
           <a href="https://www.aiu.ac.in/" target="_blank">
-            <p style="    font-size: 19px;
-    font-weight: 800;
-    text-align: inherit;
-    color: black;"> AIU</p>
+            <p > AIU</p>
           </a>
         </div>
 
@@ -480,10 +419,7 @@
         </div>
         <div class="legacyTitle">
           <a href="https://www.starexuniversity.com/assets/nep_2020.pdf" target="_blank">
-            <p style="    font-size: 19px;
-    font-weight: 800;
-    text-align: inherit;
-    color: black;"> NEP 2020</p>
+            <p> NEP 2020</p>
           </a>
         </div>
 
@@ -495,7 +431,7 @@
   <div class="flex-column crcLogoContainer ">
     <h2 class="text-center h2-blue">Industry Linkage</h2>
     <swiper-container loop="true" autoplay-disable-on-interaction="false" autoplay-delay="0" speed="3000"
-      space-between="20" slides-per-view="8" centered-slides="false" free-mode="true" free-mode-momentum="true"
+      space-between="20" [slidesPerView]=crcSlidesPerView centered-slides="false" free-mode="true" free-mode-momentum="true"
       wait-for-transition="false" loop-additional-slides="4" class="crcLogoSwiper">
       <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
           src="../../assets/company-logo/1.png" /></div>
