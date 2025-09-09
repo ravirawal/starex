@@ -1,10 +1,7 @@
 @use 'swiper/css';
 @use 'swiper/css/effect-flip';
+@use "sass:math";
 html,
-body {
-  height: 100%;
-}
-
 body {
   width: 100vw;
   max-width: 100%;
@@ -18,6 +15,36 @@ body {
 app-root {
   display: block;
   overflow: visible;
+}
+
+// Base styles (mobile first)
+@for $i from 1 through 12 {
+  .col-sm-#{$i} {
+    width: math.div($i, 12) * 100%;
+    max-width: math.div($i, 12) * 100%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+  }
+}
+
+// Override for medium screens and up
+@media (min-width: 960px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: math.div($i, 12) * 100%;
+      max-width: math.div($i, 12) * 100%;
+    }
+  }
+}
+
+// Override for large screens and up
+@media (min-width: 1280px) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      width: math.div($i, 12) * 100%;
+      max-width: math.div($i, 12) * 100%;
+    }
+  }
 }
 
 .mat-icon {
@@ -38,6 +65,7 @@ a {
   display: flex;
   flex-direction: row;
 }
+
 .flex-wrap{
 flex-wrap: wrap;
 justify-content: center;
@@ -94,25 +122,6 @@ justify-content: center;
   .flex-column-S {
     flex-direction: column;
   }
-
-  .col-sm-12 {
-    width: 100%
-  }
-  .col-sm-6 {
-  width: 50%
-}
-
-.col-sm-4 {
-  width: 33%;
-}
-
-.col-sm-3 {
-  width: 25%;
-}
-
-.col-sm-2 {
-  width: 16%;
-}
 }
 
 .margin-left-1 {
