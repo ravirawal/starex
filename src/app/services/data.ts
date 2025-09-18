@@ -194,6 +194,7 @@ export const FACULTY_LIST: { [key: string]: Faculty[] }  = {
 export const ROUTE_MATCH = {
   'about starex': '/about-starex',
   'achivements': '/achivements',
+  'admission': '/director',
   'annual report': '/annual-reports',
   'annual reports': '/annual-reports',
   'approval': '/approval-recognition',
@@ -214,6 +215,7 @@ export const ROUTE_MATCH = {
   'coe': '/coe',
   'cse': '/computerscience&technology',
   'datesheet': '/datesheet',
+  'director': '/director',
   'disclosure': '/disclosure',
   'engineering': '/engineering&technology',
   'events': '/events',

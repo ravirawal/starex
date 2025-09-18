@@ -57,6 +57,8 @@ import { PhdComponent } from './others-component/phd/phd';
 import { CarriersComponent } from './others-component/carrier/carrier';
 import { FaqsComponent } from './others-component/faqs/faqs';
 import { IbmIceComponent } from './others-component/ibm-ice/ibm-ice';
+import { DirectorComponent } from './about_list/director/director';
+import { AdmissionProcessComponent } from './about_list/admission-process/admission-process';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -77,6 +79,7 @@ export const routes: Routes = [
   { path: 'registrar-message', component: RegistrarComponent },
   { path: 'osd-message', component: OSDComponent },
   { path: 'coe', component: COEComponent },
+  { path: 'director', component: DirectorComponent },
   { path: 'approval-recognition', component: RecognisationComponent },
   { path: 'disclosure', component: DisclosureComponent },
   { path: 'starex-mou', component: MOUComponent },
@@ -85,6 +88,7 @@ export const routes: Routes = [
   { path: 'ombudsperson', component: PoliciesComponent },
   { path: 'policies', component: PoliciesComponent },
   { path: 'organogram', component: OrganogramComponent },
+    { path: 'admission-process', component: AdmissionProcessComponent },
   { path: 'university-authorities', component: UniversityAuthorityComponent },
   { path: 'committees', component: BoardCommetiesComponent },
   { path: 'ICHM', component: IcheAustraliaComponent },

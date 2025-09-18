@@ -61,6 +61,7 @@ window.addEventListener('resize', () => {
   handleDivClick(event: MouseEvent): void {
   event.stopPropagation(); // prevents bubbling that triggers close
   // your custom logic here
+  
 }
 handleAnchorClick(): void {
     this.menuTrigger.closeMenu(); // Closes menu on anchor click

@@ -1,8 +1,8 @@
 <div class="home">
   <div class="video-wrapper" #wrapper>
-    <img src="../../assets/starex/university_image.jpg" alt="Virtual Tour Poster" #posterImg>
-    <video src="../../assets/video/virtual tour.mp4" autoplay
-      [muted]="'muted'" playsinline loop style="width:100%;height:auto;object-fit:cover;display:none;" #videoEl
+    <img class="posterImg" src="../../assets/starex/university_image.jpg" alt="Virtual Tour Poster" #posterImg>
+    <video src="../../assets/video/virtual tour.mp4" autoplay [muted]="'muted'" playsinline loop
+      style="width:100%;height:auto;object-fit:cover;display:none;" #videoEl
       (loadeddata)="posterImg.style.display='none'; videoEl.style.display='block'; wrapper.style.minHeight=''; wrapper.style.height=''">
     </video>
   </div>
@@ -46,6 +46,236 @@
     </div>
   </div>
 
+  <!-- Tranding Section Start -->
+  <section id="tranding">
+    <div class="programs-header text-center">
+      <h2 class="h2-blue">🚀 Explore Our Running Programs</h2>
+      <p class="programs-subtitle">
+        Discover the academic journeys currently shaping futures at Starex University. From cutting-edge science to
+        transformative humanities—your path starts here.
+      </p>
+      <a class="cta-button" routerLink="/apply-now">Apply Now</a>
+
+      <div class="feature-highlights">
+        <div class="highlight-card">
+          <i class="fa fa-book"></i>
+          <h3>Wide Range of Disciplines</h3>
+          <p>From agriculture to law, explore programs that match your passion and career goals.</p>
+        </div>
+        <div class="highlight-card">
+          <i class="fa fa-lightbulb-o"></i>
+          <h3>Innovative Curriculum</h3>
+          <p>Courses designed to meet industry standards and future challenges.</p>
+        </div>
+        <div class="highlight-card">
+          <i class="fa fa-graduation-cap"></i>
+          <h3>Experienced Faculty</h3>
+          <p>Learn from mentors who combine academic excellence with real-world insight.</p>
+        </div>
+      </div>
+
+
+      <div class="tranding-container">
+        <div class="swiper tranding-slider margin-top-1">
+          <swiper-container #swiperRef [config]="config" init="false" loop>
+            <!-- Slide-start -->
+            <div (click)="goToPath('pharmaceutical-science')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/effectC/Pharmaceutical__sciences.webp" alt="Tranding">
+                <figcaption> PHARMACEUTICAL </figcaption>
+              </div>
+
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('physical-science')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/effectC/physical__scienes.webp" alt="Tranding">
+                <figcaption> PHYSICAL SCIENCE </figcaption>
+              </div>
+
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('life-science')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/effectC/life__sciences.webp" alt="Tranding">
+                <figcaption> LIFE SCIENCE </figcaption>
+              </div>
+
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('computerscience&technology')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/carousel/AI__carousall.webp" alt="Tranding">
+                <figcaption> COMPUTER SCIENCE & TECHNOLOGY </figcaption>
+              </div>
+
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('computerscience&technology')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/effectC/IBM-ICE.webp" alt="Tranding">
+                <figcaption> ENGINEERING & TECHNOLOGY </figcaption>
+              </div>
+
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('law')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/carousel/law __courses5.webp" alt="Tranding">
+                <figcaption> LAW </figcaption>
+              </div>
+
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('humanities')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/effectC/humanities__carousall.webp" alt="Tranding">
+                <figcaption> HUMANITIES </figcaption>
+              </div>
+
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('hotel-management')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/effectC/HM.webp" alt="Tranding">
+                <figcaption> HOTEL & MANAGEMENT </figcaption>
+              </div>
+
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div (click)="goToPath('agriculture')" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/effectC/agriculture_carousall.webp" alt="Tranding">
+                <figcaption> AGRICULTURE </figcaption>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div routerLink="pharmaceutical-science" class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="../../assets/carousel/banner-samatrix.webp" alt="Tranding">
+                <figcaption> SAMATRIX ASSOCIATION </figcaption>
+              </div>
+            </div>
+            <!-- Slide-end -->
+          </swiper-container>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quality-leaders-section container-fluid mb-14 lg:mb-20">
+    <div class=" leadership-header quality-leaders-wrapper flex-column mx-auto px-3">
+      <div class="text-center">
+        <h2 class="section-title">🌟 Meet Our Quality Leaders</h2>
+        <p class="section-subtitle">
+          Visionaries, strategists, and mentors—our leadership team drives excellence across every dimension of Starex
+          University. Their commitment to innovation, integrity, and student success sets the tone for everything we do.
+        </p>
+      </div>
+
+
+      <div class="leaders-grid flex-row flex-wrap justify-center gap-md">
+
+        <!-- Leader Card: Chairperson -->
+        <div class="leader-card animate slide-top in-view mt-4">
+          <div class="leader-box">
+            <div class="leader-image">
+              <img src="../../assets/admin-staff/chairman_image.jpg" alt="Chairperson Image">
+            </div>
+            <div class="leader-description">
+              <p class="leader-text">Shri Mohinder Singh has extensive experience in delivering quality education with
+                strong infrastructure and management.</p>
+            </div>
+            <div class="leader-details">
+              <h3 class="leader-name">Sh. Mohinder Singh</h3>
+              <span class="leader-role">Chairperson</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leader Card: Vice Chairman -->
+        <div class="leader-card animate slide-top in-view mt-4" style="transition-delay: .1s;">
+          <div class="leader-box">
+            <div class="leader-image">
+              <img src="../../assets/admin-staff/vice-chanellor.jpg" alt="Vice Chairman Image">
+            </div>
+            <div class="leader-description">
+              <p class="leader-text">Ms. Madhu Parhar, Vice Chairman, brings over 40 years of experience in the
+                education sector.</p>
+            </div>
+            <div class="leader-details">
+              <h3 class="leader-name">Ms. Madhu Parhar</h3>
+              <span class="leader-role">Vice Chairman</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leader Card: Board Member -->
+        <div class="leader-card animate slide-top in-view mt-4" style="transition-delay: .2s;">
+          <div class="leader-box">
+            <div class="leader-image">
+              <img src="../../assets/logo/ugc.jpg" alt="Board Member Image">
+            </div>
+            <div class="leader-description">
+              <p class="leader-text">Mr. Nakshatar Pal Singh is an Independent Director and global mentor with expertise
+                in financial services, innovation, and impact leadership.</p>
+            </div>
+            <div class="leader-details">
+              <h3 class="leader-name">Mr. Nakshatar Pal Singh</h3>
+              <span class="leader-role">Board Member, Asia</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leader Card: Dean Academics -->
+        <div class="leader-card animate slide-top margin-top-1 margin-bottom-1" style="transition-delay: .3s;">
+          <div class="leader-box">
+            <div class="leader-image">
+              <img src="../../assets/logo/ugc.jpg" alt="Dean Academics Image">
+            </div>
+            <div class="leader-description">
+              <p class="leader-text">Dr. Dinesh Kumar is a renowned development expert with leadership roles at ADB and
+                academic credentials from IIT and LSE.</p>
+            </div>
+            <div class="leader-details">
+              <h3 class="leader-name">Dr. Dinesh Kumar</h3>
+              <span class="leader-role">Dean Academics, Starex</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leader Card: Director of Schools -->
+        <div class="leader-card animate slide-top margin-top-1 margin-bottom-1" style="transition-delay: .5s;">
+          <div class="leader-box">
+            <div class="leader-image">
+              <img src="../../assets/logo/ugc.jpg" alt="Director of Schools Image">
+            </div>
+            <div class="leader-description">
+              <a href="about/our-officers/dr-madan-mohan.html">
+                <p class="leader-text">Dr. Hemant Sharma, Director of Schools, has over 35 years of in digital marketing
+                  and university campagining.</p>
+              </a>
+            </div>
+            <div class="leader-details">
+              <h3 class="leader-name">Dr. Hemant Sharma</h3>
+              <span class="leader-role">Director of Schools</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <div class="flex-column">
     <h2 class="text-center h2-blue"> Congratulations Moments</h2>
     <div class="flex-row flex-column-S">
@@ -62,313 +292,103 @@
     </div>
   </div>
 
-  <!-- Tranding Section Start -->
-  <section id="tranding">
-    <h2 class="text-center h2-blue"> Running Programs</h2>
-    <div class="tranding-container">
-      <div class="swiper tranding-slider margin-top-1">
-        <swiper-container #swiperRef [config]="config" init="false" loop>
-          <!-- Slide-start -->
-          <div (click)="goToPath('pharmaceutical-science')" class="swiper-slide tranding-slide">
-            <div class="tranding-slide-img">
-              <img src="../../assets/effectC/Pharmaceutical__sciences.webp" alt="Tranding">
-              <figcaption> PHARMACEUTICAL </figcaption>
-            </div>
+  <!-- div slider 1 -->
+  <div class="flex-row flex-column-S item-gap margin-top-1">
+    <!-- LEFT: Fade Effect -->
+    <div class="flex-column-S col-lg-8 col-md-8 col-sm-12">
+      <!-- <h2 class="text-center h2-blue margin-top-2">Main Highlights</h2> -->
+      <swiper-container class="highlights-swipper" loop="true" autoplay-delay="2500" speed="8000" slides-per-view="1">
+        <div class="swiper-slide highlights-slides">
+          <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexNews/jan13.png" alt="">
 
-          </div>
-          <!-- Slide-end -->
-          <!-- Slide-start -->
-          <div (click)="goToPath('physical-science')" class="swiper-slide tranding-slide">
-            <div class="tranding-slide-img">
-              <img src="../../assets/effectC/physical__scienes.webp" alt="Tranding">
-              <figcaption> PHYSICAL SCIENCE </figcaption>
-            </div>
+          <p>Agriculture Science research field</p>
+        </div>
+        <div class="swiper-slide highlights-slides"><img class="events-img"
+            src="https://www.starexuniversity.com/uploads/StarexNews/Bharatiya_Bhasha_Diwas.png" alt="">
 
-          </div>
-          <!-- Slide-end -->
-          <!-- Slide-start -->
-          <div (click)="goToPath('life-science')" class="swiper-slide tranding-slide">
-            <div class="tranding-slide-img">
-              <img src="../../assets/effectC/life__sciences.webp" alt="Tranding">
-              <figcaption> LIFE SCIENCE </figcaption>
-            </div>
+          <p>Bharatiya Bhasha Diwas</p>
+        </div>
+        <div class="swiper-slide highlights-slides">
+          <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexNews/nsd.png" alt="">
 
-          </div>
-          <!-- Slide-end -->
-          <!-- Slide-start -->
-          <div (click)="goToPath('computerscience&technology')" class="swiper-slide tranding-slide">
-            <div class="tranding-slide-img">
-              <img src="../../assets/carousel/AI__carousall.webp" alt="Tranding">
-              <figcaption> COMPUTER SCIENCE & TECHNOLOGY </figcaption>
-            </div>
+          <p>National Science Day Seminar featuring Dr. Akhilesh Pandey</p>
+        </div>
+        <div class="swiper-slide highlights-slides"><img class="events-img"
+            src="https://www.starexuniversity.com/uploads/StarexHighlights/Chemistry_Lab.jpg" alt="">
 
-          </div>
-          <!-- Slide-end -->
-          <!-- Slide-start -->
-          <div (click)="goToPath('computerscience&technology')" class="swiper-slide tranding-slide">
-            <div class="tranding-slide-img">
-              <img src="../../assets/effectC/IBM-ICE.webp" alt="Tranding">
-              <figcaption> ENGINEERING & TECHNOLOGY </figcaption>
-            </div>
+          <p>Chemistry Lab in Action</p>
+        </div>
+        <div class="swiper-slide highlights-slides">
+          <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexNews/dsd.png" alt="">
 
-          </div>
-          <!-- Slide-end -->
-          <!-- Slide-start -->
-          <div (click)="goToPath('law')" class="swiper-slide tranding-slide">
-            <div class="tranding-slide-img">
-              <img src="../../assets/carousel/law __courses5.webp" alt="Tranding">
-              <figcaption> LAW </figcaption>
-            </div>
+          <p>Students immersed themselves in vibrant global crafts and cultural exhibits.</p>
+        </div>
+        <div class="swiper-slide highlights-slides"><img class="events-img"
+            src="https://www.starexuniversity.com/uploads/StarexNews/WhatsApp_Image_2024-02-08_at_5_40_40_PM.png"
+            alt="">
 
-          </div>
-          <!-- Slide-end -->
-          <!-- Slide-start -->
-          <div (click)="goToPath('humanities')" class="swiper-slide tranding-slide">
-            <div class="tranding-slide-img">
-              <img src="../../assets/effectC/humanities__carousall.webp" alt="Tranding">
-              <figcaption> HUMANITIES </figcaption>
-            </div>
-
-          </div>
-          <!-- Slide-end -->
-          <!-- Slide-start -->
-          <div (click)="goToPath('hotel-management')" class="swiper-slide tranding-slide">
-            <div class="tranding-slide-img">
-              <img src="../../assets/effectC/HM.webp" alt="Tranding">
-              <figcaption> HOTEL & MANAGEMENT </figcaption>
-            </div>
-
-          </div>
-          <!-- Slide-end -->
-          <!-- Slide-start -->
-          <div (click)="goToPath('agriculture')" class="swiper-slide tranding-slide">
-            <div class="tranding-slide-img">
-              <img src="../../assets/effectC/agriculture_carousall.webp" alt="Tranding">
-              <figcaption> AGRICULTURE </figcaption>
-            </div>
-          </div>
-          <!-- Slide-end -->
-          <!-- Slide-start -->
-          <div routerLink="pharmaceutical-science" class="swiper-slide tranding-slide">
-            <div class="tranding-slide-img">
-              <img src="../../assets/carousel/banner-samatrix.webp" alt="Tranding">
-              <figcaption> SAMATRIX ASSOCIATION </figcaption>
-            </div>
-          </div>
-          <!-- Slide-end -->
-        </swiper-container>
-      </div>
+          <p>Visit to Mark Exhaust System Pvt Ltd</p>
+        </div>
+      </swiper-container>
     </div>
-  </section>
-  <section class="quality-leaders-section container-fluid mb-14 lg:mb-20">
-  <div class="quality-leaders-wrapper flex-column mx-auto px-3">
-    <h2 class="section-title text-center h2-blue mt-4">Quality Leaders</h2>
 
-    <div class="leaders-grid flex-row flex-wrap justify-center gap-md">
-      
-      <!-- Leader Card: Chairperson -->
-      <div class="leader-card animate slide-top in-view mt-4">
-        <div class="leader-box">
-          <div class="leader-image">
-            <img src="../../assets/admin-staff/chairman_image.jpg" alt="Chairperson Image">
-          </div>
-          <div class="leader-description">
-            <p class="leader-text">Shri Mohinder Singh has extensive experience in delivering quality education with strong infrastructure and management.</p>
-          </div>
-          <div class="leader-details">
-            <h3 class="leader-name">Sh. Mohinder Singh</h3>
-            <span class="leader-role">Chairperson</span>
-          </div>
-        </div>
-      </div>
 
-      <!-- Leader Card: Vice Chairman -->
-      <div class="leader-card animate slide-top in-view mt-4" style="transition-delay: .1s;">
-        <div class="leader-box">
-          <div class="leader-image">
-            <img src="../../assets/admin-staff/vice-chanellor.jpg" alt="Vice Chairman Image">
-          </div>
-          <div class="leader-description">
-            <p class="leader-text">Ms. Madhu Parhar, Vice Chairman, brings over 40 years of experience in the education sector.</p>
-          </div>
-          <div class="leader-details">
-            <h3 class="leader-name">Ms. Madhu Parhar</h3>
-            <span class="leader-role">Vice Chairman</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Leader Card: Board Member -->
-      <div class="leader-card animate slide-top in-view mt-4" style="transition-delay: .2s;">
-        <div class="leader-box">
-          <div class="leader-image">
-            <img src="../../assets/logo/ugc.jpg" alt="Board Member Image">
-          </div>
-          <div class="leader-description">
-            <p class="leader-text">Mr. Nakshatar Pal Singh is an Independent Director and global mentor with expertise in financial services, innovation, and impact leadership.</p>
-          </div>
-          <div class="leader-details">
-            <h3 class="leader-name">Mr. Nakshatar Pal Singh</h3>
-            <span class="leader-role">Board Member, Asia</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Leader Card: Dean Academics -->
-      <div class="leader-card animate slide-top margin-top-1 margin-bottom-1" style="transition-delay: .3s;">
-        <div class="leader-box">
-          <div class="leader-image">
-            <img src="../../assets/logo/ugc.jpg" alt="Dean Academics Image">
-          </div>
-          <div class="leader-description">
-            <p class="leader-text">Dr. Dinesh Kumar is a renowned development expert with leadership roles at ADB and academic credentials from IIT and LSE.</p>
-          </div>
-          <div class="leader-details">
-            <h3 class="leader-name">Dr. Dinesh Kumar</h3>
-            <span class="leader-role">Dean Academics, Starex</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Leader Card: Director of Schools -->
-      <div class="leader-card animate slide-top margin-top-1 margin-bottom-1" style="transition-delay: .5s;">
-        <div class="leader-box">
-          <div class="leader-image">
-            <img src="../../assets/logo/ugc.jpg" alt="Director of Schools Image">
-          </div>
-          <div class="leader-description">
-            <a href="about/our-officers/dr-madan-mohan.html">
-              <p class="leader-text">Dr. Hemant Sharma, Director of Schools, has over 35 years of in digital marketing and university campagining.</p>
-            </a>
-          </div>
-          <div class="leader-details">
-            <h3 class="leader-name">Dr. Hemant Sharma</h3>
-            <span class="leader-role">Director of Schools</span>
-          </div>
-        </div>
-      </div>
+    <div class="latest-events col-lg-4 col-md-4 col-sm-12 slider1-bgimg">
+      <!-- <h2 class="text-center h2-blue margin-top-2">Latest happenings / Events</h2> -->
 
     </div>
   </div>
-</section>
-<!-- div slider 1 -->
- <div class="flex-row flex-column-S item-gap margin-top-1">
-  <!-- LEFT: Fade Effect -->
-  <div class="flex-column-S col-lg-8 col-md-8 col-sm-12">
-    <!-- <h2 class="text-center h2-blue margin-top-2">Main Highlights</h2> -->
-    <swiper-container
-      class="highlights-swipper"
-      loop="true"
-      autoplay-delay="2500"
-      speed="8000"
-      slides-per-view="1"
-    >
-     <div class="swiper-slide highlights-slides">
-        <img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexNews/jan13.png"
-          alt="">
+  <!-- div slider 2 -->
+  <div class="flex-row flex-column-S item-gap margin-top-1">
+    <!-- LEFT: Fade Effect -->
+    <div class="flex-column-S col-lg-8 col-sm-12 slider2-bgimg">
 
-        <p>Agriculture Science research field</p>
-      </div>
-      <div class="swiper-slide highlights-slides"><img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexNews/Bharatiya_Bhasha_Diwas.png" alt="">
+    </div>
 
-       <p>Bharatiya Bhasha Diwas</p>
-      </div>
-     <div class="swiper-slide highlights-slides">
-        <img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexNews/nsd.png"
-          alt="">
+    <!-- RIGHT: Vertical with 4 slides visible -->
+    <div class="latest-events col-lg-4 col-sm-12">
+      <!-- <h2 class="text-center h2-blue margin-top-2">Latest happenings / Events</h2> -->
+      <swiper-container direction="vertical" loop="true" slides-per-view="1" autoplay-delay="2500" speed="8000"
+        class="vertical-swiper">
+        <div class="swiper-slide">
+          <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexEvents/Teachers_Day_3.jpg" alt="">
+          <p> Happy Teachers Day 2025</p>
+        </div>
+        <div class="swiper-slide"><img class="events-img"
+            src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_071309733.jpg" alt="">
 
-        <p>National Science Day Seminar featuring Dr. Akhilesh Pandey</p>
-      </div>
-      <div class="swiper-slide highlights-slides"><img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexHighlights/Chemistry_Lab.jpg" alt="">
+          <p>National Flag Day</p>
+        </div>
+        <div class="swiper-slide"><img class="events-img"
+            src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250621_021121435_MP.jpg" alt="">
 
-       <p>Chemistry Lab in Action</p>
-      </div>
-       <div class="swiper-slide highlights-slides">
-        <img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexNews/dsd.png"
-          alt="">
+          <p>International Yoga Day</p>
+        </div>
+        <div class="swiper-slide"><img class="events-img"
+            src="https://www.starexuniversity.com/uploads/StarexEvents/Teachers_Day_1_(1).jpg" alt="">
 
-        <p>Students immersed themselves in vibrant global crafts and cultural exhibits.</p>
-      </div>
-      <div class="swiper-slide highlights-slides"><img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexNews/WhatsApp_Image_2024-02-08_at_5_40_40_PM.png" alt="">
+          <p> Happy Teachers Day 2025</p>
+        </div>
+        <div class="swiper-slide">
+          <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_072132804.jpg"
+            alt="">
+          <p> National Flag Day</p>
+        </div>
 
-       <p>Visit to Mark Exhaust System Pvt Ltd</p>
-      </div>
-    </swiper-container>
+        <div class="swiper-slide">
+          <img class="events-img"
+            src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_062218240_MP.jpg" alt="">
+
+          <p>National Flag Day</p>
+        </div>
+        <div class="swiper-slide"><img class="events-img"
+            src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250621_020102747_MP.jpg" alt="">
+
+          <p>International Yoga Day</p>
+        </div>
+      </swiper-container>
+    </div>
   </div>
-
-  
-  <div class="latest-events col-lg-4 col-md-4 col-sm-12 slider1-bgimg">
-    <!-- <h2 class="text-center h2-blue margin-top-2">Latest happenings / Events</h2> -->
-   
-  </div>
-</div>
-<!-- div slider 2 -->
- <div class="flex-row flex-column-S item-gap margin-top-1">
-  <!-- LEFT: Fade Effect -->
-  <div class="flex-column-S col-lg-8 col-sm-12 slider2-bgimg">
- 
-  </div>
-
-  <!-- RIGHT: Vertical with 4 slides visible -->
-  <div class="latest-events col-lg-4 col-sm-12">
-    <!-- <h2 class="text-center h2-blue margin-top-2">Latest happenings / Events</h2> -->
-    <swiper-container
-      direction="vertical"
-      loop="true"
-      slides-per-view="1"
-     autoplay-delay="2500"
-     speed="8000"
-      class="vertical-swiper"
-    >
-     <div class="swiper-slide">
-        <img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexEvents/Teachers_Day_3.jpg"
-          alt="">
-        <p> Happy Teachers Day 2025</p>
-      </div>
-      <div class="swiper-slide"><img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_071309733.jpg" alt="">
-
-        <p>National Flag Day</p>
-      </div>
-      <div class="swiper-slide"><img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250621_021121435_MP.jpg" alt="">
-
-         <p>International Yoga Day</p>
-      </div>
-      <div class="swiper-slide"><img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexEvents/Teachers_Day_1_(1).jpg" alt="">
-
-         <p> Happy Teachers Day 2025</p>
-      </div>
-      <div class="swiper-slide">
-        <img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_072132804.jpg"
-          alt="">
-        <p> National Flag Day</p>
-      </div>
-      
-      <div class="swiper-slide">
-        <img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_062218240_MP.jpg"
-          alt="">
-
-         <p>National Flag Day</p>
-      </div>
-      <div class="swiper-slide"><img class="events-img"
-          src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250621_020102747_MP.jpg" alt="">
-
-         <p>International Yoga Day</p>
-      </div>
-    </swiper-container>
-  </div>
-</div>
 
   <section class=" flex-column govt-section">
     <h2 class="text-center h2-blue margin-top-2">Important Links</h2>
@@ -388,8 +408,8 @@
       </div>
       <div class="col-md-2 col-sm-12 text-center govt-img-container">
         <div class="icon-holder">
-          <a href="https://schooleducationharyana.gov.in/" target="_blank"> <img src="../../assets/logo/Govt_of_Haryana.webp"
-              class="govt_img" alt=""></a>
+          <a href="https://schooleducationharyana.gov.in/" target="_blank"> <img
+              src="../../assets/logo/Govt_of_Haryana.webp" class="govt_img" alt=""></a>
         </div>
         <div class="legacyTitle">
           <a href="https://schooleducationharyana.gov.in/" target="_blank">
@@ -400,12 +420,12 @@
       </div>
       <div class="col-md-2 col-sm-12 text-center govt-img-container">
         <div class="icon-holder">
-          <a href="https://www.ugc.gov.in/" target="_blank"> <img src="../../assets/logo/ugc.jpg" class="govt_img" alt=""
-             ></a>
+          <a href="https://www.ugc.gov.in/" target="_blank"> <img src="../../assets/logo/ugc.jpg" class="govt_img"
+              alt=""></a>
         </div>
         <div class="legacyTitle">
           <a href="https://www.ugc.gov.in/" target="_blank">
-            <p >UGC</p>
+            <p>UGC</p>
           </a>
         </div>
 
@@ -417,7 +437,7 @@
         </div>
         <div class="legacyTitle">
           <a href="https://www.aiu.ac.in/" target="_blank">
-            <p > AIU</p>
+            <p> AIU</p>
           </a>
         </div>
 
@@ -443,8 +463,8 @@
   <div class="flex-column crcLogoContainer ">
     <h2 class="text-center h2-blue">Industry Linkage</h2>
     <swiper-container loop="true" autoplay-disable-on-interaction="false" autoplay-delay="0" speed="3000"
-      space-between="20" [slidesPerView]=crcSlidesPerView centered-slides="false" free-mode="true" free-mode-momentum="true"
-      wait-for-transition="false" loop-additional-slides="4" class="crcLogoSwiper">
+      space-between="20" [slidesPerView]=crcSlidesPerView centered-slides="false" free-mode="true"
+      free-mode-momentum="true" wait-for-transition="false" loop-additional-slides="4" class="crcLogoSwiper">
       <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
           src="../../assets/company-logo/1.png" /></div>
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"

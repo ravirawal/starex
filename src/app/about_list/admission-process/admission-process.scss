@@ -1,0 +1,124 @@
+.admission-page {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.admission-header {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(to right, #004d40, #00796b);
+  border-radius: 8px;
+  color: #fff;
+
+  .admission-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .admission-subtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    color: #f9f9f9;
+  }
+
+  .cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffca28;
+    color: #212121;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: #ffc107;
+    }
+  }
+}
+
+.image-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+  .image-wrapper {
+    flex: 0 0 45%;
+    max-width: 45%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+  }
+}
+
+.feature-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+
+  .highlight-card {
+    flex: 0 0 30%;
+    background-color: #ffffff;
+    border-left: 6px solid #00796b;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    i {
+      font-size: 2rem;
+      color: #00796b;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #2e3b4e;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .image-wrapper,
+  .highlight-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .admission-title {
+    font-size: 2rem;
+  }
+
+  .admission-subtitle {
+    font-size: 1rem;
+  }
+}
