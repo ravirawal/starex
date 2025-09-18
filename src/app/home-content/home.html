@@ -173,7 +173,7 @@
   </section>
 
   <section class="quality-leaders-section container-fluid mb-14 lg:mb-20">
-    <div class=" leadership-header quality-leaders-wrapper flex-column mx-auto px-3">
+    <div class="leadership-header quality-leaders-wrapper flex-column mx-auto px-3">
       <div class="text-center">
         <h2 class="section-title">🌟 Meet Our Quality Leaders</h2>
         <p class="section-subtitle">
@@ -182,18 +182,16 @@
         </p>
       </div>
 
-
       <div class="leaders-grid flex-row flex-wrap justify-center gap-md">
-
         <!-- Leader Card: Chairperson -->
-        <div class="leader-card animate slide-top in-view mt-4">
+        <div class="leader-card">
           <div class="leader-box">
             <div class="leader-image">
               <img src="../../assets/admin-staff/chairman_image.jpg" alt="Chairperson Image">
             </div>
             <div class="leader-description">
-              <p class="leader-text">Shri Mohinder Singh has extensive experience in delivering quality education with
-                strong infrastructure and management.</p>
+              <p>Shri Mohinder Singh has extensive experience in delivering quality education with strong infrastructure
+                and management.</p>
             </div>
             <div class="leader-details">
               <h3 class="leader-name">Sh. Mohinder Singh</h3>
@@ -203,14 +201,13 @@
         </div>
 
         <!-- Leader Card: Vice Chairman -->
-        <div class="leader-card animate slide-top in-view mt-4" style="transition-delay: .1s;">
+        <div class="leader-card">
           <div class="leader-box">
             <div class="leader-image">
               <img src="../../assets/admin-staff/vice-chanellor.jpg" alt="Vice Chairman Image">
             </div>
             <div class="leader-description">
-              <p class="leader-text">Ms. Madhu Parhar, Vice Chairman, brings over 40 years of experience in the
-                education sector.</p>
+              <p>Ms. Madhu Parhar, Vice Chairman, brings over 40 years of experience in the education sector.</p>
             </div>
             <div class="leader-details">
               <h3 class="leader-name">Ms. Madhu Parhar</h3>
@@ -220,14 +217,14 @@
         </div>
 
         <!-- Leader Card: Board Member -->
-        <div class="leader-card animate slide-top in-view mt-4" style="transition-delay: .2s;">
+        <div class="leader-card">
           <div class="leader-box">
             <div class="leader-image">
               <img src="../../assets/logo/ugc.jpg" alt="Board Member Image">
             </div>
             <div class="leader-description">
-              <p class="leader-text">Mr. Nakshatar Pal Singh is an Independent Director and global mentor with expertise
-                in financial services, innovation, and impact leadership.</p>
+              <p>Mr. Nakshatar Pal Singh is an Independent Director and global mentor with expertise in financial
+                services, innovation, and impact leadership.</p>
             </div>
             <div class="leader-details">
               <h3 class="leader-name">Mr. Nakshatar Pal Singh</h3>
@@ -237,14 +234,14 @@
         </div>
 
         <!-- Leader Card: Dean Academics -->
-        <div class="leader-card animate slide-top margin-top-1 margin-bottom-1" style="transition-delay: .3s;">
+        <div class="leader-card">
           <div class="leader-box">
             <div class="leader-image">
               <img src="../../assets/logo/ugc.jpg" alt="Dean Academics Image">
             </div>
             <div class="leader-description">
-              <p class="leader-text">Dr. Dinesh Kumar is a renowned development expert with leadership roles at ADB and
-                academic credentials from IIT and LSE.</p>
+              <p>Dr. Dinesh Kumar is a renowned development expert with leadership roles at ADB and academic credentials
+                from IIT and LSE.</p>
             </div>
             <div class="leader-details">
               <h3 class="leader-name">Dr. Dinesh Kumar</h3>
@@ -254,16 +251,14 @@
         </div>
 
         <!-- Leader Card: Director of Schools -->
-        <div class="leader-card animate slide-top margin-top-1 margin-bottom-1" style="transition-delay: .5s;">
+        <div class="leader-card">
           <div class="leader-box">
             <div class="leader-image">
               <img src="../../assets/logo/ugc.jpg" alt="Director of Schools Image">
             </div>
             <div class="leader-description">
-              <a href="about/our-officers/dr-madan-mohan.html">
-                <p class="leader-text">Dr. Hemant Sharma, Director of Schools, has over 35 years of in digital marketing
-                  and university campagining.</p>
-              </a>
+              <p>Dr. Hemant Sharma, Director of Schools, has over 35 years in digital marketing and university
+                campaigning.</p>
             </div>
             <div class="leader-details">
               <h3 class="leader-name">Dr. Hemant Sharma</h3>
@@ -271,199 +266,165 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <div class="flex-column">
-    <h2 class="text-center h2-blue"> Congratulations Moments</h2>
-    <div class="flex-row flex-column-S">
-      <div class="big-div col-md-6 col-sm-12" #imgRef [class.animate-slide]="imageVisible()">
-        <!-- <h2>Section 1</h2> -->
-        <img src="../../assets/aug/laxmi.jpg" alt="Animated Logo" [class.animate-image]="imageVisible()"
+  <app-about></app-about>
+
+  <div class="congrats-section flex-column">
+    <div class="congrats-header text-center">
+      <h2 class="section-title">🎉 Celebrating Our High Achievers</h2>
+      <p class="section-subtitle">
+        These outstanding students have secured top-tier placement packages, reflecting the excellence and ambition
+        nurtured at Starex University. Their success is our pride.
+      </p>
+    </div>
+
+    <div class="congrats-grid flex-row flex-column-S">
+      <div class="congrats-card col-md-6 col-sm-12" #imgRef [class.animate-slide]="imageVisible()">
+        <img src="../../assets/aug/laxmi.jpg" alt="Laxmi Placement" [class.animate-image]="imageVisible()"
           class="congratsImg" />
+        <div class="congrats-caption">
+          <h3>Laxmi Sharma</h3>
+          <p>Placed at Infosys with ₹12 LPA</p>
+        </div>
       </div>
-      <div class="big-div col-md-6 col-sm-12" #imgRef [class.animate-slide]="imageVisible()">
-        <!-- <h2>Section 1</h2> -->
-        <img src="../../assets/aug/Mr__Deepanshu.jpg" alt="Animated Logo" [class.animate-image]="imageVisible()"
+
+      <div class="congrats-card col-md-6 col-sm-12" #imgRef [class.animate-slide]="imageVisible()">
+        <img src="../../assets/aug/Mr__Deepanshu.jpg" alt="Deepanshu Placement" [class.animate-image]="imageVisible()"
           class="congratsImg" />
+        <div class="congrats-caption">
+          <h3>Deepanshu Verma</h3>
+          <p>Placed at Amazon with ₹18 LPA</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- div slider 1 -->
-  <div class="flex-row flex-column-S item-gap margin-top-1">
-    <!-- LEFT: Fade Effect -->
-    <div class="flex-column-S col-lg-8 col-md-8 col-sm-12">
-      <!-- <h2 class="text-center h2-blue margin-top-2">Main Highlights</h2> -->
-      <swiper-container class="highlights-swipper" loop="true" autoplay-delay="2500" speed="8000" slides-per-view="1">
-        <div class="swiper-slide highlights-slides">
-          <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexNews/jan13.png" alt="">
-
-          <p>Agriculture Science research field</p>
-        </div>
-        <div class="swiper-slide highlights-slides"><img class="events-img"
-            src="https://www.starexuniversity.com/uploads/StarexNews/Bharatiya_Bhasha_Diwas.png" alt="">
-
-          <p>Bharatiya Bhasha Diwas</p>
-        </div>
-        <div class="swiper-slide highlights-slides">
-          <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexNews/nsd.png" alt="">
-
-          <p>National Science Day Seminar featuring Dr. Akhilesh Pandey</p>
-        </div>
-        <div class="swiper-slide highlights-slides"><img class="events-img"
-            src="https://www.starexuniversity.com/uploads/StarexHighlights/Chemistry_Lab.jpg" alt="">
-
-          <p>Chemistry Lab in Action</p>
-        </div>
-        <div class="swiper-slide highlights-slides">
-          <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexNews/dsd.png" alt="">
-
-          <p>Students immersed themselves in vibrant global crafts and cultural exhibits.</p>
-        </div>
-        <div class="swiper-slide highlights-slides"><img class="events-img"
-            src="https://www.starexuniversity.com/uploads/StarexNews/WhatsApp_Image_2024-02-08_at_5_40_40_PM.png"
-            alt="">
-
-          <p>Visit to Mark Exhaust System Pvt Ltd</p>
-        </div>
-      </swiper-container>
-    </div>
-
-
-    <div class="latest-events col-lg-4 col-md-4 col-sm-12 slider1-bgimg">
-      <!-- <h2 class="text-center h2-blue margin-top-2">Latest happenings / Events</h2> -->
-
-    </div>
-  </div>
-  <!-- div slider 2 -->
-  <div class="flex-row flex-column-S item-gap margin-top-1">
-    <!-- LEFT: Fade Effect -->
-    <div class="flex-column-S col-lg-8 col-sm-12 slider2-bgimg">
-
-    </div>
-
-    <!-- RIGHT: Vertical with 4 slides visible -->
-    <div class="latest-events col-lg-4 col-sm-12">
-      <!-- <h2 class="text-center h2-blue margin-top-2">Latest happenings / Events</h2> -->
-      <swiper-container direction="vertical" loop="true" slides-per-view="1" autoplay-delay="2500" speed="8000"
-        class="vertical-swiper">
-        <div class="swiper-slide">
-          <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexEvents/Teachers_Day_3.jpg" alt="">
-          <p> Happy Teachers Day 2025</p>
-        </div>
-        <div class="swiper-slide"><img class="events-img"
-            src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_071309733.jpg" alt="">
-
-          <p>National Flag Day</p>
-        </div>
-        <div class="swiper-slide"><img class="events-img"
-            src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250621_021121435_MP.jpg" alt="">
-
-          <p>International Yoga Day</p>
-        </div>
-        <div class="swiper-slide"><img class="events-img"
-            src="https://www.starexuniversity.com/uploads/StarexEvents/Teachers_Day_1_(1).jpg" alt="">
-
-          <p> Happy Teachers Day 2025</p>
-        </div>
-        <div class="swiper-slide">
-          <img class="events-img" src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_072132804.jpg"
-            alt="">
-          <p> National Flag Day</p>
-        </div>
-
-        <div class="swiper-slide">
-          <img class="events-img"
-            src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_062218240_MP.jpg" alt="">
-
-          <p>National Flag Day</p>
-        </div>
-        <div class="swiper-slide"><img class="events-img"
-            src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250621_020102747_MP.jpg" alt="">
-
-          <p>International Yoga Day</p>
-        </div>
-      </swiper-container>
-    </div>
+<section class="events-gallery">
+  <div class="events-header text-center">
+    <h2 class="section-title">🎬 Campus Highlights & Celebrations</h2>
+    <p class="section-subtitle">
+      From groundbreaking research to vibrant cultural festivals, here’s a glimpse into the energy and excellence that define life at Starex University.
+    </p>
   </div>
 
-  <section class=" flex-column govt-section">
-    <h2 class="text-center h2-blue margin-top-2">Important Links</h2>
-    <div class="flex-row flex-column-S flex-wrap item-gap">
-      <div class="col-md-2 col-sm-12  text-center govt-img-container">
-        <div class="icon-holder">
-          <a href="https://www.education.gov.in/" target="_blank"> <img src="../../assets/logo/minstryEducation.png"
-              class="govt_img" alt="" style="    height: 126px;"></a>
-        </div>
+  <div class="masonry-grid">
+    <!-- Each image block -->
+    <div class="masonry-item">
+      <img src="https://www.starexuniversity.com/uploads/StarexNews/jan13.png" alt="Agriculture Science" />
+      <p>Agriculture Science Research Field</p>
+    </div>
+    <div class="masonry-item">
+      <img src="https://www.starexuniversity.com/uploads/StarexNews/Bharatiya_Bhasha_Diwas.png" alt="Bhasha Diwas" />
+      <p>Bharatiya Bhasha Diwas</p>
+    </div>
+    <div class="masonry-item">
+      <img src="https://www.starexuniversity.com/uploads/StarexNews/nsd.png" alt="Science Day" />
+      <p>National Science Day Seminar featuring Dr. Akhilesh Pandey</p>
+    </div>
+    <!-- <div class="masonry-item">
+      <img src="https://www.starexuniversity.com/uploads/StarexNews/Chemistry_Lab.jpg" alt="Chemistry Lab" />
+      <p>Chemistry Lab in Action</p>
+    </div> -->
+    <div class="masonry-item">
+      <img src="https://www.starexuniversity.com/uploads/StarexNews/dsd.png" alt="Global Crafts" />
+      <p>Students immersed in vibrant global crafts and cultural exhibits</p>
+    </div>
+    <div class="masonry-item">
+      <img src="https://www.starexuniversity.com/uploads/StarexNews/WhatsApp_Image_2024-02-08_at_5_40_40_PM.png" alt="Industry Visit" />
+      <p>Visit to Mark Exhaust System Pvt Ltd</p>
+    </div>
+    <div class="masonry-item">
+      <img src="https://www.starexuniversity.com/uploads/StarexEvents/Teachers_Day_3.jpg" alt="Teachers Day" />
+      <p>Happy Teachers Day 2025</p>
+    </div>
+    <div class="masonry-item">
+      <img src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_071309733.jpg" alt="Flag Day" />
+      <p>National Flag Day</p>
+    </div>
+    <!-- <div class="masonry-item">
+      <img src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250621_021121435_MP.jpg" alt="Yoga Day" />
+      <p>International Yoga Day</p>
+    </div> -->
+    <div class="masonry-item">
+      <img src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_072132804.jpg" alt="Flag Day" />
+      <p>National Flag Day</p>
+    </div>
+    <div class="masonry-item">
+      <img src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250722_062218240_MP.jpg" alt="Flag Day" />
+      <p>National Flag Day</p>
+    </div>
+    <div class="masonry-item">
+      <img src="https://www.starexuniversity.com/uploads/StarexEvents/PXL_20250621_020102747_MP.jpg" alt="Yoga Day" />
+      <p>International Yoga Day</p>
+    </div>
+  </div>
+</section>
 
-        <div class="legacyTitle">
-          <a href="https://www.education.gov.in/" target="_blank">
-            <p>Ministry of Education</p>
-          </a>
-        </div>
+  <section class="govt-section flex-column">
+    <div class="govt-header text-center">
+      <h2 class="section-title">🔗 Trusted Institutional & Government Resources</h2>
+      <p class="section-subtitle">
+        Explore official education portals, regulatory bodies, and policy frameworks that shape the academic landscape
+        of India. These links connect you to the foundations of quality, compliance, and innovation in higher education.
+      </p>
+    </div>
 
+    <div class="govt-grid flex-row flex-wrap justify-center">
+      <!-- Ministry of Education -->
+      <div class="govt-card col-md-2 col-sm-6">
+        <a href="https://www.education.gov.in/" target="_blank" class="govt-link">
+          <img src="../../assets/logo/minstryEducation.png" alt="Ministry of Education" class="govt-img" />
+          <p>Ministry of Education</p>
+        </a>
       </div>
-      <div class="col-md-2 col-sm-12 text-center govt-img-container">
-        <div class="icon-holder">
-          <a href="https://schooleducationharyana.gov.in/" target="_blank"> <img
-              src="../../assets/logo/Govt_of_Haryana.webp" class="govt_img" alt=""></a>
-        </div>
-        <div class="legacyTitle">
-          <a href="https://schooleducationharyana.gov.in/" target="_blank">
-            <p>State Ministry of Education</p>
-          </a>
-        </div>
 
+      <!-- State Ministry -->
+      <div class="govt-card col-md-2 col-sm-6">
+        <a href="https://schooleducationharyana.gov.in/" target="_blank" class="govt-link">
+          <img src="../../assets/logo/Govt_of_Haryana.webp" alt="State Ministry" class="govt-img" />
+          <p>State Ministry of Education</p>
+        </a>
       </div>
-      <div class="col-md-2 col-sm-12 text-center govt-img-container">
-        <div class="icon-holder">
-          <a href="https://www.ugc.gov.in/" target="_blank"> <img src="../../assets/logo/ugc.jpg" class="govt_img"
-              alt=""></a>
-        </div>
-        <div class="legacyTitle">
-          <a href="https://www.ugc.gov.in/" target="_blank">
-            <p>UGC</p>
-          </a>
-        </div>
 
+      <!-- UGC -->
+      <div class="govt-card col-md-2 col-sm-6">
+        <a href="https://www.ugc.gov.in/" target="_blank" class="govt-link">
+          <img src="../../assets/logo/ugc.jpg" alt="UGC" class="govt-img" />
+          <p>UGC</p>
+        </a>
       </div>
-      <div class="col-md-2 col-sm-12 text-center govt-img-container">
-        <div class="icon-holder">
-          <a href="https://www.aiu.ac.in/" target="_blank"> <img src="../../assets/logo/aiu-new.jpg" class="govt_img"
-              alt=""></a>
-        </div>
-        <div class="legacyTitle">
-          <a href="https://www.aiu.ac.in/" target="_blank">
-            <p> AIU</p>
-          </a>
-        </div>
 
-
-
+      <!-- AIU -->
+      <div class="govt-card col-md-2 col-sm-6">
+        <a href="https://www.aiu.ac.in/" target="_blank" class="govt-link">
+          <img src="../../assets/logo/aiu-new.jpg" alt="AIU" class="govt-img" />
+          <p>AIU</p>
+        </a>
       </div>
-      <div class="col-md-2 col-sm-12 text-center govt-img-container">
-        <div class="icon-holder">
-          <a href="https://www.starexuniversity.com/assets/nep_2020.pdf" target="_blank"> <img class="govt_img"
-              src="../../assets/logo/ministry-HRD.jpg" alt=""></a>
-        </div>
-        <div class="legacyTitle">
-          <a href="https://www.starexuniversity.com/assets/nep_2020.pdf" target="_blank">
-            <p> NEP 2020</p>
-          </a>
-        </div>
 
-
-
+      <!-- NEP 2020 -->
+      <div class="govt-card col-md-2 col-sm-6">
+        <a href="https://www.starexuniversity.com/assets/nep_2020.pdf" target="_blank" class="govt-link">
+          <img src="../../assets/logo/ministry-HRD.jpg" alt="NEP 2020" class="govt-img" />
+          <p>NEP 2020</p>
+        </a>
       </div>
     </div>
   </section>
-  <div class="flex-column crcLogoContainer ">
-    <h2 class="text-center h2-blue">Industry Linkage</h2>
+
+  <section class="industry-linkage-section crcLogoContainer">
+    <div class="industry-header text-center">
+      <h2 class="section-title">🤝 Bridging Academia and Industry for Real-World Impact</h2>
+      <p class="section-subtitle">
+        Our industry collaborations empower students with hands-on experience, cutting-edge insights, and career-ready
+        skills. From internships to innovation labs, we build pathways that connect education to enterprise.
+      </p>
+    </div>
     <swiper-container loop="true" autoplay-disable-on-interaction="false" autoplay-delay="0" speed="3000"
-      space-between="20" [slidesPerView]=crcSlidesPerView centered-slides="false" free-mode="true"
+      space-between="5" [slidesPerView]=crcSlidesPerView centered-slides="false" free-mode="true"
       free-mode-momentum="true" wait-for-transition="false" loop-additional-slides="4" class="crcLogoSwiper">
       <div class="swiper-slide swiper-slide-active"> <img alt="TechMahindra" class="crcLogoImg"
           src="../../assets/company-logo/1.png" /></div>
@@ -507,5 +468,6 @@
       <div class="swiper-slide swiper-slide-active"><img alt="TechMahindra" class="crcLogoImg"
           src="../../assets/company-logo/20.png" /></div>
     </swiper-container>
-  </div>
+  </section>
+
 </div>

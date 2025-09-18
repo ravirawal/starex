@@ -5,10 +5,11 @@ import { SwiperOptions } from 'swiper/types';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
+import { AboutComponent } from "../about_list/about/about";
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, MatGridListModule, MatCardModule, MatIconModule,],
+  imports: [CommonModule, MatGridListModule, MatCardModule, MatIconModule, AboutComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.html',
   styleUrl: './home.scss',
