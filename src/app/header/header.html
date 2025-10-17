@@ -48,57 +48,33 @@
         @if(!isMobile()){
         <mat-tab-group (click)="handleDivClick($event)">
             <mat-tab label="About Starex">
-                <ul class="dropmenu">
-                    <li>
-                        <a routerLink="about-starex" (click)="handleAnchorClick()">About Us</a>
-                    </li>
-                    <li>
-                        <a routerLink="chancellor-message" (click)="handleAnchorClick()">Chancellor's Message</a>
-                    </li>
-                    <li>
-                        <a routerLink="vice-chancellor-message" (click)="handleAnchorClick()">Vice Chancellor's
-                            Message</a>
-                    </li>
-                    <li>
-                        <a routerLink="registrar-message" (click)="handleAnchorClick()">Registrar Message</a>
-                    </li>
-                    <li>
-                        <a routerLink="osd-message" (click)="handleAnchorClick()">OSD Message</a>
-                    </li>
-                    <li>
-                        <a routerLink="coe" (click)="handleAnchorClick()">COE</a>
-                    </li>
-                    <li>
-                        <a routerLink="approval-recognition" (click)="handleAnchorClick()">Recognition &amp;
-                            Approval</a>
-                    </li>
-                    <li>
-                        <a routerLink="disclosure" (click)="handleAnchorClick()">Mandatory Disclosure</a>
-                    </li>
-                    <li>
-                        <a routerLink="starex-mou" (click)="handleAnchorClick()">Starex MOU's</a>
-                    </li>
-                    <li>
-                        <a (click)="openPdfInNewTab('assets/pdf/information_for_ugc_inspection.pdf')">Information for
-                            UGC Inspection</a>
-                    </li>
-                    <li>
-                        <a routerLink="annual-reports" (click)="handleAnchorClick()">Annual Reports</a>
-                    </li>
-                    <li>
-                        <a (click)="previewPdf('assets/pdf/2025_about_ombudsperson.pdf')">Ombudsperson</a>
-                    </li>
-                    <li>
-                        <a routerLink="policies" (click)="handleAnchorClick()">Policies</a>
-                    </li>
-                    <li>
-                        <a routerLink="organogram" (click)="handleAnchorClick()">Organogram</a>
-                    </li>
-                </ul>
+              <div class="about-links-flex">
+                        <ul class="about-column">
+                            <li><a routerLink="about-starex" (click)="handleAnchorClick()">About Us</a></li>
+                            <li><a routerLink="chancellor-message" (click)="handleAnchorClick()">Chancellor's Message</a></li>
+                            <li><a routerLink="vice-chancellor-message" (click)="handleAnchorClick()">Vice Chancellor's Message</a></li>
+                            <li><a routerLink="registrar-message" (click)="handleAnchorClick()">Registrar Message</a></li>
+                            <li><a routerLink="osd-message" (click)="handleAnchorClick()">OSD Message</a></li>
+                            <li><a routerLink="coe" (click)="handleAnchorClick()">COE</a></li>
+                            <li><a routerLink="approval-recognition" (click)="handleAnchorClick()">Recognition & Approval</a></li>
+                        </ul>
+<div class="vertical-divider"></div>
+                        <ul class="about-column">
+                            <li><a routerLink="disclosure" (click)="handleAnchorClick()">Mandatory Disclosure</a></li>
+                            <li><a routerLink="starex-mou" (click)="handleAnchorClick()">Starex MOU's</a></li>
+                            <li><a (click)="openPdfInNewTab('assets/pdf/information_for_ugc_inspection.pdf')">UGC
+                                    Inspection Info</a></li>
+                            <li><a routerLink="annual-reports" (click)="handleAnchorClick()">Annual Reports</a></li>
+                            <li><a (click)="previewPdf('assets/pdf/2025_about_ombudsperson.pdf')">Ombudsperson</a></li>
+                            <li><a routerLink="policies" (click)="handleAnchorClick()">Policies</a></li>
+                            <li><a routerLink="organogram" (click)="handleAnchorClick()">Organogram</a></li>
+                        </ul>
+                    </div>
             </mat-tab>
 
             <mat-tab label="Governance">
-                <ul class="dropmenu">
+               <div class="about-links-flex">
+                        <ul class="about-column">
                     <li>
                         <a routerLink="university-authorities" (click)="handleAnchorClick()">University Authorities</a>
                     </li>
@@ -106,9 +82,11 @@
                         <a routerLink="committees" (click)="handleAnchorClick()">Committees & Boards </a>
                     </li>
                 </ul>
+                </div>
             </mat-tab>
             <mat-tab label="Faculty Directory">
-                <ul class="dropmenu">
+                <div class="about-links-flex">
+                        <ul class="about-column">
                     <li>
                         <a (click)="goToFaculty('computerScience')">Computer Science</a>
                     </li>
@@ -127,6 +105,9 @@
                     <li>
                         <a (click)="goToFaculty('humanities')">Humanities Science</a>
                     </li>
+                    </ul>
+                    <div class="vertical-divider"></div>
+                    <ul class="about-column">
                     <li>
                         <a (click)="goToFaculty('commerce')">Commerce Management</a>
                     </li>
@@ -141,9 +122,11 @@
                     </li>
 
                 </ul>
+                    </div>
             </mat-tab>
             <mat-tab label="Schools">
-                <ul class="dropmenu">
+              <div class="about-links-flex">
+                        <ul class="about-column">
                     <li>
                         <a routerLink="agriculture" (click)="handleAnchorClick()">Agriculture Science</a>
                     </li>
@@ -163,6 +146,9 @@
                     <li>
                         <a routerLink="hotel-management" (click)="handleAnchorClick()">Hotel Management</a>
                     </li>
+                    </ul>
+                    <div class="vertical-divider"></div>
+                    <ul class="about-column">
                     <li>
                         <a routerLink="humanities" (click)="handleAnchorClick()">Humanities</a>
                     </li>
@@ -183,9 +169,11 @@
                     </li>
 
                 </ul>
+                </div>
             </mat-tab>
             <mat-tab label="Study Abroad">
-                <ul>
+                <div class="about-links-flex">
+                        <ul class="about-column">
                     <li>
                         <a routerLink="ICHM" (click)="handleAnchorClick()">ICHM, Adelaide, Australia </a>
                     </li>
@@ -196,9 +184,11 @@
                             Hospitality, GERMANY , Europe</a>
                     </li>
                 </ul>
+                </div>
             </mat-tab>
             <mat-tab label="Facility">
-                <ul>
+                <div class="about-links-flex">
+                        <ul class="about-column">
                     <li>
                         <a routerLink="campus-view" (click)="handleAnchorClick()">Campus View</a>
                     </li>
@@ -228,9 +218,11 @@
                         <a routerLink="medical-hospital" (click)="handleAnchorClick()">Medical</a>
                     </li>
                 </ul>
+                </div>
             </mat-tab>
             <mat-tab label="Alumni">
-                <ul>
+                <div class="about-links-flex">
+                        <ul class="about-column">
                     <!-- <li>
                         <a routerLink="law" (click)="handleAnchorClick()">Message</a>
                     </li>
@@ -246,9 +238,11 @@
                         <a routerLink="gallery" (click)="handleAnchorClick()">Gallery</a>
                     </li>
                 </ul>
+                </div>
             </mat-tab>
             <mat-tab label="Media">
-                <ul>
+                <div class="about-links-flex">
+                        <ul class="about-column">
                     <li>
                         <a routerLink="news" (click)="handleAnchorClick()">News</a>
                     </li>
@@ -264,9 +258,11 @@
                         <a routerLink="achivements" (click)="handleAnchorClick()">Achievements</a>
                     </li>
                 </ul>
+                </div>
             </mat-tab>
             <mat-tab label="Examination">
-                <ul>
+                <div class="about-links-flex">
+                        <ul class="about-column">
                     <li>
                         <a routerLink="results" (click)="handleAnchorClick()">Results</a>
                     </li>
@@ -280,18 +276,19 @@
                         <a routerLink="NAD-Cell" (click)="handleAnchorClick()">University NAD Cell</a>
                     </li>
                 </ul>
+                </div>
             </mat-tab>
         </mat-tab-group>
-    }
-    @else { 
-  <mat-accordion class="vertical-menu">
-    <mat-expansion-panel *ngFor="let section of aboutStarexSections" (click)="handleDivClick($event)">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          {{ section.title }}
-        </mat-panel-title>
-        <mat-panel-description>
-         <!-- <div class="dropdown-toggle" (click)="isMenuOpen = !isMenuOpen">
+        }
+        @else {
+        <mat-accordion class="vertical-menu">
+            <mat-expansion-panel *ngFor="let section of aboutStarexSections" (click)="handleDivClick($event)">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        {{ section.title }}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        <!-- <div class="dropdown-toggle" (click)="isMenuOpen = !isMenuOpen">
   @if (!isMenuOpen) {
     <mat-icon>keyboard_arrow_down</mat-icon>
   } @else {
@@ -299,29 +296,22 @@
   }
 </div> -->
 
-        </mat-panel-description>
-      </mat-expansion-panel-header>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
 
-      <ul class="dropmenu">
-        <li *ngFor="let item of section.links">
-          <a
-            *ngIf="item.type === 'router'"
-            [routerLink]="item.path"
-            (click)="handleAnchorClick()"
-          >
-            {{ item.label }}
-          </a>
-          <a
-            *ngIf="item.type === 'pdf'"
-            (click)="openPdfInNewTab(item.path)"
-          >
-            {{ item.label }}
-          </a>
-        </li>
-      </ul>
-    </mat-expansion-panel>
-  </mat-accordion>
-}
+                <ul class="dropmenu">
+                    <li *ngFor="let item of section.links">
+                        <a *ngIf="item.type === 'router'" [routerLink]="item.path" (click)="handleAnchorClick()">
+                            {{ item.label }}
+                        </a>
+                        <a *ngIf="item.type === 'pdf'" (click)="openPdfInNewTab(item.path)">
+                            {{ item.label }}
+                        </a>
+                    </li>
+                </ul>
+            </mat-expansion-panel>
+        </mat-accordion>
+        }
     </mat-menu>
-    
+
 </mat-toolbar>

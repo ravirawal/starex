@@ -1,6 +1,7 @@
 @use 'swiper/css';
 @use 'swiper/css/effect-flip';
 @use "sass:math";
+
 html,
 body {
   width: 100vw;
@@ -66,10 +67,11 @@ a {
   flex-direction: row;
 }
 
-.flex-wrap{
-flex-wrap: wrap;
-justify-content: center;
+.flex-wrap {
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .col-md-6 {
   width: 48%
 }
@@ -89,10 +91,12 @@ justify-content: center;
 .item-gap {
   gap: 1rem
 }
-.h2-blue{
+
+.h2-blue {
   word-spacing: 1px;
   color: blueviolet;
 }
+
 /* Small devices (phones, ≥576px) */
 @media (max-width: 768px) {
   .flex-column-S {
@@ -102,22 +106,24 @@ justify-content: center;
   .col-md-12 {
     width: 100%
   }
+
   .col-md-6 {
-  width: 50%
+    width: 50%
+  }
+
+  .col-md-4 {
+    width: 33%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-md-2 {
+    width: 16%;
+  }
 }
 
-.col-md-4 {
-  width: 33%;
-}
-
-.col-md-3 {
-  width: 25%;
-}
-
-.col-md-2 {
-  width: 16%;
-}
-}
 @media (max-width: 576px) {
   .flex-column-S {
     flex-direction: column;
@@ -160,72 +166,86 @@ justify-content: center;
   word-wrap: break-word;
 }
 
-hr{
+hr {
   border: 1px dashed #284fa7;
 }
-.contentTitle{
-    text-transform: uppercase;
-    color: #284fa7;
-    border-bottom: 1px dashed #284fa7;
-    padding-bottom: 10px;
-    font-weight: 700;
+
+.contentTitle {
+  text-transform: uppercase;
+  color: #284fa7;
+  border-bottom: 1px dashed #284fa7;
+  padding-bottom: 10px;
+  font-weight: 700;
 }
-p{
+
+p {
   line-height: 1.8;
-    color: #5c5a58;
-    letter-spacing: .2px;
+  color: #5c5a58;
+  letter-spacing: .2px;
 }
+
+.programme-info {
+  cursor: pointer;
+}
+
 .circleBtn:before {
-    width: 24px;
-    height: 24px;
-    background: #3383FA;
-    color: #fff;
-    content: '\2794';
-    border-radius: 50rem;
-    font-size: 18px;
-    font-weight: 400;
-    display: inline-flex;
-    align-items: center;
-    text-align: left;
-    line-height: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: all .3s ease-out;
-    z-index: -1;
-    padding: 0 7px;
-    height: 40px;
+  width: 24px;
+  height: 24px;
+  background: #3383FA;
+  color: #fff;
+  content: '\2794';
+  border-radius: 50rem;
+  font-size: 18px;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  text-align: left;
+  line-height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all .3s ease-out;
+  z-index: -1;
+  padding: 0 7px;
+  height: 40px;
 }
+
 .circleBtn:hover:before {
-    width: 100%;
-    justify-content: end;
+  width: 100%;
+  justify-content: end;
 }
-.circleBtn, .acmdContent .circleBtn {
-    height: 40px;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-    color: #fff;
-    padding: 0 20px 0 50px;
-    position: relative;
-    display: inline-flex;
-    transition: all .3s ease;
-    z-index: 1;
-    align-items: center;
-    text-decoration: none;
+
+.circleBtn,
+.acmdContent .circleBtn {
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  padding: 0 20px 0 50px;
+  position: relative;
+  display: inline-flex;
+  transition: all .3s ease;
+  z-index: 1;
+  align-items: center;
+  text-decoration: none;
 }
+
 .circleBtn.cBtnBlack {
-    color: #333;
-    font-size: 18px;
-    margin: 20px 10px;
+  color: #333;
+  font-size: 18px;
+  margin: 20px 10px;
 }
+
 .circleBtn:hover.cBtnBlack {
-    color: white;
+  color: white;
 }
+
 table {
   width: 100%;
-  
+
 }
+
 .mat-expansion-panel {
   margin-top: 1rem !important;
 }
@@ -341,12 +361,12 @@ html {
   padding: 2rem 0;
 }
 
-  // #tranding {
-  //   background-color: #1b3e7a;
-  //   .tarding-container{
-  //      padding: 2rem 3rem;
-  //   }
-  // }
+// #tranding {
+//   background-color: #1b3e7a;
+//   .tarding-container{
+//      padding: 2rem 3rem;
+//   }
+// }
 
 #tranding .tranding-slider {
   position: relative;
@@ -354,7 +374,7 @@ html {
 
 
 @media (max-width:500px) {
-.tarding-container {
+  .tarding-container {
     padding: 2rem 0.3rem;
   }
 }
@@ -446,7 +466,8 @@ html {
   display: flex;
   align-items: center;
 }
- .crcLogoContainer .swiper-slide:after {
+
+.crcLogoContainer .swiper-slide:after {
   content: '';
   width: 1px;
   height: 90%;
@@ -458,15 +479,17 @@ html {
   margin: auto;
 }
 
-.ibm-tabs .mdc-tab__text-label{
+.ibm-tabs .mdc-tab__text-label {
   color: #444 !important;
 }
-.phd-section .mdc-tab__text-label{
+
+.phd-section .mdc-tab__text-label {
   color: #444 !important;
 }
+
 .head-course-carousel swiper-container {
-width: 150px;
-    height: 42px;
+  width: 150px;
+  height: 42px;
   background-color: #1b3e7a;
   border-radius: 8px;
   font-size: 15px;
@@ -477,19 +500,21 @@ width: 150px;
   text-align: center;
   box-sizing: border-box;
   text-wrap: wrap;
-      border-radius: 5px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, 0.25);
-    border-image: initial;
-    background: rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-    margin-right: 20px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.25);
+  border-image: initial;
+  background: rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  margin-right: 20px;
 }
 
 .head-course-carousel swiper-container:hover {
-  background-color: #2452a4;   /* brighter hover tone */
-  border-color: #4c7cd1;       /* accent border on hover */
+  background-color: #2452a4;
+  /* brighter hover tone */
+  border-color: #4c7cd1;
+  /* accent border on hover */
   cursor: pointer;
 }
 
@@ -509,5 +534,14 @@ width: 150px;
 }
 
 .head-course-carousel swiper-container:hover swiper-slide span {
-  color: #e0ecff; /* soft white-blue text on hover */
+  color: #e0ecff;
+  /* soft white-blue text on hover */
+}
+
+.mat-mdc-tab-body-wrapper {
+  background-image: url('./assets/background-images/light-delight.webp');
+  background-repeat: no-repeat;
+  background-size: cover; // Ensures the image fills the container
+  background-position: center;
+  min-height: 400px;
 }

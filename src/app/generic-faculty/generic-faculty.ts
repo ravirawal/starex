@@ -17,58 +17,60 @@ export class FacultyComponent implements OnInit, OnDestroy {
 
   constructor(private facultyService: FacultyService) { }
 
-ngOnInit() {
-  this.sub = this.facultyService.getSearchTerm().subscribe(term => {
-    console.log('Search term received in FacultyComponent:', term);
+  ngOnInit() {
+    this.sub = this.facultyService.getSearchTerm().subscribe(term => {
+      console.log('Search term received in FacultyComponent:', term);
 
-    if (!term) {
-      this.facultyList = FACULTY_LIST['pharmaceutics'] || [];
-      return;
-    }
-
-    const allFaculty = this.facultyService.getAllFaculty();
-
-    if (term.name) {
-      const normalizedName = term.name.toLowerCase().replace(/[^a-z\s]/g, '').trim();
-      this.facultyList = allFaculty.filter(f =>
-        f.name.toLowerCase().replace(/[^a-z\s]/g, '').includes(normalizedName)
-      );
-      return;
-    }
-
-    if (term.designation || term.department) {
-      const departmentKeys = Object.keys(FACULTY_LIST);
-
-      // Exact match
-      if (departmentKeys.includes(term.department!)) {
-        this.facultyList = FACULTY_LIST[term.department!];
+      if (!term) {
+        this.facultyList = FACULTY_LIST['pharmaceutics'] || [];
         return;
       }
 
-      // Partial match fallback
-      const matchedKey = departmentKeys.find(key =>
-        key.toLowerCase().includes(term.department!.toLowerCase())
-      );
+      const allFaculty = this.facultyService.getAllFaculty();
 
-      if (matchedKey) {
-        this.facultyList = FACULTY_LIST[matchedKey];
+      if (term.name) {
+        const normalizedName = term.name.toLowerCase().replace(/[^a-z\s]/g, '').trim();
+        this.facultyList = allFaculty.filter(f =>
+          f.name.toLowerCase().replace(/[^a-z\s]/g, '').includes(normalizedName)
+        );
         return;
       }
 
-      // Fallback to filtering allFaculty
-      this.facultyList = allFaculty.filter(f => {
-        const title = f.title.toLowerCase();
-        const matchesDesignation = term.designation ? title.includes(term.designation.toLowerCase()) : true;
-        const matchesDepartment = term.department ? title.includes(term.department.toLowerCase()) : true;
-        return matchesDesignation && matchesDepartment;
-      });
-      return;
-    }
+      if (term.designation || term.department) {
+        const departmentKeys = Object.keys(FACULTY_LIST);
 
-    this.facultyList = allFaculty;
-  });
-}
+        // Exact match
+        if (departmentKeys.includes(term.department!)) {
+          this.facultyList = FACULTY_LIST[term.department!];
+          return;
+        }
 
+        // Partial match fallback
+        const matchedKey = departmentKeys.find(key =>
+          key.toLowerCase().includes(term.department!.toLowerCase())
+        );
+
+        if (matchedKey) {
+          this.facultyList = FACULTY_LIST[matchedKey];
+          return;
+        }
+
+        // Fallback to filtering allFaculty
+        this.facultyList = allFaculty.filter(f => {
+          const title = f.title.toLowerCase();
+          const matchesDesignation = term.designation ? title.includes(term.designation.toLowerCase()) : true;
+          const matchesDepartment = term.department ? title.includes(term.department.toLowerCase()) : true;
+          return matchesDesignation && matchesDepartment;
+        });
+        return;
+      }
+
+      this.facultyList = allFaculty;
+    });
+  }
+  openInfo() {
+
+  }
   ngOnDestroy() {
     this.sub.unsubscribe();
   }

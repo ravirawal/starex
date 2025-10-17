@@ -1,6 +1,6 @@
 <div [class]="getContainerClass()">
 	<div class="chatbot-modal-header">
-		<span class="chatbot-title">Chatbot Assistant</span>
+		<span class="chatbot-title">Starex AI Assistant</span>
 			<button class="chatbot-close-btn" aria-label="Minimize" (click)="onMinimize()">
 				<span style="font-size:1.3rem;display:inline-block;transform:translateY(2px);">&#8213;</span>
 			</button>
@@ -12,7 +12,7 @@
 				</div>
 			</div>
 		<form class="chatbot-input-form" (submit)="onSubmit($event)">
-			<input type="text" class="chatbot-input" placeholder="Type your message..." autocomplete="off" [(ngModel)]="userInput" name="chatbotInput" />
+			<input #chatInput type="text" class="chatbot-input" placeholder="Type your message..." autocomplete="off" [(ngModel)]="userInput" name="chatbotInput" />
 			<button type="submit" class="chatbot-send-btn" aria-label="Send">
 				<span>&#9658;</span>
 			</button>

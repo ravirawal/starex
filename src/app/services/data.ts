@@ -4,20 +4,90 @@ export const FACULTY_LIST: { [key: string]: Faculty[] }  = {
     pharmaceutics:[
       {
         name: 'Dr. Parveen Kumari',
-        photo: '/assets/icons/female.svg',
+        photo: '/assets/department/tech-faculty/Parveen Kumari (336).jpg',
         title: 'Principal, Pharmaceutics',
         research: 'Crop Science, Sustainable Farming',
         bio: 'Dr. Praveen has 20+ years of experience in agricultural research.',
-        email: '',
+      },
+       {
+        name: 'Ms. Nikita Yadav',
+        photo: '/assets/department/tech-faculty/Nikita (577).jpg',
+        title: 'Assistant professor, Pharmaceutics',
+        research: 'Crop Science, Sustainable Farming',
+        bio: 'Ms. Praveen has 20+ years of experience in agricultural research.',
       },
       {
-        name: 'Dr. Sushila',
-        photo: '/assets/icons/female.svg',
-        title: 'Assistant, Agriculture',
+        name: 'Ms. Kamica Yadav',
+        photo: '/assets/department/tech-faculty/Kamica (121).jpg',
+        title: 'Assistant professor, Pharmaceutics',
         research: 'Crop Science, Sustainable Farming',
-        bio: 'Dr. Verma has 20+ years of experience in agricultural research.',
+        bio: 'Ms. Praveen has 20+ years of experience in agricultural research.',
+      },
+      {
+        name: 'Ms. Vandana Tyagi',
+        photo: '/assets/department/tech-faculty/Vandana Tyagi (281).jpg',
+        title: 'Assistant professor, Pharmaceutics',
+        research: 'Crop Science, Sustainable Farming',
+        bio: 'Ms. Praveen has 20+ years of experience in agricultural research.',
+      },
+      {
+        name: 'Ms. Nikita Kaushik',
+        photo: '/assets/department/tech-faculty/Nikita Kaushik (736).jpg',
+        title: 'Assistant professor, Pharmaceutics',
+        research: 'Crop Science, Sustainable Farming',
+        bio: 'Ms. Praveen has 20+ years of experience in agricultural research.',
+      },
+      {
+        name: 'Ms. Sushila',
+        photo: '/assets/department/tech-faculty/Sushila (576).jpg',
+        title: 'Assistant Professor, Pharmaceutics',
+        research: 'Crop Science, Sustainable Farming',
+        bio: 'tech-faculty 20+ years of experience in agricultural research.',
         email: ''
-      }
+      },
+      {
+        name: 'Ms. Aastha Kumari',
+        photo: '/assets/department/tech-faculty/Km Astha Singh (797).jpg',
+        title: 'Assistant professor, Pharmaceutics',
+        research: 'Crop Science, Sustainable Farming',
+        bio: 'Ms. Praveen has 20+ years of experience in agricultural research.',
+      },
+       {
+        name: 'Ms. Ritu Dinkar',
+        photo: '/assets/department/tech-faculty/Km Ritu Dinkar(377).jpg',
+        title: 'Assistant professor, Pharmaceutics',
+        research: 'Crop Science, Sustainable Farming',
+        bio: 'Ms. Praveen has 20+ years of experience in agricultural research.',
+      },
+      {
+        name: 'Ms. Anjali Kumari',
+        photo: '/assets/department/tech-faculty/Anjali (812).jpg',
+        title: 'Assistant professor, Pharmaceutics',
+        research: 'Crop Science, Sustainable Farming',
+        bio: 'Ms. Praveen has 20+ years of experience in agricultural research.',
+      },
+      {
+        name: 'Ms. Ankita Kumari',
+        photo: '/assets/department/tech-faculty/Ankita (731).jpg',
+        title: 'Assistant professor, Pharmaceutics',
+        research: 'Crop Science, Sustainable Farming',
+        bio: 'Ms. Praveen has 20+ years of experience in agricultural research.',
+      },
+      {
+        name: 'Ms. Renu Gill',
+        photo: '/assets/department/tech-faculty/Renu Grill (830).jpg',
+        title: 'Assistant professor, Pharmaceutics',
+        research: 'Crop Science, Sustainable Farming',
+        bio: 'Ms. Praveen has 20+ years of experience in agricultural research.',
+      },
+      {
+        name: 'Ms. Vanshika Chauhan',
+        photo: '/assets/department/tech-faculty/Vanshika Chauhan (916).jpg',
+        title: 'Assistant Professor, Pharmaceutics',
+        research: 'Crop Science, Sustainable Farming',
+        bio: 'tech-faculty 20+ years of experience in agricultural research.',
+        email: ''
+      },
     ],
      law:[
       {

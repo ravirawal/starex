@@ -173,3 +173,36 @@ button {
     }
   }
 }
+.about-links-flex {
+  background-image: url(../../assets/background-images/edu-full-screen-banner.avif);
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  position: relative;
+  flex-wrap: wrap;
+  opacity: .9;
+  height: 100%;
+}
+
+.about-column {
+  list-style: none;
+  padding: 2rem;
+  margin: 0;
+  flex: 0 1 auto;
+
+  li {
+    margin-bottom: 1rem;
+
+    a {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.vertical-divider {
+  width: 2px;
+  background-color: #90caf9;
+  height: auto;
+  align-self: stretch;
+}

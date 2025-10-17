@@ -11,7 +11,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class ChatbotModal implements OnChanges, AfterViewInit {
 	@ViewChild('messagesContainer') messagesContainer!: ElementRef<HTMLDivElement>;
+	@ViewChild('chatInput') chatInput!: ElementRef<HTMLInputElement>;
 	ngAfterViewInit() {
+		this.chatInput.nativeElement.focus();
 		this.scrollToBottom();
 	}
 	@Input() closing = false;
